@@ -13,7 +13,7 @@ const Category = ({ categoryList }) => {
         );
     });
     return (
-        <nav className={styles.category__nav}>
+        <nav className={`${styles.category__nav} container`}>
             <ul className={styles.category__list}>{listToRender}</ul>
         </nav>
     );

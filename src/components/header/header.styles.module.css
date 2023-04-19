@@ -1,0 +1,15 @@
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.header__bottom {
+    background-color: var(--main-color);
+}
