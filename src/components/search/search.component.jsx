@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FaSearch } from "react-icons/fa";
 
 import styles from "./search.styles.module.css";
 
@@ -11,7 +10,7 @@ const Search = () => {
             </div>
             <input className={styles.search__input} type="text" name="search" />
             <button className={styles.search__btn}>
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                <FaSearch />
             </button>
         </form>
     );
