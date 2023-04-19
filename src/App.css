@@ -1,3 +1,7 @@
-.App {
-    text-align: center;
+.container {
+    max-width: 70%;
+}
+
+.hidden {
+    display: none;
 }
