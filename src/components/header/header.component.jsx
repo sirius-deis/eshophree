@@ -1,13 +1,15 @@
-import Search from "../search/search.component";
-
 import styles from "./header.styles.module.css";
+
+import Search from "../search/search.component";
+import Menu from "../menu/menu.component";
 
 const Header = () => {
     return (
         <header className={styles.header}>
-            <div className={styles["header__top"]}>
-                <img src="/images/logo.jpg" width="190" height="45" alt="logo" className={styles.logo} />
+            <div className={styles.header__top}>
+                <img src="/images/logo.jpg" width="190" height="45" alt="logo" className={styles.header__logo} />
                 <Search />
+                <Menu />
             </div>
         </header>
     );
