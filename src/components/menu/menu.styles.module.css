@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
     list-style: none;
 }
 
@@ -16,6 +17,10 @@
     cursor: pointer;
 }
 
+.menu__item:nth-child(2) {
+    outline: 1px solid var(--main-color);
+}
+
 .menu__item:last-child {
     background-color: var(--red-color);
     color: var(--bg-color);
@@ -23,7 +28,7 @@
 }
 
 .menu__item:not(:last-child):hover {
-    background-color: var(--shadow-color);
+    background-color: var(--gray-color);
 }
 
 .menu__cart {

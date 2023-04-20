@@ -29,6 +29,10 @@
     padding: 0.5rem 0.7rem;
 }
 
+.search__input:focus {
+    outline: none;
+}
+
 .search__btn {
     display: flex;
     justify-content: center;

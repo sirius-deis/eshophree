@@ -7,7 +7,8 @@
 :root {
     font-size: 62.5%;
     --bg-color: #fffbeb;
-    --main-color: #fbbf24;
+    --main-color: #fcd34d;
+    --main-color-darker: #d97706;
     --text-color: #451a03;
     --gray-color: #fde68a;
     --shadow-color: rgba(69, 26, 3, 0.2);

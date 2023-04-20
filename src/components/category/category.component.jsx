@@ -6,8 +6,9 @@ const Category = ({ categoryList }) => {
     const listToRender = categoryList.map((category) => {
         return (
             <li className={styles.category__item} key={category.id}>
-                <Link to={category.linkUrl}>
-                    <category.icon />${category.title}
+                <Link className={styles.category__link} to={category.linkUrl}>
+                    <category.icon />
+                    <span>{category.title.replace("and", "&")}</span>
                 </Link>
             </li>
         );

@@ -1,0 +1,32 @@
+.category__nav {
+}
+
+.category__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.category__item {
+}
+
+.category__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: var(--text-color);
+}
+
+.category__link:hover {
+    background-color: var(--main-color-darker);
+    color: var(--bg-color);
+}
+
+.category__link span::first-letter {
+    text-transform: uppercase;
+}

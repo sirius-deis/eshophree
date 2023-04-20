@@ -11,7 +11,7 @@ const Search = () => {
                     All <MdOutlineArrowDropDown />
                 </div>
             </div>
-            <input className={styles.search__input} type="text" name="search" placeholder="Enter product name" />
+            <input className={styles.search__input} type="text" name="search" placeholder="Enter a product name" />
             <button className={styles.search__btn}>
                 <FaSearch />
             </button>
