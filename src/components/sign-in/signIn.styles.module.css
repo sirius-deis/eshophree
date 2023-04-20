@@ -1,0 +1,62 @@
+.signIn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    min-width: 100%;
+    padding: 2rem;
+}
+
+.signIn__row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.signIn__label {
+    font-size: 1.8rem;
+    color: var(--text-color-lighter);
+}
+
+.signIn__input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+}
+
+.signIn__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signIn__remember {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.signIn__forgot {
+    font-size: 1.4rem;
+}
+
+.signIn__forgot a:link,
+.signIn__forgot a:visited {
+    color: var(--text-color);
+}
+
+.signIn__forgot a:hover,
+.signIn__forgot a:active {
+    color: var(--text-color-lighter);
+}
+
+.signIn__btn {
+    padding: 0.5rem 3rem;
+    background-color: transparent;
+    border-color: var(--gray-color);
+    border-radius: 5px;
+    color: var(--main-color-darker);
+    cursor: pointer;
+}

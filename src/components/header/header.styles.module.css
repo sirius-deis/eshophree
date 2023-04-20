@@ -11,6 +11,6 @@
 }
 
 .header__bottom {
-    margin-top: 1rem;
+    margin: 2rem 0;
     background-color: var(--main-color);
 }

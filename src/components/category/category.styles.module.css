@@ -1,6 +1,3 @@
-.category__nav {
-}
-
 .category__list {
     display: flex;
     justify-content: space-between;
@@ -8,18 +5,19 @@
     list-style: none;
 }
 
-.category__item {
-}
-
 .category__link {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    padding: 2rem 1rem;
+    padding: 2rem 0.4rem;
     text-decoration: none;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: var(--text-color);
+}
+
+.category__link:first-child {
+    font-size: 1.8rem;
 }
 
 .category__link:hover {

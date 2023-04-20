@@ -10,6 +10,7 @@
     --main-color: #fcd34d;
     --main-color-darker: #d97706;
     --text-color: #451a03;
+    --text-color-lighter: #78350f;
     --gray-color: #fde68a;
     --shadow-color: rgba(69, 26, 3, 0.2);
     --red-color: #dc2626;
@@ -21,6 +22,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--bg-color);
+    height: 100vh;
 }
 
 code {
