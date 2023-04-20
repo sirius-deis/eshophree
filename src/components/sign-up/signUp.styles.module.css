@@ -1,0 +1,51 @@
+.signUp {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    min-width: 100%;
+    padding: 2rem;
+}
+
+.signUp__row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.signUp__col,
+.signUp__col--long {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.signUp__col {
+    max-width: 50%;
+    gap: 0.5rem;
+}
+
+.signUp__col--long {
+    width: 100%;
+}
+
+.signUp__label {
+    font-size: 1.8rem;
+    color: var(--text-color-lighter);
+}
+
+.signUp__input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+}
+
+.signUp__btn {
+    padding: 1rem 5rem;
+    background-color: transparent;
+    border-color: var(--gray-color);
+    border-radius: 5px;
+    color: var(--main-color-darker);
+    cursor: pointer;
+}

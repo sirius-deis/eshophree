@@ -19,10 +19,12 @@ const SignUp = () => {
                 </div>
             </div>
             <div className={styles.signUp__row}>
-                <label className={styles.signUp__label} htmlFor="email">
-                    Email address*
-                </label>
-                <input className={styles.signUp__input} type="email" id="email" name="email" />
+                <div className={styles["signUp__col--long"]}>
+                    <label className={styles.signUp__label} htmlFor="email">
+                        Email address*
+                    </label>
+                    <input className={styles.signUp__input} type="email" id="email" name="email" />
+                </div>
             </div>
             <div className={styles.signUp__row}>
                 <div className={styles.signUp__col}>
@@ -45,7 +47,7 @@ const SignUp = () => {
                 </label>
             </div>
             <div className={styles.signUp__row}>
-                <button className={styles.signUp__btn}>Sign up</button>
+                <button className={styles.signUp__btn}>Sign up &rarr;</button>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import styles from "./header.styles.module.css";
 
@@ -11,7 +12,9 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={`${styles.header__top} container`}>
-                <img src="/images/logo.jpg" width="190" height="45" alt="logo" className={styles.header__logo} />
+                <Link to="/">
+                    <img src="/images/logo.jpg" width="190" height="45" alt="logo" className={styles.header__logo} />
+                </Link>
                 <Search />
                 <Menu />
             </div>

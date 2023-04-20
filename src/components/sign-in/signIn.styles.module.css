@@ -26,6 +26,7 @@
 }
 
 .signIn__wrapper {
+    margin-top: 7.5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -53,7 +54,7 @@
 }
 
 .signIn__btn {
-    padding: 0.5rem 3rem;
+    padding: 1rem 5rem;
     background-color: transparent;
     border-color: var(--gray-color);
     border-radius: 5px;
