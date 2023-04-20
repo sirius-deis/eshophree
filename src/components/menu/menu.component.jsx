@@ -10,10 +10,12 @@ const Menu = () => {
                     <FaUserCircle />
                 </li>
                 <li className={styles.menu__item}>
+                    <span className={styles.menu__amount}>2</span>
                     <FaRegHeart />
                 </li>
-                <li className={styles.menu__item}>
-                    <span>
+                <li className={`${styles.menu__item}`}>
+                    <span className={styles.menu__cart}>
+                        <span className={styles.menu__amount}>4</span>
                         <FaShoppingBasket />
                     </span>
                     <span>£80.00</span>

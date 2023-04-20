@@ -1,0 +1,50 @@
+.menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.menu__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.menu__item:last-child {
+    background-color: var(--red-color);
+    color: var(--bg-color);
+    gap: 1rem;
+}
+
+.menu__item:not(:last-child):hover {
+    background-color: var(--shadow-color);
+}
+
+.menu__cart {
+    display: flex;
+}
+
+.menu__cart + span {
+    font-size: 2rem;
+}
+
+.menu__amount {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color: var(--main-color);
+    border-radius: 500%;
+    color: var(--text-color);
+    transform: translate(-50%, -50%);
+}
