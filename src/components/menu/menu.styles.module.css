@@ -19,6 +19,7 @@
 
 .menu__item:nth-child(2) {
     outline: 1px solid var(--main-color);
+    color: var(--red-color);
 }
 
 .menu__item:last-child {
@@ -27,8 +28,13 @@
     gap: 1rem;
 }
 
-.menu__item:not(:last-child):hover {
+.menu__item:nth-child(2):hover {
     background-color: var(--gray-color);
+}
+
+.menu__item:first-child:hover {
+    box-shadow: var(--box-shadow);
+    z-index: 20;
 }
 
 .menu__cart {

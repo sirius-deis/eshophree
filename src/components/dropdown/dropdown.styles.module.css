@@ -3,8 +3,8 @@
     top: 4.5rem;
     left: 0;
     background-color: var(--bg-color);
-    border: 1px solid var(--gray-color);
-    box-shadow: 2px 3px 6px 2px var(--shadow-color);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
     max-height: 30rem;
     overflow-y: auto;
     z-index: 10;
