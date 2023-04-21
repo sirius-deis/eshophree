@@ -1,11 +1,23 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import styles from "./authWrapper.styles.module.css";
 import SignIn from "../sign-in/signIn.component";
 import SignUp from "../sign-up/signUp.component";
 
 const AuthWrapper = () => {
-    const [isToggled, setIsToggled] = useState(false);
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [isToggled, setIsToggled] = useState(searchParams.get("toggled"));
+
+    const toggleTabToFalse = () => {
+        setIsToggled(false);
+        setSearchParams("");
+    };
+
+    const toggleTabToTrue = () => {
+        setIsToggled(true);
+        setSearchParams("toggled=true");
+    };
 
     return (
         <div className={styles.auth}>
@@ -13,7 +25,7 @@ const AuthWrapper = () => {
                 <li className={styles.auth__tab}>
                     <button
                         className={`${styles.auth__toggleTab} ${!isToggled ? styles.active : ""}`}
-                        onClick={() => setIsToggled(false)}
+                        onClick={toggleTabToFalse}
                     >
                         Sign in
                     </button>
@@ -22,7 +34,7 @@ const AuthWrapper = () => {
                 <li className={styles.auth__tab}>
                     <button
                         className={`${styles.auth__toggleTab} ${isToggled ? styles.active : ""}`}
-                        onClick={() => setIsToggled(true)}
+                        onClick={toggleTabToTrue}
                     >
                         Sign up
                     </button>

@@ -15,7 +15,7 @@ const Header = () => {
                 <Link to="/">
                     <img src="/images/logo.jpg" width="190" height="45" alt="logo" className={styles.header__logo} />
                 </Link>
-                <Search />
+                <Search categories={categories} />
                 <Menu />
             </div>
             <div className={styles.header__bottom}>

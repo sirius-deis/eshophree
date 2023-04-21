@@ -33,10 +33,23 @@
 
 .menu__cart {
     display: flex;
+    padding-right: 1.1rem;
+    border-right: 1px solid var(--bg-color);
 }
 
 .menu__cart + span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
+}
+
+.menu__cart + span svg {
+    transition: transform ease-in 0.2s;
+}
+
+.menu__cart + span.open svg {
+    transform: rotate(-180deg);
 }
 
 .menu__amount {

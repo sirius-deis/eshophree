@@ -1,7 +1,7 @@
 import styles from "./dropdown.styles.module.css";
 
-const Dropdown = ({ list = [] }) => {
-    return <div className={styles.dropdown}></div>;
+const Dropdown = ({ children }) => {
+    return <div className={styles.dropdown}>{children}</div>;
 };
 
 export default Dropdown;

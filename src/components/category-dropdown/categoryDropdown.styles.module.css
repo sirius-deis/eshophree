@@ -1,0 +1,15 @@
+.category__list {
+    list-style: none;
+}
+
+.category__item {
+    padding: 1rem 2rem;
+}
+
+.category__item:hover {
+    background-color: var(--bg-lighter);
+}
+
+.category__item::first-letter {
+    text-transform: uppercase;
+}

@@ -5,10 +5,10 @@
     gap: 0.5rem;
     border: 1px solid var(--gray-color);
     border-radius: 5px;
-    overflow: hidden;
 }
 
 .search__select {
+    position: relative;
     padding: 1rem 0.1rem 1rem 1rem;
     font-size: 1.8rem;
     border-right: 1px solid var(--gray-color);
@@ -19,6 +19,14 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.search__chosen svg {
+    transition: transform ease-in 0.2s;
+}
+
+.search__chosen.open svg {
+    transform: rotate(-180deg);
 }
 
 .search__input {
@@ -42,4 +50,9 @@
     background-color: var(--main-color);
     border: 0;
     cursor: pointer;
+    transition: transform ease-in 0.2s;
+}
+
+.search__btn:hover {
+    transform: scale(1.1);
 }
