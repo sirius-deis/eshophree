@@ -9,21 +9,27 @@ import CategoryDropdown from "../category-dropdown/categoryDropdown.component";
 import styles from "./search.styles.module.css";
 
 const Search = ({ categories }) => {
+    const [chosenCategory, setChosenCategory] = useState("all");
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
+    const chooseCategory = (categoryName) => {
+        setChosenCategory(categoryName);
+        setIsOpen(false);
+    };
+
     return (
         <form className={styles.search}>
             <div className={styles.search__select}>
                 <div className={`${styles.search__chosen} ${isOpen ? styles.open : ""}`} onClick={toggleDropdown}>
-                    All <MdOutlineArrowDropDown />
+                    <span className={styles.chosen}>{chosenCategory}</span> <MdOutlineArrowDropDown />
                 </div>
                 {isOpen && (
-                    <Dropdown isOpen={isOpen}>
-                        <CategoryDropdown categories={categories} />
+                    <Dropdown>
+                        <CategoryDropdown categories={categories} chooseCategory={chooseCategory} />
                     </Dropdown>
                 )}
             </div>

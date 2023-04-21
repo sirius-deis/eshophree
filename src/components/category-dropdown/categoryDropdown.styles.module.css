@@ -1,4 +1,7 @@
 .category__list {
+    width: 29rem;
+    display: flex;
+    flex-direction: column;
     list-style: none;
 }
 

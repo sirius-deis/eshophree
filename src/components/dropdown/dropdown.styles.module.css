@@ -1,11 +1,13 @@
 .dropdown {
+    width: fit-content;
+    max-height: 30rem;
+    overflow-y: auto;
+    overflow-x: hidden;
     position: absolute;
     top: 4.5rem;
     left: 0;
     background-color: var(--bg-color);
     border-radius: 5px;
     box-shadow: var(--box-shadow);
-    max-height: 30rem;
-    overflow-y: auto;
     z-index: 10;
 }

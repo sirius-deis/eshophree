@@ -18,7 +18,19 @@
 .search__chosen {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.2rem;
+}
+
+.chosen {
+    width: 10rem;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.chosen::first-letter {
+    text-transform: uppercase;
 }
 
 .search__chosen svg {
