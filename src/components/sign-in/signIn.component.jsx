@@ -1,33 +1,17 @@
 import styles from "./signIn.styles.module.css";
 import { Link, useNavigate } from "react-router-dom";
 
+import LabelWithInput from "../label-with-input/labelWithInput.component";
+
 const SignIn = () => {
     const navigate = useNavigate();
     return (
         <div className={styles.signIn}>
             <div className={styles.signIn__row}>
-                <label className={styles.signIn__label} htmlFor="email">
-                    Email Address*
-                </label>
-                <input
-                    className={styles.signIn__input}
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="Email address"
-                />
+                <LabelWithInput label="Email Address*" type="text" placeholder="Enter your email address" />
             </div>
             <div className={styles.signIn__row}>
-                <label className={styles.signIn__label} htmlFor="password">
-                    Password*
-                </label>
-                <input
-                    className={styles.signIn__input}
-                    type="text"
-                    id="password"
-                    name="password"
-                    placeholder="Password"
-                />
+                <LabelWithInput label="Password*" type="password" placeholder="Enter your password" />
             </div>
             <div className={styles.signIn__row}>
                 <div className={styles.signIn__wrapper}>

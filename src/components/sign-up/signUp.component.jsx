@@ -1,43 +1,30 @@
 import styles from "./signUp.styles.module.css";
 import { Link } from "react-router-dom";
 
+import LabelWithInput from "../label-with-input/labelWithInput.component";
+
 const SignUp = () => {
     return (
         <div className={styles.signUp}>
             <div className={styles.signUp__row}>
                 <div className={styles.signUp__col}>
-                    <label className={styles.signUp__label} htmlFor="name">
-                        First name*
-                    </label>
-                    <input className={styles.signUp__input} type="text" id="name" name="name" />
+                    <LabelWithInput label="First name*" type="text" placeholder="Enter your name" />
                 </div>
                 <div className={styles.signUp__col}>
-                    <label className={styles.signUp__label} htmlFor="last">
-                        Last name*
-                    </label>
-                    <input className={styles.signUp__input} type="text" id="last" name="last" />
+                    <LabelWithInput label="Last name*" type="text" placeholder="Enter your last name" />
                 </div>
             </div>
             <div className={styles.signUp__row}>
                 <div className={styles["signUp__col--long"]}>
-                    <label className={styles.signUp__label} htmlFor="email">
-                        Email address*
-                    </label>
-                    <input className={styles.signUp__input} type="email" id="email" name="email" />
+                    <LabelWithInput label="Email address*" type="email" placeholder="Enter your email address" />
                 </div>
             </div>
             <div className={styles.signUp__row}>
                 <div className={styles.signUp__col}>
-                    <label className={styles.signUp__label} htmlFor="password">
-                        Password*
-                    </label>
-                    <input className={styles.signUp__input} type="password" id="password" name="password" />
+                    <LabelWithInput label="Password*" type="password" placeholder="Enter your password" />
                 </div>
                 <div className={styles.signUp__col}>
-                    <label className={styles.signUp__label} htmlFor="confirm">
-                        Confirm password*
-                    </label>
-                    <input className={styles.signUp__input} type="password" id="confirm" name="confirm" />
+                    <LabelWithInput label="Confirm password*" type="password" placeholder="Confirm your password" />
                 </div>
             </div>
             <div className={styles.signUp__row}>
