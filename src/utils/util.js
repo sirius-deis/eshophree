@@ -5,7 +5,7 @@ export const checkIfBlank = (state, setErrorFn) => {
 };
 
 export const fetchToServer = async (url, options) => {
-    const response = await fetch(url, options);
+    const response = await fetch(url, { credentials: "include", ...options });
     if (!response.ok) {
         throw new Error(response.statusText);
     }

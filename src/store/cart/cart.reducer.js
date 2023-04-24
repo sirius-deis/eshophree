@@ -6,11 +6,13 @@ const INITIAL_STATE = {
     price: 0,
 };
 
+const calculateAmount = () => {};
+
 const cartReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case CartActionTypes.ADD_ITEM:
+        case CartActionTypes.FETCH_ITEMS:
             //TODO:
-            return {};
+            return { products: action.payload };
         default:
             return state;
     }

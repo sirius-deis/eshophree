@@ -11,12 +11,8 @@ import Loader from "../loader/loader.component";
 
 import { checkIfBlank, fetchToServer } from "../../utils/util";
 
-//http://localhost:3000/api/v1/users/login
-//error={emailErr}
-
 const SignIn = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [emailErr, setEmailErr] = useState(null);
     const [password, setPassword] = useState("");
@@ -36,6 +32,7 @@ const SignIn = () => {
         checkIfBlank(password, setPasswordErr);
         if (!emailErr && !passwordErr) {
             try {
+                setIsLoading(true);
                 const data = await fetchToServer("http://localhost:3000/api/v1/users/login", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -48,6 +45,7 @@ const SignIn = () => {
             } catch (error) {
                 //TODO:
             }
+            setIsLoading(false);
         }
     };
 
