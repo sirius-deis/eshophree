@@ -41,7 +41,7 @@
 }
 
 .auth__line {
-    border-top: 2px solid var(--gray-color);
+    border-top: 2px solid var(--additional-color);
 }
 
 .auth__toggleContainer {

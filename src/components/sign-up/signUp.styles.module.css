@@ -31,21 +31,17 @@
 }
 
 .signUp__label {
+    width: 100%;
     font-size: 1.8rem;
     color: var(--text-color-lighter);
 }
 
-.signUp__input {
-    width: 100%;
-    padding: 0.5rem 1rem;
-    font-size: 1.6rem;
+.signUp__label a:link,
+.signUp__label a:visited {
+    color: var(--text-color);
 }
 
-.signUp__btn {
-    padding: 1rem 5rem;
-    background-color: transparent;
-    border-color: var(--gray-color);
-    border-radius: 5px;
-    color: var(--main-color-darker);
-    cursor: pointer;
+.signUp__label a:hover,
+.signUp__label a:active {
+    color: var(--text-color-lighter);
 }

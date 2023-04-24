@@ -2,6 +2,7 @@ import styles from "./signUp.styles.module.css";
 import { Link } from "react-router-dom";
 
 import LabelWithInput from "../label-with-input/labelWithInput.component";
+import Button from "../button/Button.component";
 
 const SignUp = () => {
     return (
@@ -28,13 +29,13 @@ const SignUp = () => {
                 </div>
             </div>
             <div className={styles.signUp__row}>
-                <input type="checkbox" />
+                <input type="checkbox" id="check" />
                 <label htmlFor="check" className={styles.signUp__label}>
                     I agree to the <Link to="/policy">privacy policy</Link> *
                 </label>
             </div>
             <div className={styles.signUp__row}>
-                <button className={styles.signUp__btn}>Sign up &rarr;</button>
+                <Button text="Sign up &rarr;" />
             </div>
         </div>
     );

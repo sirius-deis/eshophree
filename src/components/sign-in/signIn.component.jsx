@@ -2,6 +2,7 @@ import styles from "./signIn.styles.module.css";
 import { Link, useNavigate } from "react-router-dom";
 
 import LabelWithInput from "../label-with-input/labelWithInput.component";
+import Button from "../button/Button.component";
 
 const SignIn = () => {
     const navigate = useNavigate();
@@ -27,7 +28,7 @@ const SignIn = () => {
                 </div>
             </div>
             <div className={styles.signIn__row}>
-                <button className={styles.signIn__btn}>Sign in &rarr;</button>
+                <Button text="Sign in &rarr;" />
             </div>
         </div>
     );

@@ -42,11 +42,8 @@
     color: var(--text-color-lighter);
 }
 
-.signIn__btn {
-    padding: 1rem 5rem;
-    background-color: transparent;
-    border-color: var(--gray-color);
-    border-radius: 5px;
-    color: var(--main-color-darker);
-    cursor: pointer;
+.signUp__label {
+    width: 100%;
+    font-size: 1.8rem;
+    color: var(--text-color-lighter);
 }

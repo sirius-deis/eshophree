@@ -1,0 +1,13 @@
+.btn {
+    padding: 1rem 5rem;
+    background-color: transparent;
+    border-color: var(--additional-color);
+    border-radius: 5px;
+    color: var(--main-color-darker);
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: var(--additional-color-darker);
+    transform: scale(1.1);
+}
