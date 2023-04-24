@@ -2,12 +2,13 @@ import styles from "./signIn.styles.module.css";
 import { Link, useNavigate } from "react-router-dom";
 
 import LabelWithInput from "../label-with-input/labelWithInput.component";
+import CheckBoxWithLabel from "../checkbox-with-label/checkboxWithLabel.component";
 import Button from "../button/Button.component";
 
 const SignIn = () => {
     const navigate = useNavigate();
     return (
-        <div className={styles.signIn}>
+        <form className={styles.signIn}>
             <div className={styles.signIn__row}>
                 <LabelWithInput label="Email Address*" type="text" placeholder="Enter your email address" />
             </div>
@@ -17,10 +18,9 @@ const SignIn = () => {
             <div className={styles.signIn__row}>
                 <div className={styles.signIn__wrapper}>
                     <div className={styles.signIn__remember}>
-                        <input type="checkbox" id="check" />
-                        <label className={styles.signIn__label} htmlFor="check">
-                            Remember me
-                        </label>
+                        <CheckBoxWithLabel>
+                            <span>Remember me</span>
+                        </CheckBoxWithLabel>
                     </div>
                     <div className={styles.signIn__forgot}>
                         <Link to="/">Forgot password?</Link>
@@ -28,9 +28,9 @@ const SignIn = () => {
                 </div>
             </div>
             <div className={styles.signIn__row}>
-                <Button text="Sign in &rarr;" />
+                <Button>{"Sign in &rarr;"}</Button>
             </div>
-        </div>
+        </form>
     );
 };
 

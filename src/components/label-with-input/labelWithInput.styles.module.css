@@ -1,6 +1,6 @@
 .label {
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--text-color-lighter);
 }
 
@@ -8,4 +8,13 @@
     width: 100%;
     padding: 0.5rem 1rem;
     font-size: 1.6rem;
+}
+
+.input.error {
+    border-color: var(--red-color);
+}
+
+.error {
+    font-size: 1.4rem;
+    color: var(--red-color);
 }

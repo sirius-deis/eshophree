@@ -1,5 +1,8 @@
 .btn {
+    min-width: 20rem;
+    min-height: 4.5rem;
     padding: 1rem 5rem;
+    position: relative;
     background-color: transparent;
     border-color: var(--additional-color);
     border-radius: 5px;
@@ -7,7 +10,7 @@
     cursor: pointer;
 }
 
-.btn:hover {
+.btn:not(:disabled):hover {
     border-color: var(--additional-color-darker);
     transform: scale(1.1);
 }
