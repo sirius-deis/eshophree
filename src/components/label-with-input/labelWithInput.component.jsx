@@ -1,6 +1,6 @@
 import styles from "./labelWithInput.styles.module.css";
 
-const LabelWithInput = ({ label, type, placeholder, error, handler }) => {
+const LabelWithInput = ({ label, type, placeholder, value, error, handler }) => {
     const onChangeHandler = (event) => {
         handler(event.target.value);
     };
@@ -13,6 +13,7 @@ const LabelWithInput = ({ label, type, placeholder, error, handler }) => {
                     className={`${styles.input} ${error ? styles.error : ""}`}
                     type={type}
                     placeholder={placeholder}
+                    value={value}
                     onChange={onChangeHandler}
                 />
             </label>

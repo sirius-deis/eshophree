@@ -44,7 +44,7 @@ const AuthWrapper = () => {
             <div className={styles.auth__line}></div>
             <div className={`${styles.auth__toggleContainer} ${isToggled ? styles.auth__toggle : ""}`}>
                 <SignIn />
-                <SignUp />
+                <SignUp toggler={toggleTabToFalse} />
             </div>
         </div>
     );

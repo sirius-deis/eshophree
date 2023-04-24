@@ -8,13 +8,9 @@ import CheckBoxWithLabel from "../checkbox-with-label/checkboxWithLabel.componen
 import Button from "../button/Button.component";
 import Loader from "../loader/loader.component";
 
-const checkIfBlank = (state, setErrorFn) => {
-    if (state.trim().length < 1) {
-        setErrorFn("This field cannot be blank");
-    }
-};
+import { checkIfBlank, fetchToServer } from "../../utils/util";
 
-const SignUp = () => {
+const SignUp = ({ toggler }) => {
     const [name, setName] = useState("");
     const [nameErr, setNameErr] = useState(null);
     const [surname, setSurname] = useState("");
@@ -29,7 +25,7 @@ const SignUp = () => {
     const [isCheckedErr, setIsCheckedErr] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleClick = (setFn) => {
+    const handleChange = (setFn) => {
         return (value) => {
             setFn(value);
         };
@@ -37,20 +33,33 @@ const SignUp = () => {
 
     const tryToSignUp = async () => {
         setIsLoading(true);
-        const response = await fetch("http://localhost:3000/api/v1/users/signup", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                name,
-                surname,
-                email,
-                password,
-                passwordConfirm,
-            }),
-        });
-        setIsLoading(false);
-        if (!response.ok) {
+        try {
+            await fetchToServer("http://localhost:3000/api/v1/users/signup", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name,
+                    surname,
+                    email,
+                    password,
+                    passwordConfirm,
+                }),
+            });
+            restForm();
+            toggler();
+        } catch (error) {
+            //TODO:
         }
+        setIsLoading(false);
+    };
+
+    const restForm = () => {
+        setName("");
+        setSurname("");
+        setEmail("");
+        setPassword("");
+        setPasswordConfirm("");
+        setIsChecked(false);
     };
 
     const handleSubmit = (event) => {
@@ -82,8 +91,9 @@ const SignUp = () => {
                         label="First name*"
                         type="text"
                         placeholder="Enter your name"
+                        value={name}
                         error={nameErr}
-                        handler={handleClick(setName)}
+                        handler={handleChange(setName)}
                     />
                 </div>
                 <div className={styles.signUp__col}>
@@ -91,8 +101,9 @@ const SignUp = () => {
                         label="Last name*"
                         type="text"
                         placeholder="Enter your last name"
+                        value={surname}
                         error={surnameErr}
-                        handler={handleClick(setSurname)}
+                        handler={handleChange(setSurname)}
                     />
                 </div>
             </div>
@@ -102,8 +113,9 @@ const SignUp = () => {
                         label="Email address*"
                         type="email"
                         placeholder="Enter your email address"
+                        value={email}
                         error={emailErr}
-                        handler={handleClick(setEmail)}
+                        handler={handleChange(setEmail)}
                     />
                 </div>
             </div>
@@ -113,8 +125,9 @@ const SignUp = () => {
                         label="Password*"
                         type="password"
                         placeholder="Enter your password"
+                        value={password}
                         error={passwordErr}
-                        handler={handleClick(setPassword)}
+                        handler={handleChange(setPassword)}
                     />
                 </div>
                 <div className={styles.signUp__col}>
@@ -122,20 +135,21 @@ const SignUp = () => {
                         label="Confirm password*"
                         type="password"
                         placeholder="Confirm your password"
+                        value={passwordConfirm}
                         error={passwordConfirmErr}
-                        handler={handleClick(setPasswordConfirm)}
+                        handler={handleChange(setPasswordConfirm)}
                     />
                 </div>
             </div>
             <div className={styles.signUp__row}>
-                <CheckBoxWithLabel error={isCheckedErr} handler={handleClick(setIsChecked)}>
+                <CheckBoxWithLabel checked={isChecked} error={isCheckedErr} handler={handleChange(setIsChecked)}>
                     <span>I agree to the</span>
                     <Link to="/policy">privacy policy</Link>
                     <span> *</span>
                 </CheckBoxWithLabel>
             </div>
             <div className={styles.signUp__row}>
-                <Button disabled={isLoading}> {isLoading ? <Loader size={3} /> : "Sign up &rarr;"} </Button>
+                <Button disabled={isLoading}> {isLoading ? <Loader size={3} /> : <span>Sign up &rarr;</span>} </Button>
             </div>
         </form>
     );
