@@ -3,7 +3,14 @@ import PropTypes from "prop-types";
 import styles from "./dropdown.styles.module.css";
 
 const Dropdown = ({ children }) => {
-    return <div className={styles.dropdown}>{children}</div>;
+    const handleClick = (e) => {
+        e.stopPropagation();
+    };
+    return (
+        <div className={styles.dropdown} onClick={handleClick}>
+            {children}
+        </div>
+    );
 };
 
 Dropdown.propTypes = {

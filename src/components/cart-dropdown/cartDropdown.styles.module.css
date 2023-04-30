@@ -1,0 +1,35 @@
+.cart {
+    min-width: 30rem;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cart__heading {
+    font-size: 1.5rem;
+}
+
+.cart__container {
+    max-height: 25rem;
+    overflow-y: auto;
+}
+
+.cart__info {
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.cart__info:first-child {
+    text-transform: uppercase;
+}
+
+.cart__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}

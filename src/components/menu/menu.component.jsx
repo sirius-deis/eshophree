@@ -6,6 +6,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 import Dropdown from "../dropdown/dropdown.component";
 import UserDropdown from "../user-dropdown/userDropdown.component";
+import CartDropdown from "../cart-dropdown/cartDropdown.component";
 import styles from "./menu.styles.module.css";
 
 const Menu = () => {
@@ -17,7 +18,7 @@ const Menu = () => {
         setIsCartOpen(!isCartOpen);
     };
 
-    const toggleDropdown = () => {
+    const toggleDropdown = (e) => {
         setIsCartOpen(false);
         setIsDropdownOpen(!isDropdownOpen);
     };
@@ -45,6 +46,11 @@ const Menu = () => {
                     <span className={`${isCartOpen ? styles.open : ""}`}>
                         £{cart.price.toFixed(2)} <MdOutlineKeyboardArrowDown />
                     </span>
+                    {isCartOpen && (
+                        <Dropdown>
+                            <CartDropdown products={cart.products} price={cart.price} />
+                        </Dropdown>
+                    )}
                 </li>
             </ul>
         </div>

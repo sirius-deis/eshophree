@@ -2,9 +2,12 @@ import PropTypes from "prop-types";
 
 import styles from "./button.styles.module.css";
 
-const Button = ({ children, disabled, rounded }) => {
+const Button = ({ children, disabled, rounded, color }) => {
     return (
-        <button disabled={disabled} className={`${styles.btn} ${rounded ? styles.rounded : ""}`}>
+        <button
+            disabled={disabled}
+            className={`${styles.btn} ${rounded ? styles.rounded : ""} ${color ? styles[`btn--${color}`] : ""}`}
+        >
             {children}
         </button>
     );
