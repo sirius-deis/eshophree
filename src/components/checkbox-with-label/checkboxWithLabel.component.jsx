@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import styles from "./checkBoxWithLabel.styles.module.css";
 
 const CheckBoxWithLabel = ({ children, checked, error, handler }) => {
@@ -13,6 +15,13 @@ const CheckBoxWithLabel = ({ children, checked, error, handler }) => {
             {error && <p className={styles.error}>{error}</p>}
         </label>
     );
+};
+
+CheckBoxWithLabel.propTypes = {
+    children: PropTypes.node,
+    checked: PropTypes.bool,
+    error: PropTypes.string,
+    handler: PropTypes.func,
 };
 
 export default CheckBoxWithLabel;

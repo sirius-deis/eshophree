@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import styles from "./Button.styles.module.css";
+import styles from "./button.styles.module.css";
 
 const Button = ({ children, disabled, rounded }) => {
     return (

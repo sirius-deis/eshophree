@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./notFound.styles.module.css";
 
 import Search from "../../components/search/search.component";
-import Button from "../../components/button/Button.component";
+import Button from "../../components/button/button.component";
 
 const NotFound = () => {
     return (

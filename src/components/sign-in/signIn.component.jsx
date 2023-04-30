@@ -6,7 +6,7 @@ import { signIn } from "../../store/user/user.actions";
 import styles from "./signIn.styles.module.css";
 import LabelWithInput from "../label-with-input/labelWithInput.component";
 import CheckBoxWithLabel from "../checkbox-with-label/checkboxWithLabel.component";
-import Button from "../button/Button.component";
+import Button from "../button/button.component";
 import Loader from "../loader/loader.component";
 
 import { checkIfBlank, fetchToServer } from "../../utils/util";
