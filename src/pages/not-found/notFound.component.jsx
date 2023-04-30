@@ -15,7 +15,7 @@ const NotFound = () => {
                     Sorry but the page you are looking for does not exist, have been removed, name changed or is
                     temporarily unavailable.
                 </p>
-                <Search rounded={true} withDropdown={false} />
+                <Search rounded={true} showDropdown={false} />
                 <Button rounded={true}>
                     <Link className={styles["not-found__link"]} to="/">
                         Back to home page

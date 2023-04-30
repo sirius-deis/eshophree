@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineArrowDropDown } from "react-icons/md";
@@ -8,7 +9,7 @@ import CategoryDropdown from "../category-dropdown/categoryDropdown.component";
 
 import styles from "./search.styles.module.css";
 
-const Search = ({ categories = [], withDropdown = true, rounded }) => {
+const Search = ({ categories = [], showDropdown = true, rounded }) => {
     const [chosenCategory, setChosenCategory] = useState("all");
     const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +24,7 @@ const Search = ({ categories = [], withDropdown = true, rounded }) => {
 
     return (
         <form className={`${styles.search} ${rounded ? styles.rounded : ""}`}>
-            {withDropdown && (
+            {showDropdown && (
                 <div className={styles.search__select}>
                     <div className={`${styles.search__chosen} ${isOpen ? styles.open : ""}`} onClick={toggleDropdown}>
                         <span className={styles.chosen}>{chosenCategory}</span> <MdOutlineArrowDropDown />
@@ -41,6 +42,12 @@ const Search = ({ categories = [], withDropdown = true, rounded }) => {
             </button>
         </form>
     );
+};
+
+Search.propTypes = {
+    categories: PropTypes.array,
+    showDropdown: PropTypes.bool,
+    rounded: PropTypes.bool,
 };
 
 export default Search;
