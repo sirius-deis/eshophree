@@ -1,8 +1,9 @@
 import { useDispatch } from "react-redux";
 import styles from "./productsList.styles.module.css";
+import { clearItem } from "../../store/cart/cart.actions";
 
 const ProductsList = ({ products }) => {
-    console.log(products);
+    const dispatch = useDispatch();
     const listToRender = products.map(({ product, quantity }) => {
         return (
             <li className={styles.product__item} key={product._id}>
@@ -14,7 +15,9 @@ const ProductsList = ({ products }) => {
                         <span className={styles.product__quantity}>{quantity}</span>
                     </div>
                 </div>
-                <button className={styles.product__close}>&#215;</button>
+                <button className={styles.product__close} onClick={() => dispatch(clearItem(product._id))}>
+                    &#215;
+                </button>
             </li>
         );
     });
