@@ -1,12 +1,13 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
 import { store } from "../../store/store";
 
-import ProductsList from "./productsList.component";
+import CartDropdown from "./cartDropdown.component";
 
-describe("ProductsList component", () => {
+describe("CartDropdown component", () => {
     const products = [
         {
             product: {
@@ -36,19 +37,16 @@ describe("ProductsList component", () => {
             quantity: 8,
         },
     ];
+    const price = products.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
     it("should render component", () => {
         render(
             <Provider store={store}>
-                <ProductsList products={products} />
+                <BrowserRouter>
+                    <CartDropdown products={products} price={price} />
+                </BrowserRouter>
             </Provider>
         );
         expect(screen.getAllByRole("listitem")).toHaveLength(3);
-        expect(screen.getByText(products[0].quantity)).toBeInTheDocument();
-        expect(screen.getByText(products[1].quantity)).toBeInTheDocument();
-        expect(screen.getByText(products[2].quantity)).toBeInTheDocument();
-
-        expect(screen.getByText(`£${products[0].product.price.toFixed(2)}`)).toBeInTheDocument();
-        expect(screen.getByText(`£${products[1].product.price.toFixed(2)}`)).toBeInTheDocument();
-        expect(screen.getByText(`£${products[2].product.price.toFixed(2)}`)).toBeInTheDocument();
+        expect(screen.getByText(`£${price.toFixed(2)}`)).toBeInTheDocument();
     });
 });
