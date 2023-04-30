@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import styles from "./labelWithInput.styles.module.css";
 
 const LabelWithInput = ({ label, type, placeholder, value, error, handler }) => {
@@ -19,6 +21,15 @@ const LabelWithInput = ({ label, type, placeholder, value, error, handler }) => 
             </label>
         </>
     );
+};
+
+LabelWithInput.propTypes = {
+    label: PropTypes.string,
+    type: PropTypes.string,
+    placeholder: PropTypes.string,
+    value: PropTypes.string,
+    error: PropTypes.string,
+    handler: PropTypes.func,
 };
 
 export default LabelWithInput;
