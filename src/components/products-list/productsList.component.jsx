@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux";
 import styles from "./productsList.styles.module.css";
 
 const ProductsList = ({ products }) => {

@@ -15,9 +15,17 @@
     color: var(--bg-color);
 }
 
+.btn--dark:hover {
+    background-color: var(--text-color-lighter);
+}
+
 .btn--yellow {
     background-color: var(--additional-color-darker);
     color: var(--text-color);
+}
+
+.btn--yellow:hover {
+    background-color: var(--additional-color);
 }
 
 .btn a {
