@@ -2,16 +2,16 @@ import { useDispatch } from "react-redux";
 import styles from "./productsList.styles.module.css";
 
 const ProductsList = ({ products }) => {
-    const listToRender = products.map((product) => {
-        const { productId } = product;
+    console.log(products);
+    const listToRender = products.map(({ product, quantity }) => {
         return (
-            <li className={styles.product__item} key={productId._id}>
-                <img src={`http://localhost:3000/${productId.images[0]}`} width={40} height={40} alt={productId.name} />
+            <li className={styles.product__item} key={product._id}>
+                <img src={`http://localhost:3000/${product.images[0]}`} width={40} height={40} alt={product.name} />
                 <div className={styles.product__center}>
-                    <div className={styles.product__name}>{productId.name}</div>
+                    <div className={styles.product__name}>{product.name}</div>
                     <div className={styles.product__detail}>
-                        <span className={styles.product__price}>£{productId.price.toFixed(2)}</span> x
-                        <span className={styles.product__quantity}>{product.quantity}</span>
+                        <span className={styles.product__price}>£{product.price.toFixed(2)}</span> x
+                        <span className={styles.product__quantity}>{quantity}</span>
                     </div>
                 </div>
                 <button className={styles.product__close}>&#215;</button>

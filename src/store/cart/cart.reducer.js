@@ -14,11 +14,21 @@ const calculatePrice = (products) => {
     return products.reduce((acc, product) => (acc += product.productId.price), 0);
 };
 
+const addProductToCart = (productsInCart, product) => {
+    // const isPresent = productsInCart.findIndex(productInCart => productInCart.)
+};
+
 const cartReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case CartActionTypes.FETCH_ITEMS:
             const products = action.payload;
-            return { products: products, amount: calculateAmount(products), price: calculatePrice(products) };
+            return {
+                products: products.map((item) => ({ product: item.productId, quantity: item.quantity })),
+                amount: calculateAmount(products),
+                price: calculatePrice(products),
+            };
+        case CartActionTypes.ADD_ITEM:
+            return {};
         case CartActionTypes.CLEAR_CART:
             return {};
         default:
