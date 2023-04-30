@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signIn } from "../../store/user/user.actions";
@@ -28,14 +28,12 @@ const SignIn = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        checkIfBlank(email, setEmailErr);
-        checkIfBlank(password, setPasswordErr);
+        checkIfBlank(email, setEmailErr, 5);
+        checkIfBlank(password, setPasswordErr, 5);
         if (!emailErr && !passwordErr) {
             try {
                 setIsLoading(true);
                 const data = await fetchToServer("http://localhost:3000/api/v1/users/login", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
                         email,
                         password,

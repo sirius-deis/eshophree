@@ -1,9 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import styles from "./userDropdown.styles.module.css";
 import { fetchToServer } from "../../utils/util";
 import { signOut } from "../../store/user/user.actions";
+import { clearCart } from "../../store/cart/cart.actions";
 
 const UserDropdown = () => {
     const dispatch = useDispatch();
@@ -11,9 +12,12 @@ const UserDropdown = () => {
 
     const logoutHandler = () => {
         try {
-            fetchToServer("http://localhost:3000/api/v1/users/logout");
+            fetchToServer("http://localhost:3000/api/v1/users/logout", { method: "GET" });
             dispatch(signOut());
-        } catch (error) {}
+            dispatch(clearCart());
+        } catch (error) {
+            //TODO:
+        }
     };
 
     if (!isLoggedIn) {

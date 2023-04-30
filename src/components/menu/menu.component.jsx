@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 import { FaUserCircle, FaRegHeart, FaShoppingBasket } from "react-icons/fa";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
@@ -8,6 +9,7 @@ import UserDropdown from "../user-dropdown/userDropdown.component";
 import styles from "./menu.styles.module.css";
 
 const Menu = () => {
+    const cart = useSelector((state) => state.cart);
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const toggleCart = () => {
@@ -37,11 +39,11 @@ const Menu = () => {
                 </li>
                 <li className={`${styles.menu__item}`} onClick={toggleCart}>
                     <span className={styles.menu__cart}>
-                        <span className={styles.menu__amount}>4</span>
+                        <span className={styles.menu__amount}>{cart.amount}</span>
                         <FaShoppingBasket />
                     </span>
                     <span className={`${isCartOpen ? styles.open : ""}`}>
-                        £80.00 <MdOutlineKeyboardArrowDown />
+                        £{cart.price.toFixed(2)} <MdOutlineKeyboardArrowDown />
                     </span>
                 </li>
             </ul>

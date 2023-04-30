@@ -35,8 +35,6 @@ const SignUp = ({ toggler }) => {
         setIsLoading(true);
         try {
             await fetchToServer("http://localhost:3000/api/v1/users/signup", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     name,
                     surname,
@@ -64,11 +62,11 @@ const SignUp = ({ toggler }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        checkIfBlank(name, setNameErr);
-        checkIfBlank(surname, setSurnameErr);
-        checkIfBlank(email, setEmailErr);
-        checkIfBlank(password, setPasswordErr);
-        checkIfBlank(passwordConfirm, setPasswordConfirmErr);
+        checkIfBlank(name, setNameErr, 3);
+        checkIfBlank(surname, setSurnameErr, 3);
+        checkIfBlank(email, setEmailErr, 5);
+        checkIfBlank(password, setPasswordErr, 5);
+        checkIfBlank(passwordConfirm, setPasswordConfirmErr, 5);
         if (!isChecked) {
             setIsCheckedErr("You should confirm privacy policy");
         }

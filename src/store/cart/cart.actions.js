@@ -6,3 +6,9 @@ export const addItems = (items) => {
         payload: items,
     };
 };
+
+export const clearCart = () => {
+    return {
+        type: CartActionTypes.CLEAR_CART,
+    };
+};
