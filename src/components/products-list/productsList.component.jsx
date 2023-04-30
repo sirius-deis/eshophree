@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { useDispatch } from "react-redux";
 import styles from "./productsList.styles.module.css";
 import { clearItem } from "../../store/cart/cart.actions";
@@ -22,6 +24,10 @@ const ProductsList = ({ products }) => {
         );
     });
     return <ul className={styles.product__list}>{listToRender}</ul>;
+};
+
+ProductsList.propTypes = {
+    products: PropTypes.array,
 };
 
 export default ProductsList;

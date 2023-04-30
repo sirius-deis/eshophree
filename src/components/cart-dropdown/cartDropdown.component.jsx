@@ -1,3 +1,5 @@
+import PropTypes, { number } from "prop-types";
+
 import { Link } from "react-router-dom";
 
 import styles from "./cartDropdown.styles.module.css";
@@ -35,6 +37,11 @@ const CartDropdown = ({ products, price }) => {
             </div>
         </div>
     );
+};
+
+CartDropdown.propTypes = {
+    products: PropTypes.array,
+    price: number,
 };
 
 export default CartDropdown;
