@@ -6,7 +6,9 @@ const INITIAL_STATE = {
     price: 0,
 };
 
-const calculateAmount = () => {};
+const calculateAmount = (products) => {
+    return;
+};
 
 const cartReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {

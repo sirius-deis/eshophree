@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./header.styles.module.css";
 
+import Logo from "../../assets/images/logo.jpg";
 import Search from "../search/search.component";
 import Menu from "../menu/menu.component";
 import Category from "../category/category.component";
@@ -13,7 +14,7 @@ const Header = () => {
         <header className={styles.header}>
             <div className={`${styles.header__top} container`}>
                 <Link to="/">
-                    <img src="/images/logo.jpg" width="190" height="45" alt="logo" className={styles.header__logo} />
+                    <img src={Logo} width="190" height="45" alt="logo" className={styles.header__logo} />
                 </Link>
                 <Search categories={categories} />
                 <Menu />

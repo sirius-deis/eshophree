@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.rounded {
+    border-radius: 25px;
+}
+
 .btn:not(:disabled):hover {
     border-color: var(--additional-color-darker);
     transform: scale(1.1);

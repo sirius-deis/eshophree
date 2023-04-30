@@ -9,24 +9,27 @@ const useFetch = (url, options) => {
         const abortController = new AbortController();
         const fetchData = async () => {
             setIsLoading(true);
-
-            const response = await fetch(url, { ...options, signal: abortController.signal });
-            if (!response.ok) {
-                throw new Error(response.statusText);
+            try {
+                const response = await fetch(url, {
+                    ...options,
+                    signal: abortController.signal,
+                    credentials: "include",
+                });
+                if (!response.ok) {
+                    throw new Error(response.statusText);
+                }
+                const receivedData = await response.json();
+                setData(receivedData);
+            } catch (error) {
+                setError(error);
             }
-            const receivedData = await response.json();
-            setData(receivedData);
             setIsLoading(false);
         };
-        try {
-            fetchData();
-        } catch (error) {
-            setError(error);
-            setIsLoading(false);
-        }
+        fetchData();
         return () => {
             abortController.abort();
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [url]);
 
     return [data, isLoading, error];
