@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import styles from "./loader.styles.module.css";
 
 const Loader = ({ size = 4 }) => {
@@ -8,6 +10,10 @@ const Loader = ({ size = 4 }) => {
             ))}
         </div>
     );
+};
+
+Loader.propTypes = {
+    size: PropTypes.number,
 };
 
 export default Loader;
