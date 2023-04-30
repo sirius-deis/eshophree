@@ -5,10 +5,10 @@ import Category from "./category.component";
 
 describe("Category component", () => {
     const props = [
-        { id: 0, linkUrl: "/gaming", title: "gaming" },
-        { id: 1, linkUrl: "/cameras", title: "cameras" },
-        { id: 2, linkUrl: "/components", title: "components" },
-        { id: 3, linkUrl: "/laptop-and-computers", title: "laptop and computers" },
+        { id: 1, linkUrl: "/gaming", title: "gaming" },
+        { id: 2, linkUrl: "/cameras", title: "cameras" },
+        { id: 3, linkUrl: "/components", title: "components" },
+        { id: 4, linkUrl: "/laptop-and-computers", title: "laptop and computers" },
     ];
     it("should render component", () => {
         render(

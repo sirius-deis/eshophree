@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import styles from "./categoryDropdown.styles.module.css";
 
 const CategoryDropdown = ({ categories, chooseCategory }) => {
@@ -10,6 +12,11 @@ const CategoryDropdown = ({ categories, chooseCategory }) => {
         </li>
     ));
     return <ul className={styles.category__list}>{listToRender}</ul>;
+};
+
+CategoryDropdown.propTypes = {
+    categories: PropTypes.array,
+    chooseCategory: PropTypes.func,
 };
 
 export default CategoryDropdown;
