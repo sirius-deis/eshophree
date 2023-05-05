@@ -1,18 +1,21 @@
-import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import styles from "./userDropdown.styles.module.css";
-import { fetchToServer } from "../../utils/util";
-import { signOut } from "../../store/user/user.actions";
-import { clearCart } from "../../store/cart/cart.actions";
+import styles from './userDropdown.styles.module.css';
+import { fetchToServer } from '../../utils/util';
+import { signOut } from '../../store/user/user.actions';
+import { clearCart } from '../../store/cart/cart.actions';
 
-const UserDropdown = () => {
+const UserDropdown = ({ toggleDropdown }) => {
     const dispatch = useDispatch();
-    const { isLoggedIn, currentUser } = useSelector((state) => state.user);
+    const { isLoggedIn, currentUser } = useSelector(state => state.user);
 
     const logoutHandler = () => {
         try {
-            fetchToServer("http://localhost:3000/api/v1/users/logout", { method: "GET" });
+            fetchToServer('http://localhost:3000/api/v1/users/logout', {
+                method: 'GET',
+            });
             dispatch(signOut());
             dispatch(clearCart());
         } catch (error) {
@@ -20,17 +23,29 @@ const UserDropdown = () => {
         }
     };
 
+    const onClickHandle = () => {
+        toggleDropdown();
+    };
+
     if (!isLoggedIn) {
         return (
             <div className={styles.user}>
                 <ul className={styles.user_list}>
                     <li className={styles.user__item}>
-                        <Link className={styles.user__link} to="/login">
+                        <Link
+                            className={styles.user__link}
+                            to='/login'
+                            onClick={onClickHandle}
+                        >
                             Sign in
                         </Link>
                     </li>
                     <li className={styles.user__item}>
-                        <Link className={styles.user__link} to="/login?toggled=true">
+                        <Link
+                            className={styles.user__link}
+                            to='/login'
+                            onClick={onClickHandle}
+                        >
                             Sign up
                         </Link>
                     </li>
@@ -43,17 +58,17 @@ const UserDropdown = () => {
             <h2 className={styles.user__name}>{currentUser.name}</h2>
             <ul className={styles.user_list}>
                 <li className={styles.user__item}>
-                    <Link className={styles.user__link} to="/me">
+                    <Link className={styles.user__link} to='/me'>
                         My account
                     </Link>
                 </li>
                 <li className={styles.user__item}>
-                    <Link className={styles.user__link} to="/orders">
+                    <Link className={styles.user__link} to='/orders'>
                         Orders
                     </Link>
                 </li>
                 <li className={styles.user__item}>
-                    <Link className={styles.user__link} to="/reviews">
+                    <Link className={styles.user__link} to='/reviews'>
                         Reviews
                     </Link>
                 </li>
@@ -63,6 +78,10 @@ const UserDropdown = () => {
             </button>
         </div>
     );
+};
+
+UserDropdown.propTypes = {
+    toggleDropdown: PropTypes.func,
 };
 
 export default UserDropdown;

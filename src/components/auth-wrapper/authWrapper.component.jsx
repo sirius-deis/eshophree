@@ -1,22 +1,18 @@
-import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useState } from 'react';
 
-import styles from "./authWrapper.styles.module.css";
-import SignIn from "../sign-in/signIn.component";
-import SignUp from "../sign-up/signUp.component";
+import styles from './authWrapper.styles.module.css';
+import SignIn from '../sign-in/signIn.component';
+import SignUp from '../sign-up/signUp.component';
 
 const AuthWrapper = () => {
-    const [searchParams, setSearchParams] = useSearchParams();
-    const [isToggled, setIsToggled] = useState(searchParams.get("toggled"));
+    const [isToggled, setIsToggled] = useState('false');
 
     const toggleTabToFalse = () => {
         setIsToggled(false);
-        setSearchParams("");
     };
 
     const toggleTabToTrue = () => {
         setIsToggled(true);
-        setSearchParams("toggled=true");
     };
 
     return (
@@ -24,7 +20,9 @@ const AuthWrapper = () => {
             <ul className={styles.auth__tabs}>
                 <li className={styles.auth__tab}>
                     <button
-                        className={`${styles.auth__toggleTab} ${!isToggled ? styles.active : ""}`}
+                        className={`${styles.auth__toggleTab} ${
+                            !isToggled ? styles.active : ''
+                        }`}
                         onClick={toggleTabToFalse}
                     >
                         Sign in
@@ -33,7 +31,9 @@ const AuthWrapper = () => {
                 </li>
                 <li className={styles.auth__tab}>
                     <button
-                        className={`${styles.auth__toggleTab} ${isToggled ? styles.active : ""}`}
+                        className={`${styles.auth__toggleTab} ${
+                            isToggled ? styles.active : ''
+                        }`}
                         onClick={toggleTabToTrue}
                     >
                         Sign up
@@ -42,7 +42,11 @@ const AuthWrapper = () => {
                 </li>
             </ul>
             <div className={styles.auth__line}></div>
-            <div className={`${styles.auth__toggleContainer} ${isToggled ? styles.auth__toggle : ""}`}>
+            <div
+                className={`${styles.auth__toggleContainer} ${
+                    isToggled ? styles.auth__toggle : ''
+                }`}
+            >
                 <SignIn />
                 <SignUp toggler={toggleTabToFalse} />
             </div>

@@ -45,6 +45,7 @@
 }
 
 .auth__toggleContainer {
+    width: 100%;
     display: flex;
     align-items: center;
     transition: transform ease-out 0.5s;

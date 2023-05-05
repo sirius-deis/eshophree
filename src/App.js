@@ -12,6 +12,7 @@ import Home from "./pages/home/home.component";
 import Loader from "./components/loader/loader.component";
 
 const SignInAndSignUp = React.lazy(() => import("./pages/login/signIn-and-signUp"));
+const Products = React.lazy(() => import("./pages/products/products"));
 const NotFound = React.lazy(() => import("./pages/not-found/notFound.component"));
 
 function App() {
@@ -33,6 +34,14 @@ function App() {
                     element={
                         <Suspense fallback={<Loader size={20} />}>
                             <SignInAndSignUp />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="/products"
+                    element={
+                        <Suspense fallback={<Loader size={20} />}>
+                            <Products />
                         </Suspense>
                     }
                 />
