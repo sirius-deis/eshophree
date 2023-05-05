@@ -7,6 +7,32 @@ import Slider from '../../components/slider/slider.component';
 
 const Products = () => {
     const categoryList = useSelector(state => state.category.sections);
+    const tempSlides = [
+        {
+            url: '/images/slide-1.png',
+            id: '1',
+            header: 'Deals and Promotions',
+            subheader: 'Beast by Dre Studio 3',
+            regular: '$349.95',
+            promotion: '$279.00',
+        },
+        {
+            url: '/images/slide-1.png',
+            id: '1',
+            header: 'Deals and Promotions',
+            subheader: 'Beast by Dre Studio 3',
+            regular: '$349.95',
+            promotion: '$279.00',
+        },
+        {
+            url: '/images/slide-1.png',
+            id: '1',
+            header: 'Deals and Promotions',
+            subheader: 'Beast by Dre Studio 3',
+            regular: '$349.95',
+            promotion: '$279.00',
+        },
+    ];
     return (
         <div className='container'>
             <div className={styles.products}>
@@ -16,7 +42,7 @@ const Products = () => {
                     </Accordion>
                 </div>
                 <div className={styles.products__right}>
-                    <Slider />
+                    <Slider slides={tempSlides} />
                 </div>
             </div>
         </div>

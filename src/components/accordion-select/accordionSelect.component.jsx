@@ -2,7 +2,7 @@ import PropTypes, { bool } from 'prop-types';
 
 import styles from './accordionSelect.styles.module.css';
 
-const AccordionSelect = ({ list = [] }) => {
+const AccordionSelect = ({ list = [], isOpened }) => {
     const listToRender = list.map(item => (
         <li className={styles.accordion__item} key={item.id}>
             <input

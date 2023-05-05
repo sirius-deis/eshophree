@@ -5,7 +5,7 @@ import { MdOutlineArrowDropDown } from 'react-icons/md';
 import styles from './accordion.styles.module.css';
 
 const Accordion = ({ children, label }) => {
-    const [isOpened, setIsOpened] = useState(false);
+    const [isOpened, setIsOpened] = useState(true);
     const onClickHandler = () => {
         setIsOpened(!isOpened);
     };

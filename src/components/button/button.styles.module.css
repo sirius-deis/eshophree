@@ -4,7 +4,7 @@
     padding: 1rem 5rem;
     position: relative;
     background-color: transparent;
-    border-color: var(--additional-color);
+    border: 0;
     border-radius: 5px;
     color: var(--main-color-darker);
     cursor: pointer;
@@ -26,6 +26,16 @@
 
 .btn--yellow:hover {
     background-color: var(--additional-color);
+}
+
+.btn--blue {
+    background-color: var(--blue-color);
+    color: var(--text-color);
+}
+
+.btn--blue:hover {
+    background-color: var(--blue-color-darker);
+    color: var(--text-color);
 }
 
 .btn a {
