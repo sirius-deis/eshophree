@@ -1,0 +1,13 @@
+.products {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.products__left {
+    min-width: 20%;
+}
+
+.products__right {
+    min-width: 80%;
+}
