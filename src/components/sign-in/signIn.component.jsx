@@ -1,44 +1,47 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { signIn } from "../../store/user/user.actions";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { signIn } from '../../store/user/user.actions';
 
-import styles from "./signIn.styles.module.css";
-import LabelWithInput from "../label-with-input/labelWithInput.component";
-import CheckBoxWithLabel from "../checkbox-with-label/checkboxWithLabel.component";
-import Button from "../button/button.component";
-import Loader from "../loader/loader.component";
+import styles from './signIn.styles.module.css';
+import LabelWithInput from '../label-with-input/labelWithInput.component';
+import CheckBoxWithLabel from '../checkbox-with-label/checkboxWithLabel.component';
+import Button from '../button/button.component';
+import Loader from '../loader/loader.component';
 
-import { checkIfBlank, fetchToServer } from "../../utils/util";
+import { checkIfBlank, fetchToServer } from '../../utils/util';
 
 const SignIn = () => {
     const dispatch = useDispatch();
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState('');
     const [emailErr, setEmailErr] = useState(null);
-    const [password, setPassword] = useState("");
+    const [password, setPassword] = useState('');
     const [passwordErr, setPasswordErr] = useState(null);
     const [isChecked, setIsChecked] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleChange = (setFn) => {
-        return (value) => {
+    const handleChange = setFn => {
+        return value => {
             setFn(value);
         };
     };
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async event => {
         event.preventDefault();
         checkIfBlank(email, setEmailErr, 5);
         checkIfBlank(password, setPasswordErr, 5);
         if (!emailErr && !passwordErr) {
             try {
                 setIsLoading(true);
-                const data = await fetchToServer("http://localhost:3000/api/v1/users/login", {
-                    body: JSON.stringify({
-                        email,
-                        password,
-                    }),
-                });
+                const data = await fetchToServer(
+                    'http://localhost:3000/api/v1/users/login',
+                    {
+                        body: JSON.stringify({
+                            email,
+                            password,
+                        }),
+                    }
+                );
                 dispatch(signIn(data.data.user));
             } catch (error) {
                 //TODO:
@@ -51,9 +54,9 @@ const SignIn = () => {
         <form className={styles.signIn} onSubmit={handleSubmit}>
             <div className={styles.signIn__row}>
                 <LabelWithInput
-                    label="Email Address*"
-                    type="text"
-                    placeholder="Enter your email address"
+                    label='Email Address*'
+                    type='text'
+                    placeholder='Enter your email address'
                     value={email}
                     error={emailErr}
                     handler={handleChange(setEmail)}
@@ -61,9 +64,9 @@ const SignIn = () => {
             </div>
             <div className={styles.signIn__row}>
                 <LabelWithInput
-                    label="Password*"
-                    type="password"
-                    placeholder="Enter your password"
+                    label='Password*'
+                    type='password'
+                    placeholder='Enter your password'
                     value={password}
                     error={passwordErr}
                     handler={handleChange(setPassword)}
@@ -72,17 +75,26 @@ const SignIn = () => {
             <div className={styles.signIn__row}>
                 <div className={styles.signIn__wrapper}>
                     <div className={styles.signIn__remember}>
-                        <CheckBoxWithLabel checked={isChecked} handler={handleChange(setIsChecked)}>
+                        <CheckBoxWithLabel
+                            checked={isChecked}
+                            handler={handleChange(setIsChecked)}
+                        >
                             <span>Remember me</span>
                         </CheckBoxWithLabel>
                     </div>
                     <div className={styles.signIn__forgot}>
-                        <Link to="/">Forgot password?</Link>
+                        <Link to='/'>Forgot password?</Link>
                     </div>
                 </div>
             </div>
             <div className={styles.signIn__row}>
-                <Button disabled={isLoading}>{isLoading ? <Loader size={3} /> : <span>Sign in &rarr;</span>}</Button>
+                <Button disabled={isLoading} color='yellow'>
+                    {isLoading ? (
+                        <Loader size={3} />
+                    ) : (
+                        <span>Sign in &rarr;</span>
+                    )}
+                </Button>
             </div>
         </form>
     );

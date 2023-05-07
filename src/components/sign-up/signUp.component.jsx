@@ -1,32 +1,32 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-import styles from "./signUp.styles.module.css";
+import styles from './signUp.styles.module.css';
 
-import LabelWithInput from "../label-with-input/labelWithInput.component";
-import CheckBoxWithLabel from "../checkbox-with-label/checkboxWithLabel.component";
-import Button from "../button/button.component";
-import Loader from "../loader/loader.component";
+import LabelWithInput from '../label-with-input/labelWithInput.component';
+import CheckBoxWithLabel from '../checkbox-with-label/checkboxWithLabel.component';
+import Button from '../button/button.component';
+import Loader from '../loader/loader.component';
 
-import { checkIfBlank, fetchToServer } from "../../utils/util";
+import { checkIfBlank, fetchToServer } from '../../utils/util';
 
 const SignUp = ({ toggler }) => {
-    const [name, setName] = useState("");
+    const [name, setName] = useState('');
     const [nameErr, setNameErr] = useState(null);
-    const [surname, setSurname] = useState("");
+    const [surname, setSurname] = useState('');
     const [surnameErr, setSurnameErr] = useState(null);
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState('');
     const [emailErr, setEmailErr] = useState(null);
-    const [password, setPassword] = useState("");
+    const [password, setPassword] = useState('');
     const [passwordErr, setPasswordErr] = useState(null);
-    const [passwordConfirm, setPasswordConfirm] = useState("");
+    const [passwordConfirm, setPasswordConfirm] = useState('');
     const [passwordConfirmErr, setPasswordConfirmErr] = useState(null);
     const [isChecked, setIsChecked] = useState(false);
     const [isCheckedErr, setIsCheckedErr] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleChange = (setFn) => {
-        return (value) => {
+    const handleChange = setFn => {
+        return value => {
             setFn(value);
         };
     };
@@ -34,7 +34,7 @@ const SignUp = ({ toggler }) => {
     const tryToSignUp = async () => {
         setIsLoading(true);
         try {
-            await fetchToServer("http://localhost:3000/api/v1/users/signup", {
+            await fetchToServer('http://localhost:3000/api/v1/users/signup', {
                 body: JSON.stringify({
                     name,
                     surname,
@@ -52,15 +52,15 @@ const SignUp = ({ toggler }) => {
     };
 
     const restForm = () => {
-        setName("");
-        setSurname("");
-        setEmail("");
-        setPassword("");
-        setPasswordConfirm("");
+        setName('');
+        setSurname('');
+        setEmail('');
+        setPassword('');
+        setPasswordConfirm('');
         setIsChecked(false);
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = event => {
         event.preventDefault();
         checkIfBlank(name, setNameErr, 3);
         checkIfBlank(surname, setSurnameErr, 3);
@@ -68,13 +68,20 @@ const SignUp = ({ toggler }) => {
         checkIfBlank(password, setPasswordErr, 5);
         checkIfBlank(passwordConfirm, setPasswordConfirmErr, 5);
         if (!isChecked) {
-            setIsCheckedErr("You should confirm privacy policy");
+            setIsCheckedErr('You should confirm privacy policy');
         }
 
-        if (!nameErr && !surnameErr && !emailErr && !passwordErr && !passwordConfirmErr && !isCheckedErr) {
+        if (
+            !nameErr &&
+            !surnameErr &&
+            !emailErr &&
+            !passwordErr &&
+            !passwordConfirmErr &&
+            !isCheckedErr
+        ) {
             if (password !== passwordConfirm) {
-                setPasswordErr("Passwords are not the same");
-                setPasswordConfirmErr("Passwords are not the same");
+                setPasswordErr('Passwords are not the same');
+                setPasswordConfirmErr('Passwords are not the same');
                 return;
             }
             tryToSignUp();
@@ -86,9 +93,9 @@ const SignUp = ({ toggler }) => {
             <div className={styles.signUp__row}>
                 <div className={styles.signUp__col}>
                     <LabelWithInput
-                        label="First name*"
-                        type="text"
-                        placeholder="Enter your name"
+                        label='First name*'
+                        type='text'
+                        placeholder='Enter your name'
                         value={name}
                         error={nameErr}
                         handler={handleChange(setName)}
@@ -96,9 +103,9 @@ const SignUp = ({ toggler }) => {
                 </div>
                 <div className={styles.signUp__col}>
                     <LabelWithInput
-                        label="Last name*"
-                        type="text"
-                        placeholder="Enter your last name"
+                        label='Last name*'
+                        type='text'
+                        placeholder='Enter your last name'
                         value={surname}
                         error={surnameErr}
                         handler={handleChange(setSurname)}
@@ -106,11 +113,11 @@ const SignUp = ({ toggler }) => {
                 </div>
             </div>
             <div className={styles.signUp__row}>
-                <div className={styles["signUp__col--long"]}>
+                <div className={styles['signUp__col--long']}>
                     <LabelWithInput
-                        label="Email address*"
-                        type="email"
-                        placeholder="Enter your email address"
+                        label='Email address*'
+                        type='email'
+                        placeholder='Enter your email address'
                         value={email}
                         error={emailErr}
                         handler={handleChange(setEmail)}
@@ -120,9 +127,9 @@ const SignUp = ({ toggler }) => {
             <div className={styles.signUp__row}>
                 <div className={styles.signUp__col}>
                     <LabelWithInput
-                        label="Password*"
-                        type="password"
-                        placeholder="Enter your password"
+                        label='Password*'
+                        type='password'
+                        placeholder='Enter your password'
                         value={password}
                         error={passwordErr}
                         handler={handleChange(setPassword)}
@@ -130,9 +137,9 @@ const SignUp = ({ toggler }) => {
                 </div>
                 <div className={styles.signUp__col}>
                     <LabelWithInput
-                        label="Confirm password*"
-                        type="password"
-                        placeholder="Confirm your password"
+                        label='Confirm password*'
+                        type='password'
+                        placeholder='Confirm your password'
                         value={passwordConfirm}
                         error={passwordConfirmErr}
                         handler={handleChange(setPasswordConfirm)}
@@ -140,14 +147,24 @@ const SignUp = ({ toggler }) => {
                 </div>
             </div>
             <div className={styles.signUp__row}>
-                <CheckBoxWithLabel checked={isChecked} error={isCheckedErr} handler={handleChange(setIsChecked)}>
+                <CheckBoxWithLabel
+                    checked={isChecked}
+                    error={isCheckedErr}
+                    handler={handleChange(setIsChecked)}
+                >
                     <span>I agree to the</span>
-                    <Link to="/policy">privacy policy</Link>
+                    <Link to='/policy'>privacy policy</Link>
                     <span> *</span>
                 </CheckBoxWithLabel>
             </div>
             <div className={styles.signUp__row}>
-                <Button disabled={isLoading}> {isLoading ? <Loader size={3} /> : <span>Sign up &rarr;</span>} </Button>
+                <Button disabled={isLoading} color='yellow'>
+                    {isLoading ? (
+                        <Loader size={3} />
+                    ) : (
+                        <span>Sign up &rarr;</span>
+                    )}
+                </Button>
             </div>
         </form>
     );
