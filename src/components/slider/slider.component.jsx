@@ -30,7 +30,7 @@ const Slider = ({ slides = [] }) => {
             }
         }, 3000);
         return () => clearInterval(intervalId);
-    }, [currentSlide]);
+    }, [currentSlide, slides.length]);
     return (
         <div className={styles.slider}>
             <div

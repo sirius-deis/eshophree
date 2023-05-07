@@ -6,10 +6,19 @@
 }
 
 .row {
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     gap: 0.2rem;
     cursor: pointer;
+}
+
+.row:last-child {
+    font-size: 1.6rem;
+}
+
+.chosen {
+    box-shadow: var(--box-shadow);
 }
 
 .row svg {

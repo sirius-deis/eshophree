@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 import styles from './products.styles.module.css';
 import Accordion from '../../components/accordion/accordion.component';
@@ -9,6 +10,21 @@ import Slider from '../../components/slider/slider.component';
 
 const Products = () => {
     const categoryList = useSelector(state => state.category.sections);
+    const [chosenCategories, setChosenCategories] = useState([]);
+    const [stars, setStars] = useState();
+    const [priceRange, setPriceRange] = useState([0, 1000]);
+
+    const handlePriceRangeChange = range => {
+        setPriceRange(range);
+    };
+
+    const handleCategoriesChange = categories => {
+        setChosenCategories(categories);
+    };
+
+    const handleStarsChange = n => {
+        setStars(n);
+    };
     const tempSlides = [
         {
             url: '/images/slide-1.png',
@@ -40,13 +56,25 @@ const Products = () => {
             <div className={styles.products}>
                 <div className={styles.products__left}>
                     <Accordion label='Category'>
-                        <AccordionSelect list={categoryList} />
+                        <AccordionSelect
+                            list={categoryList}
+                            chosen={chosenCategories}
+                            setChosenCategories={handleCategoriesChange}
+                        />
                     </Accordion>
                     <Accordion label='Stars'>
-                        <AccordionStars />
+                        <AccordionStars
+                            stars={stars}
+                            setStars={handleStarsChange}
+                        />
                     </Accordion>
                     <Accordion label='Price'>
-                        <AccordionPrice />
+                        <AccordionPrice
+                            priceRange={priceRange}
+                            setRange={handlePriceRangeChange}
+                            min={0}
+                            max={1000}
+                        />
                     </Accordion>
                 </div>
                 <div className={styles.products__right}>
