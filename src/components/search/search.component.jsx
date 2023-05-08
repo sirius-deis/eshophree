@@ -1,42 +1,58 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-import { FaSearch } from "react-icons/fa";
-import { MdOutlineArrowDropDown } from "react-icons/md";
+import { FaSearch } from 'react-icons/fa';
+import { MdOutlineArrowDropDown } from 'react-icons/md';
 
-import Dropdown from "../dropdown/dropdown.component";
-import CategoryDropdown from "../category-dropdown/categoryDropdown.component";
+import Dropdown from '../dropdown/dropdown.component';
+import ListDropdown from '../list-dropdown/listDropdown.component';
 
-import styles from "./search.styles.module.css";
+import styles from './search.styles.module.css';
 
 const Search = ({ categories = [], showDropdown = true, rounded }) => {
-    const [chosenCategory, setChosenCategory] = useState("all");
+    const [chosenCategory, setChosenCategory] = useState('all');
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(prevState => {
+            return !prevState;
+        });
     };
 
-    const chooseCategory = (categoryName) => {
+    const chooseCategory = categoryName => {
         setChosenCategory(categoryName);
         setIsOpen(false);
     };
 
     return (
-        <form className={`${styles.search} ${rounded ? styles.rounded : ""}`}>
+        <form className={`${styles.search} ${rounded ? styles.rounded : ''}`}>
             {showDropdown && (
                 <div className={styles.search__select}>
-                    <div className={`${styles.search__chosen} ${isOpen ? styles.open : ""}`} onClick={toggleDropdown}>
-                        <span className={styles.chosen}>{chosenCategory}</span> <MdOutlineArrowDropDown />
+                    <div
+                        className={`${styles.search__chosen} ${
+                            isOpen ? styles.open : ''
+                        }`}
+                        onClick={toggleDropdown}
+                    >
+                        <span className={styles.chosen}>{chosenCategory}</span>{' '}
+                        <MdOutlineArrowDropDown />
                     </div>
                     {isOpen && (
                         <Dropdown>
-                            <CategoryDropdown categories={categories} chooseCategory={chooseCategory} />
+                            <ListDropdown
+                                list={[{ title: 'all', id: 0 }, ...categories]}
+                                setElement={chooseCategory}
+                            />
                         </Dropdown>
                     )}
                 </div>
             )}
-            <input className={styles.search__input} type="text" name="search" placeholder="Enter a product name" />
+            <input
+                className={styles.search__input}
+                type='text'
+                name='search'
+                placeholder='Enter a product name'
+            />
             <button className={styles.search__btn}>
                 <FaSearch />
             </button>

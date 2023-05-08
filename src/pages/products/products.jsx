@@ -7,6 +7,7 @@ import AccordionSelect from '../../components/accordion-select/accordionSelect.c
 import AccordionStars from '../../components/accordion-stars/accordionStars.component';
 import AccordionPrice from '../../components/accordion-price/accordionPrice.component';
 import Slider from '../../components/slider/slider.component';
+import TopBar from '../../components/top-bar/topBar.component';
 
 const Products = () => {
     const categoryList = useSelector(state => state.category.sections);
@@ -25,32 +26,32 @@ const Products = () => {
     const handleStarsChange = n => {
         setStars(n);
     };
-    const tempSlides = [
-        {
-            url: '/images/slide-1.png',
-            id: '1',
-            header: 'Deals and Promotions',
-            subheader: 'Beast by Dre Studio 3',
-            regular: '$349.95',
-            promotion: '$279.00',
-        },
-        {
-            url: '/images/slide-1.png',
-            id: '1',
-            header: 'Deals and Promotions',
-            subheader: 'Beast by Dre Studio 3',
-            regular: '$349.95',
-            promotion: '$279.00',
-        },
-        {
-            url: '/images/slide-1.png',
-            id: '1',
-            header: 'Deals and Promotions',
-            subheader: 'Beast by Dre Studio 3',
-            regular: '$349.95',
-            promotion: '$279.00',
-        },
-    ];
+    // const tempSlides = [
+    //     {
+    //         url: '/images/slide-1.png',
+    //         id: '1',
+    //         header: 'Deals and Promotions',
+    //         subheader: 'Beast by Dre Studio 3',
+    //         regular: '$349.95',
+    //         promotion: '$279.00',
+    //     },
+    //     {
+    //         url: '/images/slide-1.png',
+    //         id: '1',
+    //         header: 'Deals and Promotions',
+    //         subheader: 'Beast by Dre Studio 3',
+    //         regular: '$349.95',
+    //         promotion: '$279.00',
+    //     },
+    //     {
+    //         url: '/images/slide-1.png',
+    //         id: '1',
+    //         header: 'Deals and Promotions',
+    //         subheader: 'Beast by Dre Studio 3',
+    //         regular: '$349.95',
+    //         promotion: '$279.00',
+    //     },
+    // ];
     return (
         <div className='container'>
             <div className={styles.products}>
@@ -78,7 +79,8 @@ const Products = () => {
                     </Accordion>
                 </div>
                 <div className={styles.products__right}>
-                    <Slider slides={tempSlides} />
+                    <Slider />
+                    <TopBar from={0} to={7} amount={13} />
                 </div>
             </div>
         </div>

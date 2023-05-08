@@ -1,18 +1,19 @@
-.category__list {
+.list {
     width: 29rem;
     display: flex;
     flex-direction: column;
     list-style: none;
 }
 
-.category__item {
+.item {
     padding: 1rem 2rem;
 }
 
-.category__item:hover {
+.item:hover {
     background-color: var(--bg-lighter);
+    cursor: pointer;
 }
 
-.category__item::first-letter {
+.item::first-letter {
     text-transform: uppercase;
 }
