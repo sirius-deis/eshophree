@@ -8,6 +8,7 @@ import AccordionStars from '../../components/accordion-stars/accordionStars.comp
 import AccordionPrice from '../../components/accordion-price/accordionPrice.component';
 import Slider from '../../components/slider/slider.component';
 import TopBar from '../../components/top-bar/topBar.component';
+import ProductList from '../../components/product-list/productList.component';
 
 const Products = () => {
     const categoryList = useSelector(state => state.category.sections);
@@ -81,6 +82,7 @@ const Products = () => {
                 <div className={styles.products__right}>
                     <Slider />
                     <TopBar from={0} to={7} amount={13} />
+                    <ProductList />
                 </div>
             </div>
         </div>

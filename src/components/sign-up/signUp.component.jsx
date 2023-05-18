@@ -46,7 +46,7 @@ const SignUp = ({ toggler }) => {
             restForm();
             toggler();
         } catch (error) {
-            //TODO:
+            //TODO: to add popup to inform about error
         }
         setIsLoading(false);
     };

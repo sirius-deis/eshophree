@@ -53,7 +53,7 @@ const TopBar = ({ from, to, amount }) => {
                         onClick={handleClick}
                     >
                         <span className={styles.chosen}>{chosenOption}</span>
-                        <MdOutlineArrowDropDown />
+                        <MdOutlineArrowDropDown className={styles.arrow} />
                     </div>
                     {isOpened && (
                         <Dropdown>

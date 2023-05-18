@@ -44,7 +44,7 @@ const SignIn = () => {
                 );
                 dispatch(signIn(data.data.user));
             } catch (error) {
-                //TODO:
+                //TODO: add popup to inform about error
             }
             setIsLoading(false);
         }

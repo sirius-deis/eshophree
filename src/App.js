@@ -7,7 +7,8 @@ import useFetch from './hooks/useFetch';
 import { signIn } from './store/user/user.actions';
 import { addItems } from './store/cart/cart.actions';
 
-import Header from './components/header/header.component';
+import Layout from './pages/layout/layout.component';
+
 import Home from './pages/home/home.component';
 import Loader from './components/loader/loader.component';
 
@@ -24,41 +25,42 @@ function App() {
     const [data, isLoading, error] = useFetch(
         'http://localhost:3000/api/v1/users/grab'
     );
-    if (data?.data.user) {
-        dispatch(signIn(data.data.user));
-        dispatch(addItems(data.data.cart.products));
+    if (data?.user) {
+        dispatch(signIn(data.user));
+        dispatch(addItems(data.cart.products));
     }
     return isLoading ? (
         <Loader size={20} />
     ) : (
         <div className='App'>
-            <Header />
             <Routes>
-                <Route path='/' element={<Home />} />
-                <Route
-                    path='/login'
-                    element={
-                        <Suspense fallback={<Loader size={20} />}>
-                            <SignInAndSignUp />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path='/shop'
-                    element={
-                        <Suspense fallback={<Loader size={20} />}>
-                            <Products />
-                        </Suspense>
-                    }
-                />
-                <Route
-                    path='*'
-                    element={
-                        <Suspense fallback={<Loader />}>
-                            <NotFound />
-                        </Suspense>
-                    }
-                />
+                <Route path='/' element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route
+                        path='login'
+                        element={
+                            <Suspense fallback={<Loader size={20} />}>
+                                <SignInAndSignUp />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path='shop'
+                        element={
+                            <Suspense fallback={<Loader size={20} />}>
+                                <Products />
+                            </Suspense>
+                        }
+                    />
+                    <Route
+                        path='*'
+                        element={
+                            <Suspense fallback={<Loader />}>
+                                <NotFound />
+                            </Suspense>
+                        }
+                    />
+                </Route>
             </Routes>
         </div>
     );

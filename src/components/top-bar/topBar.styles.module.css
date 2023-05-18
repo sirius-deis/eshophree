@@ -58,3 +58,7 @@
 .chosen::first-letter {
     text-transform: uppercase;
 }
+
+.arrow {
+    font-size: 2rem;
+}

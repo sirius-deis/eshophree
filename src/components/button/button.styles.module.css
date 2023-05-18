@@ -10,6 +10,12 @@
     cursor: pointer;
 }
 
+.btn--small {
+    min-width: auto;
+    min-height: auto;
+    padding: 0.5rem 1rem;
+}
+
 .btn--dark {
     background-color: var(--text-color);
     color: var(--bg-color);

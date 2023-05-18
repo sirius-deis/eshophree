@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const useFetch = (url, options) => {
     const [data, setData] = useState(null);
@@ -13,13 +13,13 @@ const useFetch = (url, options) => {
                 const response = await fetch(url, {
                     ...options,
                     signal: abortController.signal,
-                    credentials: "include",
+                    credentials: 'include',
                 });
                 if (!response.ok) {
                     throw new Error(response.statusText);
                 }
                 const receivedData = await response.json();
-                setData(receivedData);
+                setData(receivedData.data);
             } catch (error) {
                 setError(error);
             }
