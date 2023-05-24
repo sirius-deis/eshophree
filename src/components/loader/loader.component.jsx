@@ -1,19 +1,18 @@
-import PropTypes from "prop-types";
+import StyledLoader from './loader.styles';
 
-import styles from "./loader.styles.module.css";
-
-const Loader = ({ size = 4 }) => {
+const Loader = () => {
     return (
-        <div className={`${styles.spinner} ${styles.center}`} style={{ fontSize: `${size}rem` }}>
-            {new Array(12).fill("").map((_, i) => (
-                <div key={i} className={styles["spinner-blade"]}></div>
-            ))}
-        </div>
+        <StyledLoader>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </StyledLoader>
     );
-};
-
-Loader.propTypes = {
-    size: PropTypes.number,
 };
 
 export default Loader;
