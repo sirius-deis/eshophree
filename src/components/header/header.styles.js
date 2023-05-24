@@ -1,0 +1,12 @@
+import styled from 'styled-components';
+
+const StyledHeader = styled.header`
+    min-width: 100%;
+    min-height: 3rem;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+export { StyledHeader };
