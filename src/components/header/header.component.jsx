@@ -1,10 +1,6 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
-import {
-    StyledHeader,
-    StyledHeaderTop,
-    StyledHeaderBottom,
-} from './header.styles';
+import { StyledHeader, StyledHeaderTop, StyledNav } from './header.styles';
 import Search from '../search/search.component';
 import Menu from '../menu/menu.component';
 
@@ -19,7 +15,7 @@ const Header = () => {
                     <Search />
                     <Menu />
                 </StyledHeaderTop>
-                <StyledHeaderBottom></StyledHeaderBottom>
+                <StyledNav></StyledNav>
             </div>
         </StyledHeader>
     );
