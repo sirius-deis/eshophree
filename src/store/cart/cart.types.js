@@ -1,0 +1,8 @@
+const CartActionTypes = {
+    ADD_PRODUCTS_TO_CART: 'ADD_PRODUCTS_TO_CART',
+    ADD_PRODUCT_TO_CART: 'ADD_PRODUCT_TO_CART',
+    REMOVE_PRODUCT_FROM_CART: 'REMOVE_PRODUCT_FROM_CART',
+    CLEAR_CART: 'CLEAR_CART',
+};
+
+export default CartActionTypes;

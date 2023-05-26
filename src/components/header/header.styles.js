@@ -5,8 +5,17 @@ const StyledHeader = styled.header`
     min-height: 3rem;
     padding: 2rem 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 `;
 
-export { StyledHeader };
+const StyledHeaderTop = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+const StyledNav = styled.nav``;
+
+export { StyledHeader, StyledHeaderTop, StyledNav };
