@@ -1,19 +1,25 @@
 import styled from 'styled-components';
 
 const StyledSearch = styled.form`
-    width: 50%;
-    display: grid;
-    grid-template-columns: 4fr 10fr 1fr;
-    border: 1px solid var(--text-color-additional);
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--footer-color);
     border-radius: 25px;
     overflow: hidden;
 `;
 
 const StyledSearchInput = styled.input`
-    padding: 0.5rem;
+    width: 75%;
+    padding: 0.5rem 1rem;
     font-size: 2rem;
     border: none;
+    border-left: 1px solid var(--footer-color);
     background-color: transparent;
+    &:focus {
+        outline: none;
+    }
 `;
 
 export { StyledSearch, StyledSearchInput };

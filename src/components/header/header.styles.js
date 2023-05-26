@@ -11,11 +11,10 @@ const StyledHeader = styled.header`
 `;
 
 const StyledHeaderTop = styled.header`
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 `;
 
-const StyledNav = styled.nav``;
-
-export { StyledHeader, StyledHeaderTop, StyledNav };
+export { StyledHeader, StyledHeaderTop };

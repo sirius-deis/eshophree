@@ -3,6 +3,7 @@ import { MdOutlineSearch, MdKeyboardArrowDown } from 'react-icons/md';
 import { StyledSearch, StyledSearchInput } from './search.styles';
 import Button from '../button/button.component';
 import Dropdown from '../dropdown/dropdown.component';
+import DropdownMenu from '../dropdown-menu/dropdownMenu.component';
 
 const Search = () => {
     return (
@@ -15,6 +16,7 @@ const Search = () => {
             <StyledSearchInput type='text' />
             <Button
                 type='button'
+                kind='round'
                 bgColor='var(--additional-color)'
                 color='var(--bg-color)'
             >
