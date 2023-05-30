@@ -3,7 +3,7 @@ import { MdOutlineShoppingCart } from 'react-icons/md';
 import Dropdown from '../dropdown/dropdown.component';
 import DropdownMenu from '../dropdown-menu/dropdownMenu.component';
 
-import { StyledMenu, StyledDropdownToggle } from './menu.styles';
+import { StyledMenu, StyledDropdownToggle, StyledCount } from './menu.styles';
 
 const Menu = () => {
     return (
@@ -11,11 +11,13 @@ const Menu = () => {
             <Dropdown>
                 <StyledDropdownToggle>
                     <FaRegHeart />
+                    <StyledCount>0</StyledCount>
                 </StyledDropdownToggle>
             </Dropdown>
             <Dropdown>
                 <StyledDropdownToggle>
                     <MdOutlineShoppingCart />
+                    <StyledCount>0</StyledCount>
                 </StyledDropdownToggle>
             </Dropdown>
             <Dropdown>

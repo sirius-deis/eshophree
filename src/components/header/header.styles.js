@@ -8,6 +8,7 @@ const StyledHeader = styled.header`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
 `;
 
 const StyledHeaderTop = styled.header`

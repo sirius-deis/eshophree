@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-const StyledDropdownMenu = styled`
-
-`;
+const StyledDropdownMenu = styled.div``;
 
 export { StyledDropdownMenu };
