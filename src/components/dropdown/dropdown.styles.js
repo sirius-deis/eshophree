@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
-const StyledDropdown = styled.div``;
+const StyledDropdown = styled.div`
+  position: relative;
+`;
 
 export { StyledDropdown };
