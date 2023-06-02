@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledListItem = styled.li`
   font-size: 1.7rem;
-  padding: 1.5rem;
+  padding: 1rem;
   cursor: pointer;
   width: calc(100% / 6);
   text-align: center;

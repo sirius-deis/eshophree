@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const StyledDropdownMenu = styled.div`
-  min-width: 22rem;
+  min-width: 23rem;
   max-height: 29.6rem;
   position: absolute;
-  left: -1rem;
+  left: 0.2rem;
   top: calc(100% + 0.2rem);
   display: flex;
   flex-direction: column;

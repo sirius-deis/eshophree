@@ -1,21 +1,41 @@
-import { StyledRoundButton, StyledDropdownButton } from './button.styles';
+import PropTypes from 'prop-types';
+import { StyledRoundButton, StyledDropdownButton, StyledPlainButton } from './button.styles';
 
-const Button = ({ children, kind, bgColor, color, type, onClick }) => {
+const Button = ({ children, kind, bgColor, color, onClickHandler, onMouseEnterHandler }) => {
   switch (kind) {
     case 'round':
       return (
-        <StyledRoundButton bgColor={bgColor} textColor={color} type={type}>
+        <StyledRoundButton style={{ color, backgroundColor: bgColor }} type='button'>
           {children}
         </StyledRoundButton>
       );
     case 'dropdown':
-    default:
       return (
-        <StyledDropdownButton bgColor={bgColor} textColor={color} type={type} onClick={onClick}>
+        <StyledDropdownButton
+          style={{ color, backgroundColor: bgColor }}
+          type='button'
+          onClick={onClickHandler}
+          onMouseEnter={onMouseEnterHandler}
+        >
           {children}
         </StyledDropdownButton>
       );
+    default:
+      return (
+        <StyledPlainButton style={{ color, backgroundColor: bgColor }} type='button'>
+          {children}
+        </StyledPlainButton>
+      );
   }
+};
+
+Button.propTypes = {
+  children: PropTypes.node,
+  kind: PropTypes.string,
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
+  onClickHandler: PropTypes.func,
+  onMouseEnterHandler: PropTypes.func,
 };
 
 export default Button;

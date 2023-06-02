@@ -20,16 +20,26 @@ const Search = () => {
 
   const onDropdownClickHandler = () => {
     setIsDropdownOpen((prevState) => {
-      setIsDropdownOpen(!prevState);
+      return !prevState;
     });
   };
 
-  //transform: rotate(180deg);
+  const DropdownMouseEnterHandler = () => {
+    setIsDropdownOpen(true);
+  };
 
+  const DropdownMouseLeaveHandler = () => {
+    setIsDropdownOpen(false);
+  };
   return (
     <StyledSearch>
-      <Dropdown>
-        <Button type='button' bgColor='transparent' onClick={onDropdownClickHandler}>
+      <Dropdown onMouseLeaveHandler={DropdownMouseLeaveHandler}>
+        <Button
+          kind='dropdown'
+          bgColor='transparent'
+          onClickHandler={onDropdownClickHandler}
+          onMouseEnterHandler={DropdownMouseEnterHandler}
+        >
           <StyledText className={`${isDropdownOpen ? 'opened' : ''}`}>{selectedCategory}</StyledText>
           <MdKeyboardArrowDown fontSize={22} />
         </Button>

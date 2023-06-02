@@ -1,10 +1,7 @@
 .container {
-  min-width: 70%;
+  max-width: 70%;
   margin: 0 auto;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .hidden {

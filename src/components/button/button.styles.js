@@ -8,9 +8,10 @@ const StyledButton = styled.button`
   justify-content: center;
   font-size: 1.4rem;
   border: 0;
-  background-color: ${(props) => props.bgColor};
-  color: ${(props) => props.textColor || 'var(--text-color)'};
   cursor: pointer;
+  &:hover {
+    filter: brightness(95%);
+  }
 `;
 
 const StyledRoundButton = styled(StyledButton)`
@@ -28,7 +29,11 @@ const StyledRoundButton = styled(StyledButton)`
 const StyledDropdownButton = styled(StyledButton)`
   padding: 1.5rem 1rem 1.5rem;
   justify-content: space-between;
-  width: 20rem;
 `;
 
-export { StyledButton, StyledRoundButton, StyledDropdownButton };
+const StyledPlainButton = styled(StyledButton)`
+  border-radius: 10px;
+  padding: 0.6rem 1.4rem;
+`;
+
+export { StyledPlainButton, StyledRoundButton, StyledDropdownButton };

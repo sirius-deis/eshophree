@@ -8,6 +8,9 @@ const StyledSearch = styled.form`
   border: 1px solid var(--footer-color);
   box-shadow: 1px 1px 1px var(--shadow-color);
   border-radius: 25px;
+  &:focus {
+    box-shadow: 2px 2px 4px var(--shadow-color);
+  }
 `;
 
 const StyledSearchInput = styled.input`
@@ -17,7 +20,7 @@ const StyledSearchInput = styled.input`
   border: none;
   border-left: 1px solid var(--footer-color);
   background-color: transparent;
-  &:focus {
+  &:focus-within {
     outline: none;
   }
 `;

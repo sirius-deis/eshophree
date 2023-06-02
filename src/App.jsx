@@ -5,7 +5,7 @@ import './App.css';
 
 import Layout from './pages/layout/layout.component';
 import Home from './pages/home/home.component';
-import Loader from './components/loader/loader.component';
+import Spinner from './components/spinner/spinner.component';
 
 const Cart = React.lazy(() => import('./pages/cart/cart.component'));
 const Categories = React.lazy(() => import('./pages/categories/categories.component'));
@@ -15,6 +15,7 @@ const Login = React.lazy(() => import('./pages/login/login.component'));
 const Product = React.lazy(() => import('./pages/product/product.component'));
 const Search = React.lazy(() => import('./pages/search/search.component'));
 const Signup = React.lazy(() => import('./pages/signup/signup.component'));
+const Profile = React.lazy(() => import('./pages/profile/profile.component'));
 const NotFound = React.lazy(() => import('./pages/notfound/notfound.component'));
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         <Route
           path='cart'
           element={
-            <Suspense fallback={<Loader />}>
+            <Suspense fallback={<Spinner />}>
               <Cart />
             </Suspense>
           }
@@ -34,7 +35,7 @@ function App() {
         <Route
           path='categories'
           element={
-            <Suspense>
+            <Suspense fallback={<Spinner />}>
               <Categories />
             </Suspense>
           }
@@ -42,7 +43,7 @@ function App() {
         <Route
           path='contact'
           element={
-            <Suspense>
+            <Suspense fallback={<Spinner />}>
               <Contact />
             </Suspense>
           }
@@ -50,15 +51,23 @@ function App() {
         <Route
           path='faq'
           element={
-            <Suspense>
+            <Suspense fallback={<Spinner />}>
               <FAQ />
+            </Suspense>
+          }
+        />
+        <Route
+          path='/profile'
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Profile />
             </Suspense>
           }
         />
         <Route
           path='login'
           element={
-            <Suspense>
+            <Suspense fallback={<Spinner />}>
               <Login />
             </Suspense>
           }
@@ -66,7 +75,7 @@ function App() {
         <Route
           path='product'
           element={
-            <Suspense>
+            <Suspense fallback={<Spinner />}>
               <Product />
             </Suspense>
           }
@@ -74,7 +83,7 @@ function App() {
         <Route
           path='search'
           element={
-            <Suspense>
+            <Suspense fallback={<Spinner />}>
               <Search />
             </Suspense>
           }
@@ -82,7 +91,7 @@ function App() {
         <Route
           path='signup'
           element={
-            <Suspense>
+            <Suspense fallback={<Spinner />}>
               <Signup />
             </Suspense>
           }
@@ -90,7 +99,7 @@ function App() {
         <Route
           path='*'
           element={
-            <Suspense>
+            <Suspense fallback={<Spinner />}>
               <NotFound />
             </Suspense>
           }

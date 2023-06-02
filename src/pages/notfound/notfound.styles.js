@@ -4,7 +4,7 @@ const StyledNotFound = styled.div`
     text-align: center;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: calc(100%-17rem);
     overflow: hidden;
     .cont_error {
         position: absolute;
