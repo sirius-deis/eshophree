@@ -1,17 +1,18 @@
 import { Link } from 'react-router-dom';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
-import { StyledLogin, StyledH2, StyleLine } from './login.styles';
+import { StyledSignUp, StyledH2, StyleLine } from './signup.styles';
+
 import LabelWithInput from '../labelWithInput/labelWithInput';
 import Button from '../button/button';
 
-const Login = () => {
+const SignUp = () => {
   const submitHandler = (e) => {
     e.preventDefault();
   };
 
   return (
-    <StyledLogin onSubmit={submitHandler}>
-      <StyledH2>Login in</StyledH2>
+    <StyledSignUp onSubmit={submitHandler}>
+      <StyledH2>Sign up</StyledH2>
       <LabelWithInput type='email' />
       <LabelWithInput type='password' />
       <div
@@ -23,15 +24,14 @@ const Login = () => {
         }}
       >
         <p>
-          Don't have account?{' '}
-          <Link to='/signup' style={{ textDecoration: 'underline' }}>
+          Have account?{' '}
+          <Link to='/login' style={{ textDecoration: 'underline' }}>
             Sign up
           </Link>
         </p>
-        <Link to='/forget'>Forget password?</Link>
       </div>
       <Button bgColor='var(--additional-color)' color='var(--bg-color)'>
-        Login
+        Sign up
       </Button>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
         <StyleLine />
@@ -41,7 +41,7 @@ const Login = () => {
             fontSize: '1.3rem',
           }}
         >
-          Or login with
+          Or sign up with
         </p>
         <StyleLine />
       </div>
@@ -60,8 +60,8 @@ const Login = () => {
           <FaGoogle /> Google
         </Button>
       </div>
-    </StyledLogin>
+    </StyledSignUp>
   );
 };
 
-export default Login;
+export default SignUp;

@@ -7,6 +7,7 @@ import RootLayout from './layouts/rootLayout';
 import Home from './pages/home/home';
 import Spinner from './components/spinner/spinner';
 
+const CenteredLayout = React.lazy(() => import('./layouts/centeredLayout'));
 const Cart = React.lazy(() => import('./pages/cart/cart'));
 const Categories = React.lazy(() => import('./pages/categories/categories'));
 const Contact = React.lazy(() => import('./pages/contact/contact'));
@@ -14,7 +15,7 @@ const FAQ = React.lazy(() => import('./pages/faq/faq'));
 const Login = React.lazy(() => import('./pages/login/loginPage'));
 const Product = React.lazy(() => import('./pages/product/product'));
 const Search = React.lazy(() => import('./pages/search/search'));
-const Signup = React.lazy(() => import('./pages/signup/signupPage'));
+const SignUpPage = React.lazy(() => import('./pages/signup/signupPage'));
 const Profile = React.lazy(() => import('./pages/profile/profile'));
 const NotFound = React.lazy(() => import('./pages/notfound/notfound'));
 
@@ -65,14 +66,6 @@ function App() {
           }
         />
         <Route
-          path='login'
-          element={
-            <Suspense fallback={<Spinner />}>
-              <Login />
-            </Suspense>
-          }
-        />
-        <Route
           path='product'
           element={
             <Suspense fallback={<Spinner />}>
@@ -89,13 +82,30 @@ function App() {
           }
         />
         <Route
-          path='signup'
+          path='/'
           element={
-            <Suspense fallback={<Spinner />}>
-              <Signup />
+            <Suspense>
+              <CenteredLayout />
             </Suspense>
           }
-        />
+        >
+          <Route
+            path='login'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <Login />
+              </Suspense>
+            }
+          />
+          <Route
+            path='signup'
+            element={
+              <Suspense fallback={<Spinner />}>
+                <SignUpPage />
+              </Suspense>
+            }
+          />
+        </Route>
         <Route
           path='*'
           element={
