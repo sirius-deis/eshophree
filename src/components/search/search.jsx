@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 import { MdOutlineSearch, MdKeyboardArrowDown } from 'react-icons/md';
 
 import { StyledSearch, StyledSearchInput, StyledText } from './search.styles';
-import Button from '../button/button.component';
-import Dropdown from '../dropdown/dropdown.component';
-import DropdownMenu from '../dropdown-menu/dropdownMenu.component';
-import DropdownItem from '../dropdown-item/dropdownItem.component';
+import Button from '../button/button';
+import Dropdown from '../dropdown/dropdown';
+import DropdownMenu from '../dropdown-menu/dropdownMenu';
+import DropdownItem from '../dropdown-item/dropdownItem';
 
 const Search = () => {
   const categories = useSelector((store) => store.category.categories);

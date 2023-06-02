@@ -3,25 +3,25 @@ import React, { Suspense } from 'react';
 
 import './App.css';
 
-import Layout from './pages/layout/layout.component';
-import Home from './pages/home/home.component';
-import Spinner from './components/spinner/spinner.component';
+import RootLayout from './layouts/rootLayout';
+import Home from './pages/home/home';
+import Spinner from './components/spinner/spinner';
 
-const Cart = React.lazy(() => import('./pages/cart/cart.component'));
-const Categories = React.lazy(() => import('./pages/categories/categories.component'));
-const Contact = React.lazy(() => import('./pages/contact/contact.component'));
-const FAQ = React.lazy(() => import('./pages/faq/faq.component'));
-const Login = React.lazy(() => import('./pages/login/login.component'));
-const Product = React.lazy(() => import('./pages/product/product.component'));
-const Search = React.lazy(() => import('./pages/search/search.component'));
-const Signup = React.lazy(() => import('./pages/signup/signup.component'));
-const Profile = React.lazy(() => import('./pages/profile/profile.component'));
-const NotFound = React.lazy(() => import('./pages/notfound/notfound.component'));
+const Cart = React.lazy(() => import('./pages/cart/cart'));
+const Categories = React.lazy(() => import('./pages/categories/categories'));
+const Contact = React.lazy(() => import('./pages/contact/contact'));
+const FAQ = React.lazy(() => import('./pages/faq/faq'));
+const Login = React.lazy(() => import('./pages/login/loginPage'));
+const Product = React.lazy(() => import('./pages/product/product'));
+const Search = React.lazy(() => import('./pages/search/search'));
+const Signup = React.lazy(() => import('./pages/signup/signupPage'));
+const Profile = React.lazy(() => import('./pages/profile/profile'));
+const NotFound = React.lazy(() => import('./pages/notfound/notfound'));
 
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
+      <Route path='/' element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path='home' element={<Navigate to='/' replace />} />
         <Route

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import { StyledHeader, StyledHeaderTop } from './header.styles';
-import Search from '../search/search.component';
-import Menu from '../menu/menu.component';
-import Navigation from '../navigation/navigation.component';
+import Search from '../search/search';
+import Menu from '../menu/menu';
+import Navigation from '../navigation/navigation';
 
 const Header = () => {
   return (

@@ -6,8 +6,9 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.7rem;
   font-size: 1.4rem;
-  border: 0;
+  border: ${(props) => (props.bordered ? '1px solid var(--footer-color)' : '0')};
   cursor: pointer;
   &:hover {
     filter: brightness(95%);
@@ -32,8 +33,10 @@ const StyledDropdownButton = styled(StyledButton)`
 `;
 
 const StyledPlainButton = styled(StyledButton)`
+  padding: 1rem 1.4rem;
   border-radius: 10px;
-  padding: 0.6rem 1.4rem;
+  font-size: 1.6rem;
+  background-color: transparent;
 `;
 
 export { StyledPlainButton, StyledRoundButton, StyledDropdownButton };

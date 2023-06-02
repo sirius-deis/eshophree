@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import Header from '../../components/header/header.component';
-import { addCategoriesToStore } from '../../store/category/category.actions';
-import useFetch from '../../hooks/useFetch';
+import Header from '../components/header/header';
+import { addCategoriesToStore } from '../store/category/category.actions';
+import useFetch from '../hooks/useFetch';
 
-const Layout = () => {
+const RootLayout = () => {
   const [data] = useFetch('http://localhost:3000/api/v1/products/categories');
   const dispatch = useDispatch();
   useEffect(() => {
@@ -19,4 +19,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default RootLayout;

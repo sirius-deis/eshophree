@@ -1,14 +1,14 @@
 import { StyledHero, StyledColoredContainer } from './hero.styles';
 
-import Carousel from '../carousel/carousel.component';
-import Card from '../card/card.component';
+import HeroCarousel from '../heroCarousel/heroCarousel';
+import Card from '../card/card';
 
 const Hero = () => {
   return (
     <StyledColoredContainer>
       <div className='container'>
         <StyledHero>
-          <Carousel />
+          <HeroCarousel />
           <Card btnTitle='Now available' />
           <Card btnTitle='Order now' />
         </StyledHero>

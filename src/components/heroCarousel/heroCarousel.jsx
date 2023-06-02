@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   StyledCarousel,
@@ -8,12 +9,12 @@ import {
   StyledNextControl,
   StyledIndicators,
   StyledCarouselOverlay,
-} from './carousel.styles';
-import Button from '../button/button.component';
+} from './heroCarousel.styles';
+import Button from '../button/button';
 
 const size = 4;
 
-const Carousel = () => {
+const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const shiftSlide = (n = 1) => {
@@ -56,7 +57,7 @@ const Carousel = () => {
               <img src='https://source.unsplash.com/random/300×300?electronics' alt='slide' />
               <StyledCarouselOverlay>
                 <Button bgColor='var(--shadow-color-darker)' color='var(--bg-color)'>
-                  Now available &rarr;
+                  <Link to='/shop/'>Now available &rarr;</Link>
                 </Button>
               </StyledCarouselOverlay>
             </StyledCarouseItem>
@@ -68,4 +69,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default HeroCarousel;
