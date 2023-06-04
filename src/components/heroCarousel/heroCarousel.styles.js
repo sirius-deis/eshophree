@@ -20,7 +20,7 @@ const StyledCarouseItem = styled.div`
   img {
     width: 100%;
     height: 40rem;
-    object-fit: cover;
+    object-fit: content;
   }
 `;
 

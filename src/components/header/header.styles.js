@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
-  max-height: 13.5rem;
+  min-height: 13.5rem;
   padding: 1.9rem 0 0;
 `;
 

@@ -46,7 +46,7 @@ const Search = () => {
         {isDropdownOpen && (
           <DropdownMenu>
             {categories &&
-              [{ id: 1, name: 'All categories' }, ...categories].map((category) => (
+              [{ _id: 1, name: 'All categories' }, ...categories].map((category) => (
                 <DropdownItem
                   key={category._id}
                   onSelectCategoryHandler={onSelectCategoryHandler}

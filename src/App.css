@@ -4,6 +4,30 @@
   position: relative;
 }
 
+@media screen and (max-width: 1200px) {
+  :root {
+    font-size: 56.2%;
+  }
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    font-size: 50%;
+  }
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 43.75%;
+  }
+}
+
 .hidden {
   display: none;
 }

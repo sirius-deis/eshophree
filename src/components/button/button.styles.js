@@ -3,10 +3,12 @@ import styled from 'styled-components';
 const StyledButton = styled.button`
   width: 100%;
   height: 100%;
+  min-height: 3.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
+  position: relative;
   font-size: 1.4rem;
   border: ${(props) => (props.bordered ? '1px solid var(--footer-color)' : '0')};
   cursor: pointer;

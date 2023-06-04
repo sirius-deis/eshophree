@@ -6,6 +6,8 @@ const StyledSpinner = styled.div`
     position: relative;
     width: 50%;
     height: 50%;
+
+    z-index: 100;
   }
   div {
     animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;

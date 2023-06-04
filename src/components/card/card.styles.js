@@ -9,6 +9,7 @@ const StyledCard = styled.div`
     width: 100%;
     height: 19.4rem;
     border-radius: 10px;
+    object-fit: content;
   }
 `;
 

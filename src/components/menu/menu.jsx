@@ -5,6 +5,7 @@ import DropdownMenu from '../dropdown-menu/dropdownMenu';
 
 import { StyledMenu, StyledDropdownToggle, StyledCount } from './menu.styles';
 
+//TODO:
 const Menu = () => {
   return (
     <StyledMenu>
@@ -13,17 +14,20 @@ const Menu = () => {
           <FaRegHeart />
           <StyledCount>0</StyledCount>
         </StyledDropdownToggle>
+        <DropdownMenu></DropdownMenu>
       </Dropdown>
       <Dropdown>
         <StyledDropdownToggle>
           <MdOutlineShoppingCart />
           <StyledCount>0</StyledCount>
         </StyledDropdownToggle>
+        <DropdownMenu></DropdownMenu>
       </Dropdown>
       <Dropdown>
         <StyledDropdownToggle>
           <FaRegUser />
         </StyledDropdownToggle>
+        <DropdownMenu></DropdownMenu>
       </Dropdown>
     </StyledMenu>
   );

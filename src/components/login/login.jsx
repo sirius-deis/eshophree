@@ -1,19 +1,27 @@
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
 import { StyledLogin, StyledH2, StyleLine } from './login.styles';
+import Spinner from '../spinner/spinner';
 import LabelWithInput from '../labelWithInput/labelWithInput';
 import Button from '../button/button';
+import { signIn } from '../../store/user/user.actions';
 
 const Login = () => {
+  const { isLoading, error } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
+    const { email, password } = e.target;
+
+    dispatch(signIn({ email: email.value, password: password.value }));
   };
 
   return (
     <StyledLogin onSubmit={submitHandler}>
       <StyledH2>Login in</StyledH2>
-      <LabelWithInput type='email' />
-      <LabelWithInput type='password' />
+      <LabelWithInput type='email' name='email' />
+      <LabelWithInput type='password' name='password' validation={{ minLength: 8 }} />
       <div
         style={{
           display: 'flex',
