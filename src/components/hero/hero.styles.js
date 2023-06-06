@@ -13,4 +13,36 @@ const StyledHero = styled.section`
   gap: 1rem;
 `;
 
-export { StyledHero, StyledColoredContainer };
+const StyledInfo = styled.div`
+  margin-top: 2rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const StyledItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+  svg {
+    font-size: 2.2rem;
+  }
+`;
+
+const StyledText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  p:first-child {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-color-additional);
+  }
+  p:last-child {
+    color: var(--text-color-additional);
+  }
+`;
+
+export { StyledHero, StyledColoredContainer, StyledInfo, StyledItem, StyledText };

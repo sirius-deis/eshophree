@@ -6,7 +6,6 @@ const StyledSpinner = styled.div`
     position: relative;
     width: 50%;
     height: 50%;
-
     z-index: 100;
   }
   div {

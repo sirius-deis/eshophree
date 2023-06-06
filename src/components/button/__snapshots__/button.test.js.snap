@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component should match snapshot with kind default 1`] = `
+<div>
+  <button
+    class="sc-bgqQcB sc-fFGjHI MyNZc gkWWIA"
+  >
+    Loading
+  </button>
+</div>
+`;
+
+exports[`Button component should match snapshot with kind dropdown 1`] = `
+<div>
+  <button
+    class="sc-bgqQcB sc-ewnqHT MyNZc cTzBXJ"
+    type="button"
+  >
+    Loading
+  </button>
+</div>
+`;
+
+exports[`Button component should match snapshot with kind round 1`] = `
+<div>
+  <button
+    class="sc-bgqQcB sc-gTRrQi MyNZc cVPPIc"
+    type="button"
+  >
+    Loading
+  </button>
+</div>
+`;

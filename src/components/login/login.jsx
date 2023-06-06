@@ -19,6 +19,7 @@ const Login = () => {
 
   return (
     <StyledLogin onSubmit={submitHandler}>
+      <Spinner />
       <StyledH2>Login in</StyledH2>
       <LabelWithInput type='email' name='email' />
       <LabelWithInput type='password' name='password' validation={{ minLength: 8 }} />
