@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownMenu component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB kTYWeF"
+  >
+    <button>
+      button #1
+    </button>
+    <button>
+      button #2
+    </button>
+  </div>
+</div>
+`;
