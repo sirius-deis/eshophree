@@ -21,13 +21,13 @@ const SignUp = () => {
     <StyledSignUp onSubmit={submitHandler}>
       <StyledH2>Sign up</StyledH2>
       <LabelWithInput type='email' name='email' />
-      <LabelWithInput type='password' name='password' validation={{ minLength: 8 }} />
+      <LabelWithInput type='password' name='password' minLength={8} />
       <LabelWithInput
         type='password'
         label='password confirm'
         placeholder='Confirm your password'
         name='confirm'
-        validation={{ minLength: 8 }}
+        minLength={8}
       />
       <div
         style={{

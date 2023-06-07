@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB kCavFA"
+  >
+    <div
+      class="container"
+    >
+      <section
+        class="sc-gTRrQi kkyHlZ"
+      >
+        <div
+          class="sc-iVCKna fxRogo"
+        >
+          <div
+            class="sc-kuWgmH kXFAza"
+          >
+            <button
+              class="active"
+            />
+            <button
+              class=""
+            />
+            <button
+              class=""
+            />
+            <button
+              class=""
+            />
+          </div>
+          <div
+            class="sc-gxYJeL eddEhL"
+            style="transform: translateX(0%);"
+          >
+            <div
+              class="sc-kPTPQs jiUKgF"
+            >
+              <img
+                alt="slide"
+                src="https://source.unsplash.com/random/300×300?electronics"
+              />
+              <div
+                class="sc-duSInm gTwQKa"
+              >
+                <button
+                  class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+                >
+                  <a
+                    href="/shop/"
+                  >
+                    Now available →
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-kPTPQs jiUKgF"
+            >
+              <img
+                alt="slide"
+                src="https://source.unsplash.com/random/300×300?electronics"
+              />
+              <div
+                class="sc-duSInm gTwQKa"
+              >
+                <button
+                  class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+                >
+                  <a
+                    href="/shop/"
+                  >
+                    Now available →
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-kPTPQs jiUKgF"
+            >
+              <img
+                alt="slide"
+                src="https://source.unsplash.com/random/300×300?electronics"
+              />
+              <div
+                class="sc-duSInm gTwQKa"
+              >
+                <button
+                  class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+                >
+                  <a
+                    href="/shop/"
+                  >
+                    Now available →
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div
+              class="sc-kPTPQs jiUKgF"
+            >
+              <img
+                alt="slide"
+                src="https://source.unsplash.com/random/300×300?electronics"
+              />
+              <div
+                class="sc-duSInm gTwQKa"
+              >
+                <button
+                  class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+                >
+                  <a
+                    href="/shop/"
+                  >
+                    Now available →
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button
+            class="sc-ispOId sc-kcuKUB bOfhmL gaxjYS"
+          >
+            ‹
+          </button>
+          <button
+            class="sc-ispOId sc-dcrmVg bOfhmL eajqFR"
+          >
+            ›
+          </button>
+        </div>
+        <div
+          class="sc-jeCNp tSVWP"
+        >
+          <img
+            alt="card"
+            src="https://source.unsplash.com/random/300×300?electronics"
+          />
+          <div
+            class="sc-eywOmQ jPqCqk"
+          >
+            <button
+              class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+            >
+              <a
+                href="/"
+              >
+                Now available
+                 →
+              </a>
+            </button>
+          </div>
+        </div>
+        <div
+          class="sc-jeCNp tSVWP"
+        >
+          <img
+            alt="card"
+            src="https://source.unsplash.com/random/300×300?electronics"
+          />
+          <div
+            class="sc-eywOmQ jPqCqk"
+          >
+            <button
+              class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+            >
+              <a
+                href="/"
+              >
+                Order now
+                 →
+              </a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <div
+        class="sc-ewnqHT dEywDi"
+      >
+        <div
+          class="sc-fFGjHI fXiUEB"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 640 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H112C85.5 0 64 21.5 64 48v48H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h272c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H64v128c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"
+            />
+          </svg>
+          <div
+            class="sc-dicizt dDHUsF"
+          >
+            <p>
+              Free Shipping
+            </p>
+            <p>
+              Free Shipping for orders over $200
+            </p>
+          </div>
+        </div>
+        <div
+          class="sc-fFGjHI fXiUEB"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.995 6.9a.998.998 0 0 0-.548-.795l-8-4a1 1 0 0 0-.895 0l-8 4a1.002 1.002 0 0 0-.547.795c-.011.107-.961 10.767 8.589 15.014a.987.987 0 0 0 .812 0c9.55-4.247 8.6-14.906 8.589-15.014zM12 19.897C5.231 16.625 4.911 9.642 4.966 7.635L12 4.118l7.029 3.515c.037 1.989-.328 9.018-7.029 12.264z"
+            />
+            <path
+              d="m11 12.586-2.293-2.293-1.414 1.414L11 15.414l5.707-5.707-1.414-1.414z"
+            />
+          </svg>
+          <div
+            class="sc-dicizt dDHUsF"
+          >
+            <p>
+              Money Guarantee
+            </p>
+            <p>
+              Within 30 days ofr an exchange
+            </p>
+          </div>
+        </div>
+        <div
+          class="sc-fFGjHI fXiUEB"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 2C6.486 2 2 6.486 2 12v4.143C2 17.167 2.897 18 4 18h1a1 1 0 0 0 1-1v-5.143a1 1 0 0 0-1-1h-.908C4.648 6.987 7.978 4 12 4s7.352 2.987 7.908 6.857H19a1 1 0 0 0-1 1V18c0 1.103-.897 2-2 2h-2v-1h-4v3h6c2.206 0 4-1.794 4-4 1.103 0 2-.833 2-1.857V12c0-5.514-4.486-10-10-10z"
+            />
+          </svg>
+          <div
+            class="sc-dicizt dDHUsF"
+          >
+            <p>
+              Online Support
+            </p>
+            <p>
+              24 hours a day, 7 days a week
+            </p>
+          </div>
+        </div>
+        <div
+          class="sc-fFGjHI fXiUEB"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"
+            />
+          </svg>
+          <div
+            class="sc-dicizt dDHUsF"
+          >
+            <p>
+              Flexible Payment
+            </p>
+            <p>
+              Pay with Multiple Credit Cards
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

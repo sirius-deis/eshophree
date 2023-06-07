@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelWithInput component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB cyUqvl"
+  >
+    <label
+      class="sc-gTRrQi ePxBfa"
+    >
+      Value
+      *
+      <input
+        class="sc-ewnqHT hPImUq"
+        placeholder="Enter your value"
+        required=""
+        type="text"
+      />
+    </label>
+  </div>
+</div>
+`;

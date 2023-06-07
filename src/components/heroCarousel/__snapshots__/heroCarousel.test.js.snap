@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroCarousel component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB dxzDM"
+  >
+    <div
+      class="sc-gxYJeL dmSiwI"
+    >
+      <button
+        class="active"
+      />
+      <button
+        class=""
+      />
+      <button
+        class=""
+      />
+      <button
+        class=""
+      />
+    </div>
+    <div
+      class="sc-gTRrQi fZNjYN"
+      style="transform: translateX(0%);"
+    >
+      <div
+        class="sc-ewnqHT hufTMZ"
+      >
+        <img
+          alt="slide"
+          src="https://source.unsplash.com/random/300×300?electronics"
+        />
+        <div
+          class="sc-kPTPQs gkVKTH"
+        >
+          <button
+            class="sc-ispOId sc-kuWgmH dHSeuY jjKghz"
+          >
+            <a
+              href="/shop/"
+            >
+              Now available →
+            </a>
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-ewnqHT hufTMZ"
+      >
+        <img
+          alt="slide"
+          src="https://source.unsplash.com/random/300×300?electronics"
+        />
+        <div
+          class="sc-kPTPQs gkVKTH"
+        >
+          <button
+            class="sc-ispOId sc-kuWgmH dHSeuY jjKghz"
+          >
+            <a
+              href="/shop/"
+            >
+              Now available →
+            </a>
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-ewnqHT hufTMZ"
+      >
+        <img
+          alt="slide"
+          src="https://source.unsplash.com/random/300×300?electronics"
+        />
+        <div
+          class="sc-kPTPQs gkVKTH"
+        >
+          <button
+            class="sc-ispOId sc-kuWgmH dHSeuY jjKghz"
+          >
+            <a
+              href="/shop/"
+            >
+              Now available →
+            </a>
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-ewnqHT hufTMZ"
+      >
+        <img
+          alt="slide"
+          src="https://source.unsplash.com/random/300×300?electronics"
+        />
+        <div
+          class="sc-kPTPQs gkVKTH"
+        >
+          <button
+            class="sc-ispOId sc-kuWgmH dHSeuY jjKghz"
+          >
+            <a
+              href="/shop/"
+            >
+              Now available →
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button
+      class="sc-fFGjHI sc-dicizt hNdyPn hpXFoe"
+    >
+      ‹
+    </button>
+    <button
+      class="sc-fFGjHI sc-iVCKna hNdyPn bbzcUU"
+    >
+      ›
+    </button>
+  </div>
+</div>
+`;
