@@ -4,6 +4,7 @@ exports[`DropdownItem component should match snapshot 1`] = `
 <div>
   <button
     class="sc-bgqQcB llICwK"
+    role="listitem"
     type="button"
   >
     Some value

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component should match snapshot 1`] = `
+<div>
+  <ul
+    class="sc-bgqQcB eLjcYi"
+  >
+    <li
+      class="sc-gTRrQi kQsCbO"
+    >
+      <a
+        href="/1"
+      >
+        1
+      </a>
+    </li>
+    <li
+      class="sc-gTRrQi kQsCbO"
+    >
+      <a
+        href="/2"
+      >
+        2
+      </a>
+    </li>
+    <li
+      class="sc-gTRrQi kQsCbO"
+    >
+      <a
+        href="/3"
+      >
+        3
+      </a>
+    </li>
+  </ul>
+</div>
+`;

@@ -2,7 +2,7 @@ import { StyledLabelWithInput, StyledLabel, StyledInput } from './labelWithInput
 
 const LabelWithInput = ({
   type = 'text',
-  label = 'value',
+  label = type,
   name,
   placeholder = `Enter your ${label}`,
   minLength,
@@ -11,7 +11,7 @@ const LabelWithInput = ({
   return (
     <StyledLabelWithInput>
       <StyledLabel>
-        {label[0].toUpperCase() + label.slice(1)}*
+        {label[0].toUpperCase() + label.slice(1)} *
         <StyledInput
           type={type}
           placeholder={placeholder}

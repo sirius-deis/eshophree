@@ -12,13 +12,14 @@ const SignUp = () => {
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
-    const { email, password, confirm } = e.target;
+    const { email, password, confirm } = e.target.elements;
     dispatch(signUp({ email: email.value, password: password.value, passwordConfirm: confirm.value }));
     e.target.reset();
   };
 
   return (
-    <StyledSignUp onSubmit={submitHandler}>
+    <StyledSignUp onSubmit={submitHandler} aria-label='form'>
+      {isLoading && <Spinner />}
       <StyledH2>Sign up</StyledH2>
       <LabelWithInput type='email' name='email' />
       <LabelWithInput type='password' name='password' minLength={8} />
@@ -45,7 +46,7 @@ const SignUp = () => {
         </p>
       </div>
       <Button bgColor='var(--additional-color)' color='var(--bg-color)' disabled={isLoading ? true : false}>
-        {isLoading ? <Spinner /> : 'Sign up'}
+        Sign up
       </Button>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
         <StyleLine />

@@ -12,17 +12,17 @@ const Login = () => {
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
-    const { email, password } = e.target;
-
+    const { email, password } = e.target.elements;
     dispatch(signIn({ email: email.value, password: password.value }));
+    e.target.reset();
   };
 
   return (
-    <StyledLogin onSubmit={submitHandler}>
-      <Spinner />
+    <StyledLogin onSubmit={submitHandler} aria-label='form'>
+      {isLoading && <Spinner />}
       <StyledH2>Login in</StyledH2>
-      <LabelWithInput type='email' name='email' />
-      <LabelWithInput type='password' name='password' minLength={8} />
+      <LabelWithInput type='email' label='email' name='email' />
+      <LabelWithInput type='password' label='password' name='password' minLength={8} />
       <div
         style={{
           display: 'flex',

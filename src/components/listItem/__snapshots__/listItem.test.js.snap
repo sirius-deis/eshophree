@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem component should match snapshot 1`] = `
+<div>
+  <li
+    class="sc-bgqQcB XKrgR"
+  >
+    <a
+      href="/test"
+    >
+      test
+    </a>
+  </li>
+</div>
+`;

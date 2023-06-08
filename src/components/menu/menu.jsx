@@ -5,7 +5,7 @@ import DropdownMenu from '../dropdown-menu/dropdownMenu';
 
 import { StyledMenu, StyledDropdownToggle, StyledCount } from './menu.styles';
 
-//TODO:
+//TODO: add dropdown with options for icons
 const Menu = () => {
   return (
     <StyledMenu>

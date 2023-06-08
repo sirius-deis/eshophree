@@ -114,6 +114,7 @@ exports[`Header component should match snapshot 1`] = `
             </button>
             <div
               class="sc-dcrmVg bABvsQ"
+              role="listbox"
             />
           </div>
           <div
@@ -147,6 +148,7 @@ exports[`Header component should match snapshot 1`] = `
             </button>
             <div
               class="sc-dcrmVg bABvsQ"
+              role="listbox"
             />
           </div>
           <div
@@ -171,6 +173,7 @@ exports[`Header component should match snapshot 1`] = `
             </button>
             <div
               class="sc-dcrmVg bABvsQ"
+              role="listbox"
             />
           </div>
         </div>

@@ -1,17 +1,10 @@
-import StyledSpinner from './spinner.styles';
+import { StyledSpinner, StyledBackdrop } from './spinner.styles';
 
 const Spinner = () => {
   return (
-    <StyledSpinner>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </StyledSpinner>
+    <StyledBackdrop>
+      <StyledSpinner />
+    </StyledBackdrop>
   );
 };
 

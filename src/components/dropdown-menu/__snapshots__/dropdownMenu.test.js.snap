@@ -4,6 +4,7 @@ exports[`DropdownMenu component should match snapshot 1`] = `
 <div>
   <div
     class="sc-bgqQcB kTYWeF"
+    role="listbox"
   >
     <button>
       button #1

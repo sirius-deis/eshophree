@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component should match snapshot 1`] = `
+<div>
+  <nav
+    class="sc-bgqQcB bPYUnv"
+  >
+    <div
+      class="container"
+    >
+      <ul
+        class="sc-gTRrQi iYUrTl"
+      >
+        <li
+          class="sc-ewnqHT kSjrJA"
+        >
+          <a
+            href="/home"
+          >
+            home
+          </a>
+        </li>
+        <li
+          class="sc-ewnqHT kSjrJA"
+        >
+          <a
+            href="/categories"
+          >
+            categories
+          </a>
+        </li>
+        <li
+          class="sc-ewnqHT kSjrJA"
+        >
+          <a
+            href="/shop"
+          >
+            shop
+          </a>
+        </li>
+        <li
+          class="sc-ewnqHT kSjrJA"
+        >
+          <a
+            href="/about"
+          >
+            about
+          </a>
+        </li>
+        <li
+          class="sc-ewnqHT kSjrJA"
+        >
+          <a
+            href="/blog"
+          >
+            blog
+          </a>
+        </li>
+        <li
+          class="sc-ewnqHT kSjrJA"
+        >
+          <a
+            href="/contact"
+          >
+            contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;

@@ -8,7 +8,7 @@ describe('LabelWithInput component', () => {
   });
   it('should render component with given label', () => {
     render(<LabelWithInput label='name' />);
-    const label = screen.queryByLabelText(/name\*/i);
+    const label = screen.queryByLabelText(/name \*/i);
     expect(label).toBeInTheDocument();
   });
   it('should render component with given placeholder', () => {
@@ -18,7 +18,7 @@ describe('LabelWithInput component', () => {
   });
   it('should render component with placeholder without providing value', () => {
     render(<LabelWithInput />);
-    const input = screen.getByPlaceholderText(/enter your value/i);
+    const input = screen.getByPlaceholderText(/enter your text/i);
     expect(input).toBeInTheDocument();
   });
   it('should render component which is email and check its validity', () => {
