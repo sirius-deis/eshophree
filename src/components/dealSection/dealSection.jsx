@@ -1,12 +1,12 @@
-import { StyledDealSection } from './dealSection.styles';
-
 import Carousel from '../carousel/carousel';
+
+import { StyledDealSection } from './dealSection.styles';
 
 const DealSection = () => {
   return (
     <div className='container'>
       <StyledDealSection>
-        <Carousel />
+        <Carousel title='Deal Of The Day' />
       </StyledDealSection>
     </div>
   );

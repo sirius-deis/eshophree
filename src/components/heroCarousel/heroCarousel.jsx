@@ -54,9 +54,9 @@ const HeroCarousel = () => {
           .fill(null)
           .map((_, i) => (
             <StyledCarouseItem key={i}>
-              <img src='https://source.unsplash.com/random/300×300?electronics' alt='slide' />
+              <img src='https://source.unsplash.com/random/1100×400?electronics' alt='slide' />
               <StyledCarouselOverlay>
-                <Button bgColor='var(--shadow-color-darker)' color='var(--bg-color)'>
+                <Button bgColor='shadow-color-darker' color='bg-color'>
                   <Link to='/shop/'>Now available &rarr;</Link>
                 </Button>
               </StyledCarouselOverlay>

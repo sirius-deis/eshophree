@@ -1,25 +1,23 @@
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { StyledCard, StyledInfo } from './card.styles';
+import Stock from '../stock/stock';
 
-import { StyledCard, StyledImageOverlay } from './card.styles';
-
-import Button from '../button/button';
-
-const Card = ({ btnTitle }) => {
+const Card = ({ isColumn }) => {
   return (
     <StyledCard>
-      <img src='https://source.unsplash.com/random/300×300?electronics' alt='card' />
-      <StyledImageOverlay>
-        <Button bgColor='var(--shadow-color-darker)' color='var(--bg-color)'>
-          <Link>{btnTitle} &rarr;</Link>
-        </Button>
-      </StyledImageOverlay>
+      <img src='https://source.unsplash.com/random/300×350?electronics' alt='product' />
+      <StyledInfo>
+        <p>Headphone</p>
+        <h3>Samsung Galaxy S10+, 128GB, Ceramic Black - Unlocked</h3>
+        <p className='price'>
+          $80.00
+          <sup>
+            <del>$100.00</del>
+          </sup>
+        </p>
+        <Stock total={20} sold={7} endIn={new Date('2023-06-09')} />
+      </StyledInfo>
     </StyledCard>
   );
-};
-
-Card.propTypes = {
-  btnTitle: PropTypes.string,
 };
 
 export default Card;

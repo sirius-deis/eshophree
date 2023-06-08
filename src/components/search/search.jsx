@@ -34,12 +34,7 @@ const Search = () => {
   return (
     <StyledSearch>
       <Dropdown onMouseLeaveHandler={DropdownMouseLeaveHandler}>
-        <Button
-          kind='dropdown'
-          bgColor='transparent'
-          onClickHandler={onDropdownClickHandler}
-          onMouseEnterHandler={DropdownMouseEnterHandler}
-        >
+        <Button kind='dropdown' onClickHandler={onDropdownClickHandler} onMouseEnterHandler={DropdownMouseEnterHandler}>
           <StyledText className={`${isDropdownOpen ? 'opened' : ''}`}>{selectedCategory}</StyledText>
           <MdKeyboardArrowDown fontSize={22} />
         </Button>
@@ -57,7 +52,7 @@ const Search = () => {
         )}
       </Dropdown>
       <StyledSearchInput type='text' />
-      <Button type='button' kind='round' bgColor='var(--additional-color)' color='var(--bg-color)'>
+      <Button type='button' kind='round' bgColor='additional-color' color='bg-color'>
         <MdOutlineSearch />
       </Button>
     </StyledSearch>

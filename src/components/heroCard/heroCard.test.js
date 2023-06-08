@@ -1,13 +1,13 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import Card from './card';
+import HeroCard from './heroCard';
 
 describe('Card component', () => {
   it('should match snapshot', () => {
     const { container } = render(
       <MemoryRouter>
-        <Card btnTitle='Card' />
+        <HeroCard btnTitle='Card' />
       </MemoryRouter>,
     );
     expect(container).toMatchSnapshot();
@@ -15,7 +15,7 @@ describe('Card component', () => {
   it('should render element with given title', () => {
     render(
       <MemoryRouter>
-        <Card btnTitle='Card' />
+        <HeroCard btnTitle='Card' />
       </MemoryRouter>,
     );
     const title = screen.queryByText(/Card/);

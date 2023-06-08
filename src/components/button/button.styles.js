@@ -11,6 +11,8 @@ const StyledButton = styled.button`
   position: relative;
   font-size: 1.4rem;
   border: ${(props) => (props.bordered ? '1px solid var(--footer-color)' : '0')};
+  background-color: ${(props) => (props.bgColor ? `var(--${props.bgColor})` : 'transparent')};
+  color: ${(props) => (props.color ? `var(--${props.color})` : 'var(--text-color)')};
   cursor: pointer;
   &:hover {
     filter: brightness(95%);
@@ -38,7 +40,6 @@ const StyledPlainButton = styled(StyledButton)`
   padding: 1rem 1.4rem;
   border-radius: 10px;
   font-size: 1.6rem;
-  background-color: transparent;
 `;
 
 export { StyledPlainButton, StyledRoundButton, StyledDropdownButton };

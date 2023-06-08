@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
-import { StyledSignUp, StyledH2, StyleLine } from './signup.styles';
+import { StyledSignUp } from './signup.styles';
+import H2 from '../h2/h2';
+import Line from '../line/line';
 import Spinner from '../spinner/spinner';
 import LabelWithInput from '../labelWithInput/labelWithInput';
 import Button from '../button/button';
@@ -20,7 +22,7 @@ const SignUp = () => {
   return (
     <StyledSignUp onSubmit={submitHandler} aria-label='form'>
       {isLoading && <Spinner />}
-      <StyledH2>Sign up</StyledH2>
+      <H2>Sign up</H2>
       <LabelWithInput type='email' name='email' />
       <LabelWithInput type='password' name='password' minLength={8} />
       <LabelWithInput
@@ -39,8 +41,8 @@ const SignUp = () => {
         }}
       >
         <p>
-          Have account?{' '}
-          <Link to='/login' style={{ textDecoration: 'underline', paddingLeft: '0.5rem' }}>
+          Have an account?{' '}
+          <Link to='/login' style={{ textDecoration: 'underline', paddingLeft: '0.7rem' }}>
             Sign in
           </Link>
         </p>
@@ -49,7 +51,7 @@ const SignUp = () => {
         Sign up
       </Button>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
-        <StyleLine />
+        <Line width={35} />
         <p
           style={{
             color: 'var(--text-color-additional)',
@@ -58,7 +60,7 @@ const SignUp = () => {
         >
           Or sign up with
         </p>
-        <StyleLine />
+        <Line width={35} />
       </div>
       <div
         style={{

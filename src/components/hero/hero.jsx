@@ -5,7 +5,7 @@ import { MdPayment } from 'react-icons/md';
 import { StyledHero, StyledColoredContainer, StyledInfo, StyledItem, StyledText } from './hero.styles';
 
 import HeroCarousel from '../heroCarousel/heroCarousel';
-import Card from '../card/card';
+import HeroCard from '../heroCard/heroCard';
 
 const Hero = () => {
   return (
@@ -13,8 +13,8 @@ const Hero = () => {
       <div className='container'>
         <StyledHero>
           <HeroCarousel />
-          <Card btnTitle='Now available' />
-          <Card btnTitle='Order now' />
+          <HeroCard btnTitle='Now available' />
+          <HeroCard btnTitle='Order now' />
         </StyledHero>
         <StyledInfo>
           <StyledItem>

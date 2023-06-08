@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledColoredContainer = styled.div`
   width: 100%;
-  min-height: 70rem;
+  min-height: 80rem;
   padding: 4rem 0;
   background-color: var(--footer-color);
 `;

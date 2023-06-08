@@ -12,15 +12,4 @@ const StyledLogin = styled.form`
   box-shadow: 5px 4px 4px var(--shadow-color);
 `;
 
-const StyledH2 = styled.h2`
-  font-size: 2rem;
-  color: var(--text-color-additional);
-`;
-
-const StyleLine = styled.div`
-  width: calc(50% - 5rem);
-  height: 1px;
-  background-color: var(--text-color-additional);
-`;
-
-export { StyledLogin, StyledH2, StyleLine };
+export { StyledLogin };

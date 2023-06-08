@@ -5,14 +5,15 @@ const Button = ({ children, kind, bgColor, color, onClickHandler, onMouseEnterHa
   switch (kind) {
     case 'round':
       return (
-        <StyledRoundButton style={{ color, backgroundColor: bgColor }} type='button'>
+        <StyledRoundButton color={color} bgColor={bgColor} type='button'>
           {children}
         </StyledRoundButton>
       );
     case 'dropdown':
       return (
         <StyledDropdownButton
-          style={{ color, backgroundColor: bgColor }}
+          color={color}
+          bgColor={bgColor}
           type='button'
           onClick={onClickHandler}
           onMouseEnter={onMouseEnterHandler}
@@ -22,7 +23,7 @@ const Button = ({ children, kind, bgColor, color, onClickHandler, onMouseEnterHa
       );
     default:
       return (
-        <StyledPlainButton style={{ color, backgroundColor: bgColor }} bordered={bordered} disabled={disabled}>
+        <StyledPlainButton color={color} bgColor={bgColor} bordered={bordered} disabled={disabled}>
           {children}
         </StyledPlainButton>
       );
