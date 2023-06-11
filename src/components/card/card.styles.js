@@ -7,7 +7,7 @@ const StyledCard = styled.div`
   gap: 1.5rem;
   img {
     max-width: 40%;
-    max-height: 35rem;
+    min-height: 40rem;
     border: 1px solid var(--footer-color);
     border-radius: 10px;
     object-fit: content;
@@ -19,7 +19,7 @@ const StyledInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.7rem;
-  padding-right: 4rem;
+  padding-right: 3rem;
   p {
     color: var(--text-color-additional);
   }

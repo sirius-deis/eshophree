@@ -4,15 +4,15 @@ const StyledListItem = styled.li`
   font-size: 1.7rem;
   padding: 1rem;
   cursor: pointer;
-  width: calc(100% / 6);
+  width: 100%;
   text-align: center;
   transition: background-color 0.5s ease-out;
   &:hover {
-    background-color: var(--additional-color-darker);
+    backdrop-filter: brightness(90%);
   }
   a {
     text-decoration: none;
-    color: var(--bg-color);
+    color: ${(props) => (props.color ? `var(--${props.color})` : 'var(--bg-color)')};
   }
   &::first-letter {
     text-transform: uppercase;

@@ -10,7 +10,7 @@ import DropdownItem from '../dropdown-item/dropdownItem';
 
 const Search = () => {
   const categories = useSelector((store) => store.category.categories);
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [selectedCategory, setSelectedCategory] = useState(categories[0].name);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const onSelectCategoryHandler = (value) => {

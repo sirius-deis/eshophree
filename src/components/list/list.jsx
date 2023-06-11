@@ -4,10 +4,12 @@ import { StyledList } from './list.styles';
 
 import ListItem from '../listItem/listItem';
 
-const List = ({ list }) => {
-  const navigation = list.map((item, i) => {
-    return <ListItem key={i}>{item}</ListItem>;
-  });
+const List = ({ list, color }) => {
+  const navigation = list.map((item, i) => (
+    <ListItem color={color} key={item._id || i}>
+      {item.name}
+    </ListItem>
+  ));
   return <StyledList>{navigation}</StyledList>;
 };
 

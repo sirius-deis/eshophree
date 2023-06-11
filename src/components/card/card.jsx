@@ -1,20 +1,20 @@
 import { StyledCard, StyledInfo } from './card.styles';
 import Stock from '../stock/stock';
 
-const Card = ({ isColumn }) => {
+const Card = ({ isColumn, image, category, name, price, discount, total, sold, endIn }) => {
   return (
     <StyledCard>
-      <img src='https://source.unsplash.com/random/300×350?electronics' alt='product' />
+      <img src={image} alt='product' />
       <StyledInfo>
-        <p>Headphone</p>
-        <h3>Samsung Galaxy S10+, 128GB, Ceramic Black - Unlocked</h3>
+        <p>{category}</p>
+        <h3>{name}</h3>
         <p className='price'>
-          $80.00
+          ${price.toFixed(2)}
           <sup>
-            <del>$100.00</del>
+            <del>${((price / 100) * (price - discount)).toFixed(2)}</del>
           </sup>
         </p>
-        <Stock total={20} sold={7} endIn={new Date('2023-06-09')} />
+        <Stock total={total} sold={sold} endIn={endIn} />
       </StyledInfo>
     </StyledCard>
   );

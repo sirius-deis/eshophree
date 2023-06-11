@@ -11,20 +11,25 @@ const Stock = ({ total, sold, endIn }) => {
   const progressLength = (100 / total) * (total - sold);
   const [remainingTime, setRemainingTime] = useState((endIn - Date.now()) / 1000);
   useEffect(() => {
-    const intervalId = setInterval(
-      () =>
-        setRemainingTime((prevState) => {
-          return prevState - 1;
-        }),
-      1000,
-    );
+    const intervalId = setInterval(() => {
+      if (remainingTime <= 0) {
+        clearInterval(intervalId);
+      }
+      setRemainingTime((prevState) => {
+        return prevState - 1;
+      });
+    }, 1000);
     return () => {
       clearInterval(intervalId);
     };
   }, [remainingTime]);
   return (
     <StyledStock>
-      <div style={{ marginBottom: '1rem' }}>
+      <div
+        style={{
+          marginBottom: '1rem',
+        }}
+      >
         <Row>
           <span style={{ fontSize: '1.3rem', color: 'var(--text-color-additional)' }}>Available: {total - sold}</span>
           <span style={{ fontSize: '1.3rem', color: 'var(--text-color-additional)' }}>Sold: {sold}</span>
@@ -34,12 +39,12 @@ const Stock = ({ total, sold, endIn }) => {
           <StyledProgress width={progressLength} bgColor='additional-color' />
         </div>
       </div>
-      <Row>
+      <Row gap={1}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
           <h4 style={{ fontSize: '1.7rem' }}>Harry Up</h4>
           <p style={{ fontSize: '1.1rem', color: 'var(--text-color-additional)' }}>offer end in:</p>
         </div>
-        <Row gap={1}>
+        <Row gap={0.5}>
           <div className='clock'>
             <span className='circle'>{formatTime(remainingTime / 24 / 60 / 60)}</span>
             Days
