@@ -5,7 +5,7 @@ import { StyledSignUp } from './signup.styles';
 import H2 from '../h2/h2';
 import Line from '../line/line';
 import Spinner from '../spinner/spinner';
-import LabelWithInput from '../labelWithInput/labelWithInput';
+import LabelWithInput from '../label-with-input/labelWithInput';
 import Button from '../button/button';
 import { signUp } from '../../store/user/user.actions';
 
@@ -15,7 +15,9 @@ const SignUp = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     const { email, password, confirm } = e.target.elements;
-    dispatch(signUp({ email: email.value, password: password.value, passwordConfirm: confirm.value }));
+    dispatch(
+      signUp({ email: email.value, password: password.value, passwordConfirm: confirm.value }),
+    );
     e.target.reset();
   };
 
@@ -47,7 +49,11 @@ const SignUp = () => {
           </Link>
         </p>
       </div>
-      <Button bgColor='var(--additional-color)' color='var(--bg-color)' disabled={isLoading ? true : false}>
+      <Button
+        bgColor='var(--additional-color)'
+        color='var(--bg-color)'
+        disabled={isLoading ? true : false}
+      >
         Sign up
       </Button>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>

@@ -5,7 +5,7 @@ import Line from '../line/line';
 import H2 from '../h2/h2';
 import { StyledLogin } from './login.styles';
 import Spinner from '../spinner/spinner';
-import LabelWithInput from '../labelWithInput/labelWithInput';
+import LabelWithInput from '../label-with-input/labelWithInput';
 import Button from '../button/button';
 import { signIn } from '../../store/user/user.actions';
 
