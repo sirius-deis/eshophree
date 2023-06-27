@@ -1,12 +1,30 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { StyledCard, StyledInfo } from './card.styles';
-import Stock from '../stock/stock';
 
-const Card = ({ isColumn, image, category, name, price, discount, total, sold, endIn }) => {
+const Card = ({
+  children,
+  isColumn,
+  image,
+  category,
+  name,
+  price,
+  discount,
+  total,
+  sold,
+  endIn,
+}) => {
   return (
-    <StyledCard>
+    <StyledCard
+      style={{
+        display: 'flex',
+        flexDirection: isColumn ? 'column' : 'row',
+      }}
+      isColumn={isColumn}
+    >
       <img src={image} alt='product' />
-      <StyledInfo>
-        <p>{category}</p>
+      <StyledInfo isColumn={isColumn}>
+        <Link to={`/category/${category}`}>{category}</Link>
         <h3>{name}</h3>
         <p className='price'>
           ${price.toFixed(2)}
@@ -14,7 +32,7 @@ const Card = ({ isColumn, image, category, name, price, discount, total, sold, e
             <del>${((price / 100) * (price - discount)).toFixed(2)}</del>
           </sup>
         </p>
-        <Stock total={total} sold={sold} endIn={endIn} />
+        {children && React.cloneElement(children, { total, sold, endIn })}
       </StyledInfo>
     </StyledCard>
   );

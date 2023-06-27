@@ -30,13 +30,24 @@ const Carousel = ({ children, title, amount, titleColor, icon }) => {
           <StyledPrevControl onClick={() => shiftSlide(-1)} disabled={index === 0}>
             &lsaquo;
           </StyledPrevControl>
-          <StyledNextControl onClick={() => shiftSlide(1)} disabled={index * amount >= children.length - 1}>
+          <StyledNextControl
+            onClick={() => shiftSlide(1)}
+            disabled={(index + 1) * amount >= children.length}
+          >
             &rsaquo;
           </StyledNextControl>
         </div>
       </Row>
       <Line width={100} />
-      <StyledInner style={{ transform: `translateX(${-index * 50}%)` }}>
+      <StyledInner
+        style={{
+          transform: `translateX(${
+            (index + 1) * amount < children.length
+              ? -index * 100
+              : -(index - 1) * 100 + ((index * amount - children.length) / amount) * 100
+          }%)`,
+        }}
+      >
         {React.Children.map(children, (child) => (
           <StyledCarouseItem amount={amount}>{React.cloneElement(child)}</StyledCarouseItem>
         ))}

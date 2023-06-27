@@ -1,6 +1,7 @@
 import { FaFireAlt } from 'react-icons/fa';
 import Carousel from '../carousel/carousel';
 import Card from '../card/card';
+import Stock from '../stock/stock';
 import { StyledDealSection } from './dealSection.styles';
 
 const DealSection = () => {
@@ -55,7 +56,9 @@ const DealSection = () => {
         icon={<FaFireAlt color='var(--additional-color)' fontSize='2rem' />}
       >
         {dummy.map((item, i) => (
-          <Card key={i} {...item} />
+          <Card key={i} withStock {...item}>
+            <Stock />
+          </Card>
         ))}
       </Carousel>
     </StyledDealSection>

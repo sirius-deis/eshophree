@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  cursor: pointer;
   img {
-    max-width: 40%;
+    max-width: ${(props) => (props.isColumn ? '100%' : '40%')};
     min-height: 40rem;
     border: 1px solid var(--footer-color);
     border-radius: 10px;
@@ -15,10 +17,11 @@ const StyledCard = styled.div`
 `;
 
 const StyledInfo = styled.div`
+  width: 100%;
   margin-left: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.7rem;
+  gap: ${(props) => (props.isColumn ? '0.3rem' : '1.7rem')};
   padding-right: 3rem;
   p {
     color: var(--text-color-additional);
