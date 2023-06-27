@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const StyledCarousel = styled.div`
   width: 100%;
-  overflow: hidden;
 `;
 
 const StyledInner = styled.div`

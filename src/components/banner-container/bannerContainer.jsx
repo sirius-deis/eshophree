@@ -7,7 +7,7 @@ const StyledBannerContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  min-height: 15rem;
+  height: 15rem;
 `;
 
 const BannerContainer = ({ banners }) => {

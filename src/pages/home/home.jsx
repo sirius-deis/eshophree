@@ -6,6 +6,7 @@ import Carousel from '../../components/carousel/carousel';
 import Card from '../../components/card/card';
 import CategoryItem from '../../components/category-item/categoryItem';
 import BannerContainer from '../../components/banner-container/bannerContainer';
+import Banner from '../../components/banner/banner';
 
 const dummy = [
   {
@@ -58,6 +59,16 @@ const dummy = [
     sold: 7,
     endIn: new Date('2023-06-14'),
   },
+  {
+    image: 'https://source.unsplash.com/random/300×350?computers',
+    category: 'computer',
+    name: 'Some name 1',
+    price: 140,
+    discount: 10,
+    total: 43,
+    sold: 7,
+    endIn: new Date('2023-06-14'),
+  },
 ];
 
 const banners = [
@@ -97,6 +108,19 @@ const Home = () => {
             <Card key={i} {...item} isColumn />
           ))}
         </Carousel>
+      </div>
+
+      <div className='container' style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+        <Carousel
+          title='Smart Home Appliances'
+          banner={<Banner background='https://source.unsplash.com/random/300×650?advertisment' />}
+          amount={5}
+        >
+          {dummy.map((item, i) => (
+            <Card key={i} {...item} isColumn />
+          ))}
+        </Carousel>
+        <BannerContainer banners={banners.slice(0, 2)} />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ import {
   StyledNextControl,
 } from './carousel.styles';
 
-const Carousel = ({ children, title, amount, titleColor, icon }) => {
+const Carousel = ({ children, banner, title, amount, titleColor, icon }) => {
   const [index, setIndex] = useState(0);
 
   const shiftSlide = (n) => {
@@ -39,19 +39,24 @@ const Carousel = ({ children, title, amount, titleColor, icon }) => {
         </div>
       </Row>
       <Line width={100} />
-      <StyledInner
-        style={{
-          transform: `translateX(${
-            (index + 1) * amount < children.length
-              ? -index * 100
-              : -(index - 1) * 100 + ((index * amount - children.length) / amount) * 100
-          }%)`,
-        }}
-      >
-        {React.Children.map(children, (child) => (
-          <StyledCarouseItem amount={amount}>{React.cloneElement(child)}</StyledCarouseItem>
-        ))}
-      </StyledInner>
+      <div style={{ display: 'flex', gap: '1rem' }}>
+        {banner}
+        <div style={{ overflow: 'hidden' }}>
+          <StyledInner
+            style={{
+              transform: `translateX(${
+                (index + 1) * amount < children.length
+                  ? -index * 100
+                  : -(index - 1) * 100 + ((index * amount - children.length) / amount) * 100
+              }%)`,
+            }}
+          >
+            {React.Children.map(children, (child) => (
+              <StyledCarouseItem amount={amount}>{React.cloneElement(child)}</StyledCarouseItem>
+            ))}
+          </StyledInner>
+        </div>
+      </div>
     </StyledCarousel>
   );
 };

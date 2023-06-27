@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const StyledBanner = styled.div`
-  min-height: 15rem;
+  min-width: 25rem;
+  min-height: 100%;
   flex: 1;
 `;
 
