@@ -14,6 +14,8 @@ const Stock = ({ total, sold, endIn }) => {
     const intervalId = setInterval(() => {
       if (remainingTime <= 0) {
         clearInterval(intervalId);
+        setRemainingTime(0);
+        return;
       }
       setRemainingTime((prevState) => {
         return prevState - 1;
@@ -31,8 +33,12 @@ const Stock = ({ total, sold, endIn }) => {
         }}
       >
         <Row>
-          <span style={{ fontSize: '1.3rem', color: 'var(--text-color-additional)' }}>Available: {total - sold}</span>
-          <span style={{ fontSize: '1.3rem', color: 'var(--text-color-additional)' }}>Sold: {sold}</span>
+          <span style={{ fontSize: '1.3rem', color: 'var(--text-color-additional)' }}>
+            Available: {total - sold}
+          </span>
+          <span style={{ fontSize: '1.3rem', color: 'var(--text-color-additional)' }}>
+            Sold: {sold}
+          </span>
         </Row>
         <div className='progress'>
           <StyledProgress width={100} bgColor='additional-color-lighter' />
