@@ -8,6 +8,7 @@ const StyledCard = styled.div`
   gap: 1.5rem;
   cursor: pointer;
   img {
+    width: 100%;
     max-width: ${(props) => (props.isColumn ? '100%' : '40%')};
     min-height: 40rem;
     border: 1px solid var(--footer-color);

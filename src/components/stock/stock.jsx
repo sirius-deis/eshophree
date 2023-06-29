@@ -3,7 +3,7 @@ import { StyledStock, StyledProgress } from './stock.styles';
 import Row from '../row/row';
 
 const formatTime = (number) => {
-  const trunked = Math.trunc(number);
+  const trunked = Math.trunc(number) || 0;
   return trunked >= 10 ? trunked : `0${trunked}`;
 };
 

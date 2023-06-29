@@ -58,7 +58,7 @@ function App() {
           }
         />
         <Route
-          path='/profile'
+          path='profile'
           element={
             <Suspense fallback={<Spinner />}>
               <Profile />

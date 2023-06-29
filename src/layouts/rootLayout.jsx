@@ -6,7 +6,7 @@ import { addCategoriesToStore } from '../store/category/category.actions';
 import useFetch from '../hooks/useFetch';
 
 const RootLayout = () => {
-  const [data] = useFetch('http://localhost:3000/api/v1/products/categories');
+  const [data] = useFetch('products/categories');
   const dispatch = useDispatch();
   useEffect(() => {
     data && dispatch(addCategoriesToStore(data));
