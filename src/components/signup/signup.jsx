@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
 import { StyledSignUp } from './signup.styles';
@@ -11,15 +12,23 @@ import { signUp } from '../../store/user/user.actions';
 
 const SignUp = () => {
   const { isLoading, error } = useSelector((state) => state.user);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
     const { email, password, confirm } = e.target.elements;
     dispatch(
       signUp({ email: email.value, password: password.value, passwordConfirm: confirm.value }),
     );
-    e.target.reset();
+    setIsSubmitted(true);
   };
+
+  useEffect(() => {
+    if (isSubmitted && !isLoading && !error) {
+      navigate('/login');
+    }
+  }, [isLoading, error, isSubmitted, navigate]);
 
   return (
     <StyledSignUp onSubmit={submitHandler} aria-label='form'>
