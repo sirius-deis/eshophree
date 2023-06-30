@@ -18,12 +18,13 @@ const userReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isLoading: false,
         user: action.payload.data.user,
+        error: null,
         token: action.payload.token,
       };
     case UserActionTypes.SIGN_OUT_SUCCESS:
-      return { ...state, isLoading: false, user: null, token: null };
+      return { ...state, isLoading: false, user: null, error: null, token: null };
     case UserActionTypes.SIGN_UP_SUCCESS:
-      return { ...state, isLoading: false };
+      return { ...state, isLoading: false, error: null };
     case UserActionTypes.SIGN_IN_FAILURE:
     case UserActionTypes.SIGN_OUT_FAILURE:
     case UserActionTypes.SIGN_UP_FAILURE:

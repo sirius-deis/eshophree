@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
 import Line from '../line/line';
 import H2 from '../h2/h2';
@@ -11,18 +13,26 @@ import { signIn } from '../../store/user/user.actions';
 
 const Login = () => {
   const { isLoading, error } = useSelector((state) => state.user);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
     const { email, password } = e.target.elements;
     dispatch(signIn({ email: email.value, password: password.value }));
-    e.target.reset();
+    setIsSubmitted(true);
   };
+
+  useEffect(() => {
+    if (isSubmitted && !isLoading && !error) {
+      navigate('/');
+    }
+  }, [isLoading, error, isSubmitted]);
 
   return (
     <StyledLogin onSubmit={submitHandler} aria-label='form'>
       {isLoading && <Spinner />}
-      <H2>Login in</H2>
+      <H2>Log in</H2>
       <LabelWithInput type='email' label='email' name='email' />
       <LabelWithInput type='password' label='password' name='password' minLength={8} />
       <div
