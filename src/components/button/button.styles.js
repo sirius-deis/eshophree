@@ -17,6 +17,8 @@ const StyledButton = styled.button`
   &:hover {
     filter: brightness(95%);
   }
+  &:disabled {
+    filter: unset;
 `;
 
 const StyledRoundButton = styled(StyledButton)`

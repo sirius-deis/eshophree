@@ -8,7 +8,6 @@ import { StyledLogin } from './login.styles';
 import Spinner from '../spinner/spinner';
 import LabelWithInput from '../label-with-input/labelWithInput';
 import Button from '../button/button';
-import Portal from '../portal/portal';
 import Modal from '../modal/modal';
 import { signIn } from '../../store/user/user.actions';
 
@@ -29,7 +28,7 @@ const Login = () => {
     if (isSubmitted && !isLoading && !error) {
       navigate('/');
     }
-    if (error) {
+    if (isSubmitted && error) {
       setIsModalOpened(true);
     }
   }, [isLoading, error, isSubmitted, navigate]);
@@ -37,11 +36,7 @@ const Login = () => {
   return (
     <StyledLogin onSubmit={submitHandler} aria-label='form'>
       {isLoading && <Spinner />}
-      {isModalOpened && (
-        <Portal wrapperId='modal'>
-          <Modal closeModal={() => setIsModalOpened(false)}>{error}</Modal>
-        </Portal>
-      )}
+      {isModalOpened && <Modal closeModal={() => setIsModalOpened(false)}>{error}</Modal>}
       <H2>Log in</H2>
       <LabelWithInput type='email' label='email' name='email' />
       <LabelWithInput type='password' label='password' name='password' minLength={8} />
@@ -63,7 +58,7 @@ const Login = () => {
           Forget password?
         </Link>
       </div>
-      <Button bgColor='var(--additional-color)' color='var(--bg-color)'>
+      <Button bgColor='var(--additional-color)' color='var(--bg-color)' disabled={isModalOpened}>
         Login
       </Button>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
@@ -86,10 +81,10 @@ const Login = () => {
           gap: '2rem',
         }}
       >
-        <Button bordered>
+        <Button bordered disabled={isModalOpened}>
           <FaFacebookF /> Facebook
         </Button>
-        <Button bordered>
+        <Button bordered disabled={isModalOpened}>
           <FaGoogle /> Google
         </Button>
       </div>

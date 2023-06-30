@@ -8,10 +8,12 @@ import Line from '../line/line';
 import Spinner from '../spinner/spinner';
 import LabelWithInput from '../label-with-input/labelWithInput';
 import Button from '../button/button';
+import Modal from '../modal/modal';
 import { signUp } from '../../store/user/user.actions';
 
 const SignUp = () => {
   const { isLoading, error } = useSelector((state) => state.user);
+  const [isModalOpened, setIsModalOpened] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -28,11 +30,15 @@ const SignUp = () => {
     if (isSubmitted && !isLoading && !error) {
       navigate('/login');
     }
+    if (isSubmitted && error) {
+      setIsModalOpened(true);
+    }
   }, [isLoading, error, isSubmitted, navigate]);
 
   return (
     <StyledSignUp onSubmit={submitHandler} aria-label='form'>
       {isLoading && <Spinner />}
+      {isModalOpened && <Modal closeModal={() => setIsModalOpened(false)}>{error}</Modal>}
       <H2>Sign up</H2>
       <LabelWithInput type='email' name='email' />
       <LabelWithInput type='password' name='password' minLength={8} />
