@@ -13,7 +13,6 @@ import {
 
 const Carousel = ({ children, banner, title, amount, titleColor, icon }) => {
   const [index, setIndex] = useState(0);
-
   const shiftSlide = (n) => {
     setIndex((prevState) => {
       return prevState + n;

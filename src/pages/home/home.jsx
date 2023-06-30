@@ -91,7 +91,7 @@ const Home = () => {
       </div>
 
       <div className='container' style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-        <DealSection products={dealProducts?.products} />
+        {!isDealLoading && <DealSection products={dealProducts?.products} />}
         <Carousel title='Product category' amount={7}>
           {categories.map((category) => (
             <Link key={category._id} to={`/shop/${category._id}`}>
@@ -104,7 +104,7 @@ const Home = () => {
         </Carousel>
         {!isTrendingLoading && (
           <Carousel title='Trending Products' amount={5}>
-            {trendingProducts?.products.map((item, i) => (
+            {(trendingProducts?.products || []).map((item, i) => (
               <Card key={i} {...item} isColumn />
             ))}
           </Carousel>
@@ -112,7 +112,7 @@ const Home = () => {
         <BannerContainer banners={banners} />
         {!isBestLoading && (
           <Carousel title='Best Sellers' amount={5}>
-            {bestProducts?.products.map((item, i) => (
+            {(bestProducts?.products || []).map((item, i) => (
               <Card key={i} {...item} isColumn />
             ))}
           </Carousel>

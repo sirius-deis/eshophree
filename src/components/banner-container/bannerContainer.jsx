@@ -13,8 +13,8 @@ const StyledBannerContainer = styled.div`
 const BannerContainer = ({ banners }) => {
   return (
     <StyledBannerContainer>
-      {banners.map((banner) => (
-        <Banner background={banner.image} />
+      {banners.map((banner, i) => (
+        <Banner key={i} background={banner.image} />
       ))}
     </StyledBannerContainer>
   );

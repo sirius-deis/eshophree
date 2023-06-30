@@ -42,7 +42,7 @@ const Stock = ({ total, sold, endIn }) => {
         </Row>
         <div className='progress'>
           <StyledProgress width={100} bgColor='additional-color-lighter' />
-          <StyledProgress width={progressLength} bgColor='additional-color' />
+          <StyledProgress width={progressLength || 100} bgColor='additional-color' />
         </div>
       </div>
       <Row gap={1}>
