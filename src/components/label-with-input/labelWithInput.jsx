@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { StyledLabelWithInput, StyledLabel, StyledInput } from './labelWithInput.styles';
 
 const LabelWithInput = ({
@@ -23,6 +24,15 @@ const LabelWithInput = ({
       </StyledLabel>
     </StyledLabelWithInput>
   );
+};
+
+LabelWithInput.propTypes = {
+  type: PropTypes.string,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
+  minLength: PropTypes.number,
+  maxLength: PropTypes.number,
 };
 
 export default LabelWithInput;

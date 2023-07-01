@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledBanner = styled.div`
   min-width: 25rem;
@@ -8,6 +9,10 @@ const StyledBanner = styled.div`
 
 const Banner = ({ background }) => {
   return <StyledBanner style={{ background: `center / contain no-repeat url(${background})` }} />;
+};
+
+Banner.propTypes = {
+  background: PropTypes.string,
 };
 
 export default Banner;

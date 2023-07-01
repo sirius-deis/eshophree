@@ -52,6 +52,8 @@ Button.propTypes = {
   color: PropTypes.string,
   onClickHandler: PropTypes.func,
   onMouseEnterHandler: PropTypes.func,
+  bordered: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 export default Button;

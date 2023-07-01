@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledLine = styled.div`
   width: ${(props) => props.width}%;
@@ -8,6 +9,10 @@ const StyledLine = styled.div`
 
 const Line = ({ width }) => {
   return <StyledLine width={width} />;
+};
+
+Line.propTypes = {
+  width: PropTypes.number,
 };
 
 export default Line;

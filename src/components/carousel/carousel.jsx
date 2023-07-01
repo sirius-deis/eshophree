@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Line from '../line/line';
 import H2 from '../h2/h2';
 import Row from '../row/row';
@@ -58,6 +59,15 @@ const Carousel = ({ children, banner, title, amount, titleColor, icon }) => {
       </div>
     </StyledCarousel>
   );
+};
+
+Carousel.propTypes = {
+  children: PropTypes.node,
+  banner: PropTypes.node,
+  title: PropTypes.string,
+  amount: PropTypes.number,
+  titleColor: PropTypes.string,
+  icon: PropTypes.node,
 };
 
 export default Carousel;

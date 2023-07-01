@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledItem = styled.div`
   padding: 1rem;
@@ -30,6 +31,10 @@ const StyledItem = styled.div`
 
 const CategoryItem = ({ children }) => {
   return <StyledItem>{children}</StyledItem>;
+};
+
+CategoryItem.propTypes = {
+  children: PropTypes.node,
 };
 
 export default CategoryItem;

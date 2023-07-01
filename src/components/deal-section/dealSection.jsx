@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { FaFireAlt } from 'react-icons/fa';
 import Carousel from '../carousel/carousel';
 import Card from '../card/card';
@@ -21,6 +22,10 @@ const DealSection = ({ products = [] }) => {
       </Carousel>
     </StyledDealSection>
   );
+};
+
+DealSection.propTypes = {
+  products: PropTypes.array,
 };
 
 export default DealSection;

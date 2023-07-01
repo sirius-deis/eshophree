@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { StyledCard, StyledInfo } from './card.styles';
 
 const Card = ({
@@ -36,6 +37,19 @@ const Card = ({
       </StyledInfo>
     </StyledCard>
   );
+};
+
+Card.propTypes = {
+  children: PropTypes.node,
+  isColumn: PropTypes.bool,
+  image: PropTypes.string,
+  category: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.string,
+  discount: PropTypes.string,
+  total: PropTypes.number,
+  sold: PropTypes.number,
+  endIn: PropTypes.object,
 };
 
 export default Card;

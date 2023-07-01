@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Banner from '../banner/banner';
 
@@ -18,6 +19,10 @@ const BannerContainer = ({ banners }) => {
       ))}
     </StyledBannerContainer>
   );
+};
+
+BannerContainer.propTypes = {
+  banners: PropTypes.array,
 };
 
 export default BannerContainer;
