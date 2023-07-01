@@ -15,6 +15,7 @@ const List = ({ list, color }) => {
 
 List.propTypes = {
   list: PropTypes.array,
+  color: PropTypes.string,
 };
 
 export default List;

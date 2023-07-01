@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { StyledStock, StyledProgress } from './stock.styles';
 import Row from '../row/row';
 
@@ -74,6 +75,12 @@ const Stock = ({ total, sold, endIn }) => {
       </Row>
     </StyledStock>
   );
+};
+
+Stock.propTypes = {
+  total: PropTypes.number,
+  sold: PropTypes.number,
+  endIn: PropTypes.object,
 };
 
 export default Stock;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledRow = styled.div`
   display: flex;
@@ -9,6 +10,11 @@ const StyledRow = styled.div`
 
 const Row = ({ children, gap }) => {
   return <StyledRow gap={gap}>{children}</StyledRow>;
+};
+
+Row.propTypes = {
+  children: PropTypes.node,
+  gap: PropTypes.string,
 };
 
 export default Row;

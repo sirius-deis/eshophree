@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Portal from '../portal/portal';
 import Button from '../button/button';
@@ -65,6 +66,11 @@ const Modal = ({ children, closeModal }) => {
       </StyledModal>
     </Portal>
   );
+};
+
+Modal.propTypes = {
+  children: PropTypes.node,
+  closeModal: PropTypes.func,
 };
 
 export default Modal;

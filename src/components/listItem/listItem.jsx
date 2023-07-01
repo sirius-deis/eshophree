@@ -13,6 +13,7 @@ const ListItem = ({ children, color }) => {
 
 ListItem.propTypes = {
   children: PropTypes.node,
+  color: PropTypes.string,
 };
 
 export default ListItem;
