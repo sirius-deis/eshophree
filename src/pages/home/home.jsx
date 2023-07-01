@@ -9,6 +9,15 @@ import CategoryItem from '../../components/category-item/categoryItem';
 import BannerContainer from '../../components/banner-container/bannerContainer';
 import Banner from '../../components/banner/banner';
 import HotSection from '../../components/hot-section/hotSection';
+import MultiLevelCard from '../../components/multi-level-card/multiLevelCard';
+
+const divideArrayOnChunks = (array, size = 2) => {
+  const chunked = [];
+  for (let i = 0; i < array.length; i += size) {
+    chunked.push(array.slice(i, i + size));
+  }
+  return chunked;
+};
 
 const dummy = [
   {
@@ -50,26 +59,6 @@ const dummy = [
     total: 10,
     sold: 4,
     endIn: new Date('2023-06-17'),
-  },
-  {
-    image: 'https://source.unsplash.com/random/300×350?computers',
-    category: 'computer',
-    name: 'Some name 1',
-    price: 140,
-    discount: 10,
-    total: 43,
-    sold: 7,
-    endIn: new Date('2023-06-14'),
-  },
-  {
-    image: 'https://source.unsplash.com/random/300×350?computers',
-    category: 'computer',
-    name: 'Some name 1',
-    price: 140,
-    discount: 10,
-    total: 43,
-    sold: 7,
-    endIn: new Date('2023-06-14'),
   },
 ];
 
@@ -125,8 +114,18 @@ const Home = () => {
           banner={<Banner background='https://source.unsplash.com/random/300×650?advertisment' />}
           amount={5}
         >
-          {dummy.map((item, i) => (
-            <Card key={i} {...item} isColumn />
+          {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
+            <MultiLevelCard key={i}>
+              {array.map((item, i) => (
+                <Card
+                  key={i}
+                  {...item}
+                  isColumn
+                  height='30rem'
+                  styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
+                />
+              ))}
+            </MultiLevelCard>
           ))}
         </Carousel>
         <BannerContainer banners={banners.slice(0, 2)} />

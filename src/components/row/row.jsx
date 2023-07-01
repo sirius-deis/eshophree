@@ -14,7 +14,7 @@ const Row = ({ children, gap }) => {
 
 Row.propTypes = {
   children: PropTypes.node,
-  gap: PropTypes.string,
+  gap: PropTypes.number,
 };
 
 export default Row;

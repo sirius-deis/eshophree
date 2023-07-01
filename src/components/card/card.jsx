@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { StyledCard, StyledInfo } from './card.styles';
+import Image from '../../assets/images/image-not-found.png';
 
 const Card = ({
   children,
@@ -14,16 +15,21 @@ const Card = ({
   total,
   sold,
   endIn,
+  height,
+  styles,
 }) => {
+  console.log(image);
   return (
     <StyledCard
       style={{
         display: 'flex',
         flexDirection: isColumn ? 'column' : 'row',
+        ...styles,
       }}
       isColumn={isColumn}
+      height={height}
     >
-      <img src={image} alt='product' />
+      <img src={image ? image : Image} alt='product' data-image={image} />
       <StyledInfo isColumn={isColumn}>
         <Link to={`/category/${category}`}>{category}</Link>
         <h3>{name}</h3>
@@ -45,11 +51,13 @@ Card.propTypes = {
   image: PropTypes.string,
   category: PropTypes.string,
   name: PropTypes.string,
-  price: PropTypes.string,
-  discount: PropTypes.string,
+  price: PropTypes.number,
+  discount: PropTypes.number,
   total: PropTypes.number,
   sold: PropTypes.number,
   endIn: PropTypes.object,
+  height: PropTypes.string,
+  styles: PropTypes.object,
 };
 
 export default Card;

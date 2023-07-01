@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
-  padding: 0.5rem;
+  width: 100%;
+  height: ${(props) => (props.height ? props.height : 'auto')};
+  padding: 0.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +12,7 @@ const StyledCard = styled.div`
   img {
     width: 100%;
     max-width: ${(props) => (props.isColumn ? '100%' : '40%')};
-    min-height: 40rem;
+    height: ${(props) => (props.height ? '70%' : '40rem')};
     border: 1px solid var(--footer-color);
     border-radius: 10px;
     object-fit: content;
