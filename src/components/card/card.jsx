@@ -18,7 +18,6 @@ const Card = ({
   height,
   styles,
 }) => {
-  console.log(image);
   return (
     <StyledCard
       style={{

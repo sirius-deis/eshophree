@@ -10,14 +10,8 @@ import BannerContainer from '../../components/banner-container/bannerContainer';
 import Banner from '../../components/banner/banner';
 import HotSection from '../../components/hot-section/hotSection';
 import MultiLevelCard from '../../components/multi-level-card/multiLevelCard';
-
-const divideArrayOnChunks = (array, size = 2) => {
-  const chunked = [];
-  for (let i = 0; i < array.length; i += size) {
-    chunked.push(array.slice(i, i + size));
-  }
-  return chunked;
-};
+import { divideArrayOnChunks } from '../../utils/util';
+import Background from '../../assets/images/hot_bg.jpg';
 
 const dummy = [
   {
@@ -73,6 +67,7 @@ const Home = () => {
   const [dealProducts, isDealLoading] = useFetch('products?tags=deal_of_the_day');
   const [trendingProducts, isTrendingLoading] = useFetch('products?tags=trending');
   const [bestProducts, isBestLoading] = useFetch('products?tags=best_sellers');
+  const [hotProducts, isHotLoading] = useFetch('products?tags=hot');
   return (
     <div>
       <div className='container--colored'>
@@ -107,7 +102,18 @@ const Home = () => {
           </Carousel>
         )}
       </div>
-      <HotSection />
+      <div
+        style={{
+          backgroundImage: `url(${Background})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className='container'>
+          {!isHotLoading && <HotSection products={[...dummy, ...dummy, ...dummy]} />}
+        </div>
+      </div>
       <div className='container' style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
         <Carousel
           title='Smart Home Appliances'

@@ -8,11 +8,11 @@ const StyledInner = styled.div`
   margin: 2rem 0 0.5rem;
   display: flex;
   flex-wrap: no-wrap;
-  gap: 0.5rem;
   transition: all 0.3s ease-out;
 `;
 
 const StyledCarouseItem = styled.div`
+  padding: 0.25rem;
   min-width: ${(props) => `calc(100%/${props.amount})`};
 `;
 
