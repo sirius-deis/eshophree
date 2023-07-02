@@ -37,7 +37,7 @@ const HotSection = () => {
                     <Card
                       key={i}
                       {...item}
-                      height='24.5rem'
+                      height='24rem'
                       styles={{ backgroundColor: 'var(--bg-color)' }}
                     />
                   ))}

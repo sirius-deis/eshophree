@@ -34,8 +34,14 @@ const Search = () => {
   return (
     <StyledSearch>
       <Dropdown onMouseLeaveHandler={DropdownMouseLeaveHandler}>
-        <Button kind='dropdown' onClickHandler={onDropdownClickHandler} onMouseEnterHandler={DropdownMouseEnterHandler}>
-          <StyledText className={`${isDropdownOpen ? 'opened' : ''}`}>{selectedCategory}</StyledText>
+        <Button
+          kind='dropdown'
+          onClickHandler={onDropdownClickHandler}
+          onMouseEnterHandler={DropdownMouseEnterHandler}
+        >
+          <StyledText className={`${isDropdownOpen ? 'opened' : ''}`}>
+            {selectedCategory}
+          </StyledText>
           <MdKeyboardArrowDown fontSize={22} />
         </Button>
         {isDropdownOpen && (
@@ -46,7 +52,9 @@ const Search = () => {
                   key={category._id}
                   onSelectCategoryHandler={onSelectCategoryHandler}
                   value={category.name}
-                />
+                >
+                  {category.name}
+                </DropdownItem>
               ))}
           </DropdownMenu>
         )}
