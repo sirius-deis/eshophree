@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Carousel from '../carousel/carousel';
 import Card from '../card/card';
 import MultiLevelCard from '../multi-level-card/multiLevelCard';
+import useFetch from '../../hooks/useFetch';
 import { divideArrayOnChunks } from '../../utils/util';
 
 const StyledHotSection = styled.section`
@@ -13,37 +14,39 @@ const StyledHotSection = styled.section`
   border-radius: 10px;
 `;
 
-const HotSection = ({ products = [] }) => {
-  console.log(divideArrayOnChunks(products, 2, true));
+const HotSection = () => {
+  const [hotProducts, isHotLoading] = useFetch('products?tags=hot');
   return (
     <StyledHotSection>
-      <Carousel title='Hot Product' amount={3} titleColor='additional-color'>
-        {divideArrayOnChunks(products, 2, true).map((array, i) => {
-          if ((i + 1) % 2 === 0) {
-            return (
-              <Card
-                key={i}
-                {...array[0]}
-                isColumn
-                styles={{ backgroundColor: 'var(--bg-color)' }}
-              />
-            );
-          } else {
-            return (
-              <MultiLevelCard key={i}>
-                {array.map((item, i) => (
-                  <Card
-                    key={i}
-                    {...item}
-                    height='24.5rem'
-                    styles={{ backgroundColor: 'var(--bg-color)' }}
-                  />
-                ))}
-              </MultiLevelCard>
-            );
-          }
-        })}
-      </Carousel>
+      {!isHotLoading && (
+        <Carousel title='Hot Product' amount={3} titleColor='additional-color'>
+          {divideArrayOnChunks(hotProducts?.products || [], 2, true).map((array, i) => {
+            if ((i + 1) % 2 === 0) {
+              return (
+                <Card
+                  key={i}
+                  {...array[0]}
+                  isColumn
+                  styles={{ backgroundColor: 'var(--bg-color)' }}
+                />
+              );
+            } else {
+              return (
+                <MultiLevelCard key={i}>
+                  {array.map((item, i) => (
+                    <Card
+                      key={i}
+                      {...item}
+                      height='24.5rem'
+                      styles={{ backgroundColor: 'var(--bg-color)' }}
+                    />
+                  ))}
+                </MultiLevelCard>
+              );
+            }
+          })}
+        </Carousel>
+      )}
     </StyledHotSection>
   );
 };

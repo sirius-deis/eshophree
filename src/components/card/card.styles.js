@@ -12,7 +12,7 @@ const StyledCard = styled.div`
   img {
     width: 100%;
     max-width: ${(props) => (props.isColumn ? '100%' : '40%')};
-    height: ${(props) => (props.height ? '70%' : '40rem')};
+    height: ${(props) => (props.height ? '100%' : '40rem')};
     border: 1px solid var(--footer-color);
     border-radius: 10px;
     object-fit: content;

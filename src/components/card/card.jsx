@@ -21,7 +21,6 @@ const Card = ({
   return (
     <StyledCard
       style={{
-        display: 'flex',
         flexDirection: isColumn ? 'column' : 'row',
         ...styles,
       }}

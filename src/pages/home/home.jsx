@@ -12,6 +12,7 @@ import HotSection from '../../components/hot-section/hotSection';
 import MultiLevelCard from '../../components/multi-level-card/multiLevelCard';
 import { divideArrayOnChunks } from '../../utils/util';
 import Background from '../../assets/images/hot_bg.jpg';
+import TrendingSection from '../../components/trending-section/trendingSection';
 
 const dummy = [
   {
@@ -64,10 +65,7 @@ const banners = [
 
 const Home = () => {
   const categories = useSelector((store) => store.category).categories;
-  const [dealProducts, isDealLoading] = useFetch('products?tags=deal_of_the_day');
-  const [trendingProducts, isTrendingLoading] = useFetch('products?tags=trending');
   const [bestProducts, isBestLoading] = useFetch('products?tags=best_sellers');
-  const [hotProducts, isHotLoading] = useFetch('products?tags=hot');
   return (
     <div>
       <div className='container--colored'>
@@ -75,7 +73,7 @@ const Home = () => {
       </div>
 
       <div className='container' style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-        {!isDealLoading && <DealSection products={dealProducts?.products} />}
+        <DealSection />
         <Carousel title='Product category' amount={7}>
           {categories.map((category) => (
             <Link key={category._id} to={`/shop/${category._id}`}>
@@ -86,13 +84,7 @@ const Home = () => {
             </Link>
           ))}
         </Carousel>
-        {!isTrendingLoading && (
-          <Carousel title='Trending Products' amount={5}>
-            {(trendingProducts?.products || []).map((item, i) => (
-              <Card key={i} {...item} isColumn />
-            ))}
-          </Carousel>
-        )}
+        <TrendingSection />
         <BannerContainer banners={banners} />
         {!isBestLoading && (
           <Carousel title='Best Sellers' amount={5}>
@@ -111,7 +103,7 @@ const Home = () => {
         }}
       >
         <div className='container'>
-          {!isHotLoading && <HotSection products={[...dummy, ...dummy, ...dummy]} />}
+          <HotSection />
         </div>
       </div>
       <div className='container' style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
@@ -135,6 +127,94 @@ const Home = () => {
           ))}
         </Carousel>
         <BannerContainer banners={banners.slice(0, 2)} />
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5re',
+          }}
+        >
+          <div
+            style={{
+              width: '25%',
+            }}
+          >
+            <Carousel title='Top 20' amount={1}>
+              {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
+                <MultiLevelCard key={i}>
+                  {array.map((item, i) => (
+                    <Card
+                      key={i}
+                      {...item}
+                      height='25rem'
+                      styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
+                    />
+                  ))}
+                </MultiLevelCard>
+              ))}
+            </Carousel>
+          </div>
+          <div
+            style={{
+              width: '25%',
+            }}
+          >
+            <Carousel title='Featured Products' amount={1}>
+              {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
+                <MultiLevelCard key={i}>
+                  {array.map((item, i) => (
+                    <Card
+                      key={i}
+                      {...item}
+                      height='25rem'
+                      styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
+                    />
+                  ))}
+                </MultiLevelCard>
+              ))}
+            </Carousel>
+          </div>
+          <div
+            style={{
+              width: '25%',
+            }}
+          >
+            <Carousel title='Top selling Products' amount={1}>
+              {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
+                <MultiLevelCard key={i}>
+                  {array.map((item, i) => (
+                    <Card
+                      key={i}
+                      {...item}
+                      height='25rem'
+                      styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
+                    />
+                  ))}
+                </MultiLevelCard>
+              ))}
+            </Carousel>
+          </div>
+          <div
+            style={{
+              width: '25%',
+            }}
+          >
+            <Carousel title='On-Sale Products' amount={1}>
+              {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
+                <MultiLevelCard key={i}>
+                  {array.map((item, i) => (
+                    <Card
+                      key={i}
+                      {...item}
+                      height='25rem'
+                      styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
+                    />
+                  ))}
+                </MultiLevelCard>
+              ))}
+            </Carousel>
+          </div>
+        </div>
       </div>
     </div>
   );
