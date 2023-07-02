@@ -5,8 +5,14 @@ import MultiLevelCard from '../multi-level-card/multiLevelCard';
 import useFetch from '../../hooks/useFetch';
 import { divideArrayOnChunks } from '../../utils/util';
 
+const StyledComposedSection = styled.section`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
 const StyledWrapper = styled.div`
-  width: '25%';
+  width: 25%;
 `;
 
 const ComposedSection = () => {
@@ -15,7 +21,7 @@ const ComposedSection = () => {
   const [topSellingProducts, isTopSellingLoading] = useFetch('products?tags=top_selling');
   const [onSaleProducts, isOnSaleProductsLoading] = useFetch('products?tags=on_sale');
   return (
-    <section>
+    <StyledComposedSection>
       <StyledWrapper>
         {!isTop20ProductsLoading && (
           <Carousel title='Top 20' amount={1}>
@@ -88,7 +94,7 @@ const ComposedSection = () => {
           </Carousel>
         )}
       </StyledWrapper>
-    </section>
+    </StyledComposedSection>
   );
 };
 

@@ -1,63 +1,16 @@
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import useFetch from '../../hooks/useFetch';
 import Hero from '../../components/hero/hero';
 import DealSection from '../../components/deal-section/dealSection';
 import Carousel from '../../components/carousel/carousel';
-import Card from '../../components/card/card';
 import CategoryItem from '../../components/category-item/categoryItem';
 import BannerContainer from '../../components/banner-container/bannerContainer';
-import Banner from '../../components/banner/banner';
 import HotSection from '../../components/hot-section/hotSection';
-import MultiLevelCard from '../../components/multi-level-card/multiLevelCard';
-import { divideArrayOnChunks } from '../../utils/util';
 import Background from '../../assets/images/hot_bg.jpg';
 import TrendingSection from '../../components/trending-section/trendingSection';
 import BestSellersSection from '../../components/best-sellers-section/bestSellersSection';
 import SmartHomeSection from '../../components/smart-home-section/smartHomeSection';
-
-const dummy = [
-  {
-    image: 'https://source.unsplash.com/random/300×350?computers',
-    category: 'computer',
-    name: 'Some name 1',
-    price: 140,
-    discount: 10,
-    total: 43,
-    sold: 7,
-    endIn: new Date('2023-06-14'),
-  },
-  {
-    image: 'https://source.unsplash.com/random/300×350?phones',
-    category: 'phone',
-    name: 'Some name 2',
-    price: 220,
-    discount: 20,
-    total: 30,
-    sold: 24,
-    endIn: new Date('2023-06-15'),
-  },
-  {
-    image: 'https://source.unsplash.com/random/300×350?headphones',
-    category: 'headphones',
-    name: 'Some name 3',
-    price: 160,
-    discount: 30,
-    total: 10,
-    sold: 8,
-    endIn: new Date('2023-06-16'),
-  },
-  {
-    image: 'https://source.unsplash.com/random/300×350?laptops',
-    category: 'laptops',
-    name: 'Some name 4',
-    price: 400,
-    discount: 25,
-    total: 10,
-    sold: 4,
-    endIn: new Date('2023-06-17'),
-  },
-];
+import ComposedSection from '../../components/composed-section/composedSection';
 
 const banners = [
   { image: 'https://source.unsplash.com/random/300×650?advertisment' },
@@ -67,7 +20,6 @@ const banners = [
 
 const Home = () => {
   const categories = useSelector((store) => store.category).categories;
-  const [bestProducts, isBestLoading] = useFetch('products?tags=best_sellers');
   return (
     <div>
       <div className='container--colored'>
@@ -105,94 +57,7 @@ const Home = () => {
       <div className='container' style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
         <SmartHomeSection />
         <BannerContainer banners={banners.slice(0, 2)} />
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5re',
-          }}
-        >
-          <div
-            style={{
-              width: '25%',
-            }}
-          >
-            <Carousel title='Top 20' amount={1}>
-              {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
-                <MultiLevelCard key={i}>
-                  {array.map((item, i) => (
-                    <Card
-                      key={i}
-                      {...item}
-                      height='25rem'
-                      styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
-                    />
-                  ))}
-                </MultiLevelCard>
-              ))}
-            </Carousel>
-          </div>
-          <div
-            style={{
-              width: '25%',
-            }}
-          >
-            <Carousel title='Featured Products' amount={1}>
-              {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
-                <MultiLevelCard key={i}>
-                  {array.map((item, i) => (
-                    <Card
-                      key={i}
-                      {...item}
-                      height='25rem'
-                      styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
-                    />
-                  ))}
-                </MultiLevelCard>
-              ))}
-            </Carousel>
-          </div>
-          <div
-            style={{
-              width: '25%',
-            }}
-          >
-            <Carousel title='Top selling Products' amount={1}>
-              {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
-                <MultiLevelCard key={i}>
-                  {array.map((item, i) => (
-                    <Card
-                      key={i}
-                      {...item}
-                      height='25rem'
-                      styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
-                    />
-                  ))}
-                </MultiLevelCard>
-              ))}
-            </Carousel>
-          </div>
-          <div
-            style={{
-              width: '25%',
-            }}
-          >
-            <Carousel title='On-Sale Products' amount={1}>
-              {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
-                <MultiLevelCard key={i}>
-                  {array.map((item, i) => (
-                    <Card
-                      key={i}
-                      {...item}
-                      height='25rem'
-                      styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
-                    />
-                  ))}
-                </MultiLevelCard>
-              ))}
-            </Carousel>
-          </div>
-        </div>
+        <ComposedSection />
       </div>
     </div>
   );

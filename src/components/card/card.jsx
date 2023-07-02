@@ -11,7 +11,7 @@ const Card = ({
   category,
   name,
   price,
-  discount,
+  discount = 0,
   total,
   sold,
   endIn,

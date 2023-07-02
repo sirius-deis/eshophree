@@ -39,3 +39,23 @@ export const signOut = async (dispatch) => {
     dispatch({ type: UserActionTypes.SIGN_OUT_FAILURE, payload: error });
   }
 };
+
+export const addToRecentlyViewed = (product) => {
+  return {
+    type: UserActionTypes.ADD_TO_RECENTLY_VIEWED,
+    payload: product,
+  };
+};
+
+export const deleteFromRecentlyViewed = (productId) => {
+  return {
+    type: UserActionTypes.DELETE_FROM_RECENTLY_VIEWED,
+    payload: productId,
+  };
+};
+
+export const clearRecentlyViewed = () => {
+  return {
+    type: UserActionTypes.CLEAR_RECENTLY_VIEWED,
+  };
+};
