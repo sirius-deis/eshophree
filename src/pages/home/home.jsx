@@ -13,6 +13,7 @@ import MultiLevelCard from '../../components/multi-level-card/multiLevelCard';
 import { divideArrayOnChunks } from '../../utils/util';
 import Background from '../../assets/images/hot_bg.jpg';
 import TrendingSection from '../../components/trending-section/trendingSection';
+import BestSellersSection from '../../components/best-sellers-section/bestSellersSection';
 
 const dummy = [
   {
@@ -86,13 +87,7 @@ const Home = () => {
         </Carousel>
         <TrendingSection />
         <BannerContainer banners={banners} />
-        {!isBestLoading && (
-          <Carousel title='Best Sellers' amount={5}>
-            {(bestProducts?.products || []).map((item, i) => (
-              <Card key={i} {...item} isColumn />
-            ))}
-          </Carousel>
-        )}
+        <BestSellersSection />
       </div>
       <div
         style={{
