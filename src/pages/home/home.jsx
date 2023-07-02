@@ -11,6 +11,7 @@ import TrendingSection from '../../components/trending-section/trendingSection';
 import BestSellersSection from '../../components/best-sellers-section/bestSellersSection';
 import SmartHomeSection from '../../components/smart-home-section/smartHomeSection';
 import ComposedSection from '../../components/composed-section/composedSection';
+import RecentlyViewedSection from '../../components/recently-viewed-section/recentlyViewedSection';
 
 const banners = [
   { image: 'https://source.unsplash.com/random/300×650?advertisment' },
@@ -19,7 +20,7 @@ const banners = [
 ];
 
 const Home = () => {
-  const categories = useSelector((store) => store.category).categories;
+  const categories = useSelector((state) => state.category.categories);
   return (
     <div>
       <div className='container--colored'>
@@ -58,6 +59,7 @@ const Home = () => {
         <SmartHomeSection />
         <BannerContainer banners={banners.slice(0, 2)} />
         <ComposedSection />
+        <RecentlyViewedSection />
       </div>
     </div>
   );
