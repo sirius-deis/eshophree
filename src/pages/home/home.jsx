@@ -14,6 +14,7 @@ import { divideArrayOnChunks } from '../../utils/util';
 import Background from '../../assets/images/hot_bg.jpg';
 import TrendingSection from '../../components/trending-section/trendingSection';
 import BestSellersSection from '../../components/best-sellers-section/bestSellersSection';
+import SmartHomeSection from '../../components/smart-home-section/smartHomeSection';
 
 const dummy = [
   {
@@ -102,25 +103,7 @@ const Home = () => {
         </div>
       </div>
       <div className='container' style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-        <Carousel
-          title='Smart Home Appliances'
-          banner={<Banner background='https://source.unsplash.com/random/300×650?advertisment' />}
-          amount={5}
-        >
-          {divideArrayOnChunks([...dummy, ...dummy, ...dummy, ...dummy], 2).map((array, i) => (
-            <MultiLevelCard key={i}>
-              {array.map((item, i) => (
-                <Card
-                  key={i}
-                  {...item}
-                  isColumn
-                  height='30rem'
-                  styles={{ border: '1px solid var(--footer-color)', borderRadius: '10px' }}
-                />
-              ))}
-            </MultiLevelCard>
-          ))}
-        </Carousel>
+        <SmartHomeSection />
         <BannerContainer banners={banners.slice(0, 2)} />
         <div
           style={{
