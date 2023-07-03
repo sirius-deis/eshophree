@@ -2,8 +2,12 @@ import PropTypes from 'prop-types';
 
 import { StyledDropdownMenu } from './dropdownMenu.styles';
 
-const DropdownMenu = ({ children }) => {
-  return <StyledDropdownMenu role='listbox'>{children}</StyledDropdownMenu>;
+const DropdownMenu = ({ children, styles }) => {
+  return (
+    <StyledDropdownMenu style={styles} role='listbox'>
+      {children}
+    </StyledDropdownMenu>
+  );
 };
 
 DropdownMenu.propTypes = {

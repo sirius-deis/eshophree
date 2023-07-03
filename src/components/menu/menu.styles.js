@@ -17,11 +17,14 @@ const StyledDropdownToggle = styled.button`
   padding: 1.8rem;
   cursor: pointer;
   border: 0;
-  background-color: transparent;
-  border-radius: 50%;
+  background-color: ${(props) => (props.isOpen ? 'var(--bg-color)' : 'transparent')};
+  border-radius: ${(props) => (props.isOpen ? 'unset' : '50%')};
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
   transition: background-color 0.3s ease-out;
+  box-shadow: ${(props) => (props.isOpen ? '2px 2px 3px var(--shadow-color)' : 'unset')};
   &:hover {
-    background-color: var(--footer-color);
+    background-color: ${(props) => (props.isOpen ? 'unset' : 'var(--footer-color)')};
   }
 `;
 
