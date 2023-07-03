@@ -9,12 +9,11 @@ import Spinner from './components/spinner/spinner';
 
 const CenteredLayout = React.lazy(() => import('./layouts/centeredLayout'));
 const Cart = React.lazy(() => import('./pages/cart/cart'));
-const Categories = React.lazy(() => import('./pages/categories/categories'));
 const Contact = React.lazy(() => import('./pages/contact/contact'));
 const FAQ = React.lazy(() => import('./pages/faq/faq'));
 const Login = React.lazy(() => import('./pages/login/loginPage'));
 const Product = React.lazy(() => import('./pages/product/product'));
-const Search = React.lazy(() => import('./pages/search/search'));
+const SearchPage = React.lazy(() => import('./pages/search/search'));
 const SignUpPage = React.lazy(() => import('./pages/signup/signupPage'));
 const Profile = React.lazy(() => import('./pages/profile/profile'));
 const NotFound = React.lazy(() => import('./pages/notfound/notfound'));
@@ -30,14 +29,6 @@ function App() {
           element={
             <Suspense fallback={<Spinner />}>
               <Cart />
-            </Suspense>
-          }
-        />
-        <Route
-          path='categories'
-          element={
-            <Suspense fallback={<Spinner />}>
-              <Categories />
             </Suspense>
           }
         />
@@ -77,7 +68,7 @@ function App() {
           path='search'
           element={
             <Suspense fallback={<Spinner />}>
-              <Search />
+              <SearchPage />
             </Suspense>
           }
         />

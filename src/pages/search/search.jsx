@@ -1,5 +1,5 @@
-const Search = () => {
-    return <div className=''></div>;
+const SearchPage = () => {
+  return <div className=''></div>;
 };
 
-export default Search;
+export default SearchPage;

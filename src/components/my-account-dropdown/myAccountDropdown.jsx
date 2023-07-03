@@ -1,16 +1,15 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { FaRegHeart, FaRegUser, FaRegAddressCard } from 'react-icons/fa';
+import { FaRegHeart, FaRegUser, FaRegAddressCard, FaFileInvoice } from 'react-icons/fa';
 import { MdOutlineShoppingCart, MdLogout, MdLogin } from 'react-icons/md';
-import { AiOutlineDashboard } from 'react-icons/ai';
 import DropdownItem from '../dropdown-item/dropdownItem';
 
 const list = [
-  [<AiOutlineDashboard />, 'Dashboard'],
-  [<MdOutlineShoppingCart />, 'Orders'],
-  [<FaRegHeart />, 'Wishlist'],
-  [<FaRegAddressCard />, 'Addresses'],
   [<FaRegUser />, 'Account Details'],
+  [<MdOutlineShoppingCart />, 'Orders'],
+  [<FaRegAddressCard />, 'Addresses'],
+  [<FaRegHeart />, 'Wishlist'],
+  [<FaFileInvoice />, 'Invoices'],
   [<MdLogout />, 'Logout'],
 ];
 
