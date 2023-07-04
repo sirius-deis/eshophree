@@ -22,7 +22,7 @@ const banners = [
 const Home = () => {
   const categories = useSelector((state) => state.category.categories);
   return (
-    <div>
+    <main>
       <div className='container--colored'>
         <Hero />
       </div>
@@ -61,7 +61,7 @@ const Home = () => {
         <ComposedSection />
         <RecentlyViewedSection />
       </div>
-    </div>
+    </main>
   );
 };
 

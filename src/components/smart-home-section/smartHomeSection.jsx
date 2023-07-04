@@ -6,7 +6,7 @@ import useFetch from '../../hooks/useFetch';
 import { divideArrayOnChunks } from '../../utils/util';
 
 const SmartHomeSection = () => {
-  const [hotProducts, isHotLoading] = useFetch('products?tags=smart_home');
+  const [hotProducts, isHotLoading] = useFetch('products?tag=smart_home&fields=name,price,images');
   return (
     <section>
       {!isHotLoading && (

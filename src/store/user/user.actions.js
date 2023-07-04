@@ -1,5 +1,7 @@
 import UserActionTypes from './user.types';
 import fetchData from '../../utils/fetchData';
+import { addProductsToCart } from '../cart/cart.actions';
+import { addProductsToWishlist } from '../wishlist/wishlist.actions';
 
 export const signIn = (dataForServer) => async (dispatch) => {
   dispatch({ type: UserActionTypes.SIGN_IN_START });
@@ -8,7 +10,10 @@ export const signIn = (dataForServer) => async (dispatch) => {
       method: 'POST',
       body: JSON.stringify(dataForServer),
     });
+    console.log(data.data);
     dispatch({ type: UserActionTypes.SIGN_IN_SUCCESS, payload: data });
+    dispatch(addProductsToCart(data.data.cart.products));
+    dispatch(addProductsToWishlist(data.data.wishlist.products));
   } catch (error) {
     dispatch({
       type: UserActionTypes.SIGN_IN_FAILURE,
@@ -20,11 +25,11 @@ export const signIn = (dataForServer) => async (dispatch) => {
 export const signUp = (dataForServer) => async (dispatch) => {
   dispatch({ type: UserActionTypes.SIGN_UP_START });
   try {
-    const data = await fetchData('users/signup', {
+    await fetchData('users/signup', {
       method: 'POST',
       body: JSON.stringify(dataForServer),
     });
-    dispatch({ type: UserActionTypes.SIGN_UP_SUCCESS, payload: data });
+    dispatch({ type: UserActionTypes.SIGN_UP_SUCCESS });
   } catch (error) {
     dispatch({ type: UserActionTypes.SIGN_UP_FAILURE, payload: error });
   }

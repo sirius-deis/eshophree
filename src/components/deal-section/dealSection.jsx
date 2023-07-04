@@ -6,7 +6,9 @@ import useFetch from '../../hooks/useFetch';
 import { StyledDealSection } from './dealSection.styles';
 
 const DealSection = () => {
-  const [dealProducts, isDealLoading] = useFetch('products?tags=deal_of_the_day');
+  const [dealProducts, isDealLoading] = useFetch(
+    'products?tag=deal_of_the_day&fields=name,price,images',
+  );
   return (
     <StyledDealSection>
       {!isDealLoading && (

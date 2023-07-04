@@ -3,7 +3,9 @@ import Carousel from '../carousel/carousel';
 import Card from '../card/card';
 
 const BestSellersSection = () => {
-  const [bestProducts, isBestLoading] = useFetch('products?tags=best_sellers');
+  const [bestProducts, isBestLoading] = useFetch(
+    'products?tag=best_sellers&fields=name,price,images',
+  );
   return (
     <section>
       {!isBestLoading && (

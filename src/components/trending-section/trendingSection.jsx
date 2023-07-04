@@ -3,7 +3,9 @@ import Carousel from '../../components/carousel/carousel';
 import Card from '../../components/card/card';
 
 const TrendingSection = () => {
-  const [trendingProducts, isTrendingLoading] = useFetch('products?tags=trending');
+  const [trendingProducts, isTrendingLoading] = useFetch(
+    'products?tag=trending&fields=name,price,images',
+  );
   return (
     <section>
       {!isTrendingLoading && (

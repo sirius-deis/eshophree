@@ -15,7 +15,7 @@ const StyledHotSection = styled.section`
 `;
 
 const HotSection = () => {
-  const [hotProducts, isHotLoading] = useFetch('products?tags=hot');
+  const [hotProducts, isHotLoading] = useFetch('products?tag=hot&fields=name,price,images');
   return (
     <StyledHotSection>
       {!isHotLoading && (

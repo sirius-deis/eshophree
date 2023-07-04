@@ -7,8 +7,9 @@ import Image from '../../assets/images/image-not-found.png';
 const Card = ({
   children,
   isColumn,
-  image,
-  category,
+  _id,
+  images,
+  categoryId: { _id: categoryId, name: categoryName },
   name,
   price,
   discount = 0,
@@ -27,10 +28,15 @@ const Card = ({
       isColumn={isColumn}
       height={height}
     >
-      <img src={image ? image : Image} alt='product' data-image={image} />
+      <img src={images?.length ? images[0] : Image} alt='product' />
       <StyledInfo isColumn={isColumn}>
-        <Link to={`/category/${category}`}>{category}</Link>
-        <h3>{name}</h3>
+        <Link to={`/category/${categoryId}`}>{categoryName}</Link>
+        <Link
+          to={`/product/${_id}`}
+          style={{ fontSize: '2.5rem', color: 'var(--secondary-color-darker)' }}
+        >
+          {name}
+        </Link>
         <p className='price'>
           ${price.toFixed(2)}
           <sup>

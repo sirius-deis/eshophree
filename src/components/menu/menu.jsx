@@ -14,6 +14,7 @@ const Menu = () => {
   const [isCartDropdownOpen, setIsCartDropdownOpen] = useState(false);
   const [isWishlistDropdownOpen, setIsWishlistDropdownOpen] = useState(false);
   const quantity = useSelector((state) => state.cart.quantity);
+  const wishlist = useSelector((state) => state.wishlist.products);
 
   const openDropdown = (name) => {
     setIsMyAccountDropdownOpen(false);
@@ -36,16 +37,16 @@ const Menu = () => {
       <Dropdown>
         <StyledDropdownToggle>
           <FaRegHeart />
-          <StyledCount>0</StyledCount>
+          <StyledCount>{wishlist.length}</StyledCount>
         </StyledDropdownToggle>
-        <DropdownMenu></DropdownMenu>
+        {isWishlistDropdownOpen && <DropdownMenu></DropdownMenu>}
       </Dropdown>
       <Dropdown>
         <StyledDropdownToggle>
           <MdOutlineShoppingCart />
           <StyledCount>{quantity}</StyledCount>
         </StyledDropdownToggle>
-        <DropdownMenu></DropdownMenu>
+        {isCartDropdownOpen && <DropdownMenu></DropdownMenu>}
       </Dropdown>
       <Dropdown>
         <StyledDropdownToggle

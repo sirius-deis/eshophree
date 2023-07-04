@@ -13,10 +13,11 @@ const Contact = React.lazy(() => import('./pages/contact/contact'));
 const FAQ = React.lazy(() => import('./pages/faq/faq'));
 const Login = React.lazy(() => import('./pages/login/loginPage'));
 const Product = React.lazy(() => import('./pages/product/product'));
-const SearchPage = React.lazy(() => import('./pages/search/search'));
+const ShopPage = React.lazy(() => import('./pages/shop/shop'));
 const SignUpPage = React.lazy(() => import('./pages/signup/signupPage'));
 const Profile = React.lazy(() => import('./pages/profile/profile'));
 const NotFound = React.lazy(() => import('./pages/notfound/notfound'));
+const Logout = React.lazy(() => import('./pages/logout/logout'));
 
 function App() {
   return (
@@ -65,10 +66,10 @@ function App() {
           }
         />
         <Route
-          path='search'
+          path='shop'
           element={
             <Suspense fallback={<Spinner />}>
-              <SearchPage />
+              <ShopPage />
             </Suspense>
           }
         />
@@ -97,6 +98,14 @@ function App() {
             }
           />
         </Route>
+        <Route
+          path='logout'
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Logout />
+            </Suspense>
+          }
+        />
         <Route
           path='*'
           element={

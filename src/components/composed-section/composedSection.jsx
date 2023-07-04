@@ -16,10 +16,18 @@ const StyledWrapper = styled.div`
 `;
 
 const ComposedSection = () => {
-  const [top20Products, isTop20ProductsLoading] = useFetch('products?tags=top20');
-  const [featuredProducts, isFeaturedProductsLoading] = useFetch('products?tags=featured');
-  const [topSellingProducts, isTopSellingLoading] = useFetch('products?tags=top_selling');
-  const [onSaleProducts, isOnSaleProductsLoading] = useFetch('products?tags=on_sale');
+  const [top20Products, isTop20ProductsLoading] = useFetch(
+    'products?tag=top20&fields=name,price,images',
+  );
+  const [featuredProducts, isFeaturedProductsLoading] = useFetch(
+    'products?tag=featured&fields=name,price,images',
+  );
+  const [topSellingProducts, isTopSellingLoading] = useFetch(
+    'products?tag=top_selling&fields=name,price,images',
+  );
+  const [onSaleProducts, isOnSaleProductsLoading] = useFetch(
+    'products?tag=on_sale&fields=name,price,images',
+  );
   return (
     <StyledComposedSection>
       <StyledWrapper>

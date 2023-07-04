@@ -29,7 +29,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case UserActionTypes.SIGN_IN_FAILURE:
     case UserActionTypes.SIGN_OUT_FAILURE:
     case UserActionTypes.SIGN_UP_FAILURE:
-      return { ...state, isLoading: false, error: action.payload.message };
+      return { ...state, user: null, token: null, isLoading: false, error: action.payload.message };
     case UserActionTypes.ADD_TO_RECENTLY_VIEWED:
       const product = {
         id: action.payload._id,
