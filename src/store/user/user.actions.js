@@ -10,7 +10,6 @@ export const signIn = (dataForServer) => async (dispatch) => {
       method: 'POST',
       body: JSON.stringify(dataForServer),
     });
-    console.log(data.data);
     dispatch({ type: UserActionTypes.SIGN_IN_SUCCESS, payload: data });
     dispatch(addProductsToCart(data.data.cart.products));
     dispatch(addProductsToWishlist(data.data.wishlist.products));

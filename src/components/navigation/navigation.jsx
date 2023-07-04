@@ -14,7 +14,7 @@ const Navigation = () => {
   return (
     <StyledNavigation>
       <div className='container'>
-        <List list={nav} />
+        <List list={nav} styles={{ fontSize: '1.7rem' }} link />
       </div>
     </StyledNavigation>
   );
