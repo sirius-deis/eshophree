@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import { MdOutlineGpsFixed, MdOutlinePhone, MdSend } from 'react-icons/md';
 import Logo from '../../assets/images/logo.png';
 import List from '../list/list';
+import ListItem from '../listItem/listItem';
 import H2 from '../h2/h2';
 
 const StyledFooter = styled.footer`
@@ -47,6 +49,12 @@ const customerList = [
   { name: 'Product Support' },
 ];
 
+const contactList = [
+  { name: '0000 Lorem Street  Lorem, IL 540353 Dolor sit amet', icon: <MdOutlineGpsFixed /> },
+  { name: '+8(000)123 4567', icon: <MdOutlinePhone /> },
+  { name: 'eshophree@support.com', icon: <MdSend /> },
+];
+
 const Footer = () => {
   return (
     <StyledFooter>
@@ -84,6 +92,11 @@ const Footer = () => {
         </StyledBlock>
         <StyledBlock>
           <H2>Contact</H2>
+          <li>
+            {contactList.map((item) => {
+              return <ListItem icon={item.icon}>{item.name}</ListItem>;
+            })}
+          </li>
         </StyledBlock>
       </StyledFooterTop>
     </StyledFooter>
