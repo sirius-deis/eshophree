@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Card from '../../components/card/card';
 
 import Accordion from '../../components/accordion/accordion';
 

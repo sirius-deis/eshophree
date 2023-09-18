@@ -66,7 +66,7 @@ function App() {
           }
         />
         <Route
-          path='shop'
+          path='shop/*'
           element={
             <Suspense fallback={<Spinner />}>
               <ShopPage />
