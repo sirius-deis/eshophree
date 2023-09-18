@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Card from '../../components/card/card';
+import useFetch from '../../hooks/useFetch';
 
 import Accordion from '../../components/accordion/accordion';
 
@@ -24,6 +25,11 @@ const StyledRight = styled.div`
 const ShopPage = () => {
   const categories = useSelector((state) => state.category.categories);
   const location = useLocation();
+  const search = location.search.match(/^search=(.*)[^&]$/);
+  const products = useFetch(
+    `products?${search && search[0] && `search=${search[0]}&`}fields=name,price,images`,
+  );
+
   return (
     <div className='container'>
       {location.pathname.slice(1).split('/').join('>')}
@@ -31,7 +37,12 @@ const ShopPage = () => {
         <StyledLeft>
           <Accordion title='All Categories' list={categories} />
         </StyledLeft>
-        <StyledRight></StyledRight>
+        <StyledRight>
+          0-0 of 00 result for "{search}"
+          {(products?.products || []).map((item, i) => (
+            <Card key={i} {...item} isColumn />
+          ))}
+        </StyledRight>
       </StyledShopPage>
     </div>
   );
