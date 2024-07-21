@@ -1,5 +1,20 @@
-import PropTypes from 'prop-types';
-import { StyledRoundButton, StyledDropdownButton, StyledPlainButton } from './button.styles';
+import PropTypes from "prop-types";
+import {
+  StyledRoundButton,
+  StyledDropdownButton,
+  StyledPlainButton,
+} from "./button.styles";
+
+const getButton = (kind) => {
+  switch (kind) {
+    case "round":
+      return StyledRoundButton;
+    case "dropdown":
+      return StyledDropdownButton;
+    default:
+      return StyledPlainButton;
+  }
+};
 
 const Button = ({
   children,
@@ -11,38 +26,20 @@ const Button = ({
   bordered,
   disabled,
 }) => {
-  switch (kind) {
-    case 'round':
-      return (
-        <StyledRoundButton color={color} bgColor={bgColor} type='button'>
-          {children}
-        </StyledRoundButton>
-      );
-    case 'dropdown':
-      return (
-        <StyledDropdownButton
-          color={color}
-          bgColor={bgColor}
-          type='button'
-          onClick={onClickHandler}
-          onMouseEnter={onMouseEnterHandler}
-        >
-          {children}
-        </StyledDropdownButton>
-      );
-    default:
-      return (
-        <StyledPlainButton
-          color={color}
-          bgColor={bgColor}
-          bordered={bordered}
-          disabled={disabled}
-          onClick={onClickHandler}
-        >
-          {children}
-        </StyledPlainButton>
-      );
-  }
+  const ButtonEl = getButton(kind);
+  return (
+    <ButtonEl
+      color={color}
+      bgColor={bgColor}
+      type="button"
+      onClick={onClickHandler}
+      onMouseEnter={onMouseEnterHandler}
+      bordered={bordered}
+      disabled={disabled}
+    >
+      {children}
+    </ButtonEl>
+  );
 };
 
 Button.propTypes = {
