@@ -1,28 +1,8 @@
 import { useState } from 'react';
-import styled from 'styled-components';
 import List from '../list/list';
+import {StyledAccordion, StyledAccordionBody, StyledAccordionButton, StyledAccordionCollapse, StyledAccordionHeader} from './accordion.styles'
 
-const StyledAccordion = styled.div``;
 
-const StyledAccordionHeader = styled.div`
-  width: 100%;
-  display: flex;
-`;
-
-const StyledAccordionButton = styled.button`
-  width: 100%;
-  padding: 1rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.9rem;
-  cursor: pointer;
-  border: 0;
-  background-color: var(--footer-color);
-`;
-
-const StyledAccordionCollapse = styled.div``;
-
-const StyledAccordionBody = styled.div``;
 
 const Accordion = ({ title, list = [] }) => {
   const [isOpened, setIsOpened] = useState(false);
