@@ -1,23 +1,5 @@
-import styled from "styled-components";
 import PropTypes from "prop-types";
-
-const StyledHeading = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-weight: bold;
-  color: ${(props) =>
-    props.color ? `var(--${props.color})` : "var(--text-color-additional)"};
-  h1 {
-  font-size: 3rem;
-  }
-  h2 {
-  font-size: 2.5rem;
-  }
-  h3 {
-  2rem;
-  }
-`;
+import { StyledHeading } from "./heading.styles";
 
 const Heading = ({ children, color }) => {
   return <StyledHeading color={color}>{children}</StyledHeading>;

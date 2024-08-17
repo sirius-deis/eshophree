@@ -18,6 +18,15 @@
   --text-color-additional: #1e293b;
   --footer-color: #e2e8f0;
 
+  --text-color: #020617;
+  --text-color-darker: #1e293b;
+  --primary: #334155;
+  --warning-lighter: #fecaca;
+  --warning: #dc2626;
+  --warning-darker: #991b1b;
+  --success: #22c55e;
+  --default: #f8fafc;
+
   --shadow-color: rgba(51, 65, 85, 0.2);
   --shadow-color-darker: rgba(30, 41, 59, 0.7);
 }
