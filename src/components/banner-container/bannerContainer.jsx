@@ -1,15 +1,7 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Banner from '../banner/banner';
-
-const StyledBannerContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 15rem;
-`;
+import {StyledBannerContainer} from './bannerContainer.styles'
 
 const BannerContainer = ({ banners }) => {
   return (
