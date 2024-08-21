@@ -1,26 +1,9 @@
-import styled from 'styled-components';
 import { MdOutlineGpsFixed, MdOutlinePhone, MdSend } from 'react-icons/md';
 import Logo from '../../assets/images/logo.png';
 import List from '../list/list';
 import ListItem from '../listItem/listItem';
-import H2 from '../h2/h2';
-
-const StyledFooter = styled.footer`
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledFooterTop = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-`;
-
-const StyledBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+import Heading from '../heading/heading';
+import {StyledFooter, StyledFooterTop, StyledBlock} from './footer.styles'
 
 const helpList = [
   { name: 'Delivery Information' },
@@ -71,7 +54,7 @@ const Footer = () => {
           />
         </StyledBlock>
         <StyledBlock>
-          <H2>Popular categories</H2>
+          <Heading><h2>Popular categories</h2></Heading>
           <List
             isColumn={true}
             list={popularList}
@@ -81,7 +64,7 @@ const Footer = () => {
           />
         </StyledBlock>
         <StyledBlock>
-          <H2>Customer Care</H2>
+          <Heading><h2>Customer Care</h2></Heading>
           <List
             isColumn={true}
             list={customerList}
@@ -91,7 +74,7 @@ const Footer = () => {
           />
         </StyledBlock>
         <StyledBlock>
-          <H2>Contact</H2>
+          <heading><h2>Contact</h2></heading>
           <li>
             {contactList.map((item) => {
               return <ListItem icon={item.icon}>{item.name}</ListItem>;
