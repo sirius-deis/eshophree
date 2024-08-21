@@ -1,18 +1,10 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Carousel from '../carousel/carousel';
 import Card from '../card/card';
 import MultiLevelCard from '../multi-level-card/multiLevelCard';
 import useFetch from '../../hooks/useFetch';
 import { divideArrayOnChunks } from '../../utils/util';
-
-const StyledHotSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  min-height: 20rem;
-  padding: 1.5rem 2.5rem;
-  border-radius: 10px;
-`;
+import {StyledHotSection} from './hotSection.styles'
 
 const HotSection = () => {
   const [hotProducts, isHotLoading] = useFetch('products?tag=hot&fields=name,price,images');
