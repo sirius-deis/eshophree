@@ -17,7 +17,7 @@ const StyledNotFound = styled.div`
         font-family: 'Lato', sans-serif;  
         font-weight: 400;
         font-size:150px;
-        color: var(--footer-color);
+        color: var(--default-darker);
         position: relative;
         left:-100%;
         transition: all 0.5s;
@@ -29,7 +29,7 @@ const StyledNotFound = styled.div`
         font-weight: 300;
         font-size:24px;
         letter-spacing: 5px;
-        color: var(--main-color);
+        color: var(--primary);
         position: relative;
         left:100%;
         transition: all 0.5s;
@@ -44,7 +44,7 @@ const StyledNotFound = styled.div`
         height: 120%;
         top:25px;
         right: -340px;
-        background-color: var(--main-color);
+        background-color: var(--primary);
         box-shadow: 0px 0px  60px  20px  var(--shadow-color);
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
@@ -56,7 +56,7 @@ const StyledNotFound = styled.div`
          height: 300px;
        right:-10%;
        bottom:-301px;
-        background-color: var(--main-color-darker);
+        background-color: var(--text-color-darker);
        box-shadow: 0px 0px 60px 10px var(--shadow-color-darker),0px 0px  20px  0px  rgba(0,0,0,0.1);
          z-index:5;
        transition: all 0.5s;
