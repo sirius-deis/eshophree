@@ -9,7 +9,7 @@ const StyledLabelWithInput = styled.div`
 const StyledLabel = styled.label`
   font-size: 1.4rem;
   font-weight: bold;
-  color: var(--text-color-additional);
+  color: var(--text-color-darker);
 `;
 
 const StyledInput = styled.input`
@@ -18,14 +18,14 @@ const StyledInput = styled.input`
   padding: 0.7rem;
   font-size: 1.6rem;
   background-color: transparent;
-  border: 1px solid var(--footer-color);
+  border: 1px solid var(--bg-darker);
   border-radius: 7px;
   &:focus {
     outline: none;
     box-shadow: 1px 2px 2px var(--shadow-color);
   }
   &::placeholder {
-    color: var(--text-color-additional);
+    color: var(--text-color-darker);
   }
 `;
 

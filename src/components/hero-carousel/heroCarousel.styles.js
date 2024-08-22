@@ -70,11 +70,11 @@ const StyledIndicators = styled.div`
     transition: background-color 0.1s ease-out, width 0.2s ease-out;
     cursor: pointer;
     &:hover {
-      background-color: var(--footer-color);
+      background-color: var(--bg-darker);
     }
     &.active {
       width: 3rem;
-      background-color: var(--main-color);
+      background-color: var(--default);
     }
   }
 `;
