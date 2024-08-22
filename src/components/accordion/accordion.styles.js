@@ -15,7 +15,7 @@ export const StyledAccordionButton = styled.button`
   font-size: 1.9rem;
   cursor: pointer;
   border: 0;
-  background-color: var(--footer-color);
+  background-color: var(--bg-darker);
 `;
 
 export const StyledAccordionCollapse = styled.div``;
