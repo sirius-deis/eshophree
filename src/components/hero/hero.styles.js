@@ -4,7 +4,7 @@ const StyledColoredContainer = styled.div`
   width: 100%;
   min-height: 80rem;
   padding: 4rem 0;
-  background-color: var(--footer-color);
+  background-color: var(--bg-darker);
 `;
 
 const StyledHero = styled.section`
@@ -38,10 +38,10 @@ const StyledText = styled.div`
   p:first-child {
     font-size: 1.4rem;
     font-weight: bold;
-    color: var(--text-color-additional);
+    color: var(--text-color-darker);
   }
   p:last-child {
-    color: var(--text-color-additional);
+    color: var(--text-color-darker);
   }
 `;
 

@@ -28,7 +28,7 @@ const StyledControl = styled.button`
     background-color: var(--shadow-color);
   }
   &:disabled {
-    color: var(--footer-color);
+    color: var(--bg-darker);
   }
   &:disabled:hover {
     background-color: transparent;
