@@ -24,7 +24,7 @@ const StyledDropdownToggle = styled.button`
   transition: background-color 0.3s ease-out;
   box-shadow: ${(props) => (props.isOpen ? '2px 2px 3px var(--shadow-color)' : 'unset')};
   &:hover {
-    background-color: ${(props) => (props.isOpen ? 'unset' : 'var(--footer-color)')};
+    background-color: ${(props) => (props.isOpen ? 'unset' : 'var(--bg-darker)')};
   }
 `;
 
@@ -39,7 +39,7 @@ const StyledCount = styled.div`
     right: 0;
     padding: 0.5rem
     font-size: 1.5rem;
-    background-color: var(--additional-color);
+    background-color: var(--warning);
     border-radius: 50%;
     color: var(--bg-color);
 `;
