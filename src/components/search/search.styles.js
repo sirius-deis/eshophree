@@ -5,7 +5,7 @@ const StyledSearch = styled.form`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid var(--footer-color);
+  border: 1px solid var(--bg-dark);
   box-shadow: 1px 1px 1px var(--shadow-color);
   border-radius: 25px;
   &:focus {
@@ -18,7 +18,7 @@ const StyledSearchInput = styled.input`
   padding: 0.5rem 1rem;
   font-size: 2rem;
   border: none;
-  border-left: 1px solid var(--footer-color);
+  border-left: 1px solid var(--bg-dark);
   background-color: transparent;
   &:focus-within {
     outline: none;
