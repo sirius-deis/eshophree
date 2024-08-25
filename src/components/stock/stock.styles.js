@@ -15,7 +15,7 @@ const StyledStock = styled.div`
     align-items: center;
     .circle {
       padding: 1rem;
-      background-color: var(--footer-color);
+      background-color: var(--bg-darker);
       border-radius: 50%;
       font-size: 1.5rem;
     }

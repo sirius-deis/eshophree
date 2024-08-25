@@ -18,7 +18,7 @@ const StyledSpinner = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: conic-gradient(var(--footer-color) 10%, var(--additional-color-darker));
+  background: conic-gradient(var(--bg-darker) 10%, var(--warning-darker));
   -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2rem), var(--text-color) 0);
   animation: s3 1s infinite linear;
 
