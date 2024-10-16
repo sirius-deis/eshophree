@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryItem component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB jAzBDU"
+  />
+</div>
+`;
