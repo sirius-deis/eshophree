@@ -14,6 +14,6 @@ describe("Carousel component", () => {
   it("should render a carousel", () => {
     render(<Carousel>{list}</Carousel>);
     expect(screen.getByText("Slide 1")).toBeInTheDocument();
+    expect(screen.getByText("Slide 2")).toBeInTheDocument();
   });
-  
 });

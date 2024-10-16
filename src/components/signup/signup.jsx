@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
 import { StyledSignUp } from './signup.styles';
-import H2 from '../h2/h2';
+import Heading from '../heading/heading';
 import Line from '../line/line';
 import Spinner from '../spinner/spinner';
 import LabelWithInput from '../label-with-input/labelWithInput';
@@ -39,7 +39,7 @@ const SignUp = () => {
     <StyledSignUp onSubmit={submitHandler} aria-label='form'>
       {isLoading && <Spinner />}
       {isModalOpened && <Modal closeModal={() => setIsModalOpened(false)}>{error}</Modal>}
-      <H2>Sign up</H2>
+      <Heading>Sign up</Heading>
       <LabelWithInput type='email' name='email' />
       <LabelWithInput type='password' name='password' minLength={8} />
       <LabelWithInput

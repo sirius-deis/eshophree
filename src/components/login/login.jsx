@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
 import Line from '../line/line';
-import H2 from '../h2/h2';
+import Heading from '../heading/heading';
 import { StyledLogin } from './login.styles';
 import Spinner from '../spinner/spinner';
 import LabelWithInput from '../label-with-input/labelWithInput';
@@ -37,7 +37,7 @@ const Login = () => {
     <StyledLogin onSubmit={submitHandler} aria-label='form'>
       {isLoading && <Spinner />}
       {isModalOpened && <Modal closeModal={() => setIsModalOpened(false)}>{error}</Modal>}
-      <H2>Log in</H2>
+      <Heading>Log in</Heading>
       <LabelWithInput type='email' label='email' name='email' />
       <LabelWithInput type='password' label='password' name='password' minLength={8} />
       <div
