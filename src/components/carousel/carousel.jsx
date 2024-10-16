@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Line from '../line/line';
-import H2 from '../h2/h2';
+import Heading from '../heading/heading';
 import Row from '../row/row';
 
 import {
@@ -24,7 +24,7 @@ const Carousel = ({ children, banner, title, amount, titleColor, icon }) => {
       <Row>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
           {icon}
-          <H2 color={titleColor}>{title}</H2>
+          <Heading color={titleColor} >{title}</Heading>
         </div>
         <div>
           <StyledPrevControl onClick={() => shiftSlide(-1)} disabled={index === 0}>

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-fFGjHI dwKuma"
+  >
+    <div
+      class="sc-ewnqHT eqIhHE"
+    >
+      <div
+        style="display: flex; align-items: center; gap: 0.7rem;"
+      >
+        <div
+          class="sc-gTRrQi eoyTqP"
+        />
+      </div>
+      <div>
+        <button
+          class="sc-gxYJeL sc-kPTPQs kCKvOC"
+          disabled=""
+        >
+          ‹
+        </button>
+        <button
+          class="sc-gxYJeL sc-ispOId kCKvOC"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+    <div
+      class="sc-bgqQcB iPXChy"
+      width="100"
+    />
+    <div
+      style="display: flex; gap: 1rem;"
+    >
+      <div
+        style="overflow: hidden;"
+      >
+        <div
+          class="sc-dicizt cTmuUj"
+          style="transform: translateX(NaN%);"
+        >
+          <div
+            class="sc-iVCKna jFjGbS"
+          >
+            <div>
+              Slide 1
+            </div>
+          </div>
+          <div
+            class="sc-iVCKna jFjGbS"
+          >
+            <div>
+              Slide 2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
