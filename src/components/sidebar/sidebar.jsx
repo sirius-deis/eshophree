@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import {StyledLink, StyledSideNav} from './sidebar.styles'
 
 const Sidebar = ({heading, elements}) => {
@@ -9,6 +10,14 @@ const Sidebar = ({heading, elements}) => {
       })
     }
   </StyledSideNav>
+}
+
+Sidebar.propTypes = {
+  heading: PropTypes.string.isRequired,
+  elements: PropTypes.arrayOf(PropTypes.shape({
+    href: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
 }
 
 export default Sidebar;
