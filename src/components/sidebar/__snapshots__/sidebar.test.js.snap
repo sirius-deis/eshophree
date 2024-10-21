@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB dunMaC"
+  >
+    <h3>
+      Some title
+    </h3>
+  </div>
+</div>
+`;

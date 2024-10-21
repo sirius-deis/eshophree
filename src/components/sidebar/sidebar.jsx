@@ -6,7 +6,7 @@ const Sidebar = ({heading, elements}) => {
     <h3>{heading}</h3>
     {
       elements.forEach((element) => {
-        return <StyledLink href={element.href}>: {element.title}</StyledLink>
+        return <StyledLink href={element.href}>{element.title}</StyledLink>
       })
     }
   </StyledSideNav>
