@@ -1,21 +1,24 @@
 import { Link } from "react-router-dom"
 import { FaEye } from "react-icons/fa";
 import Button from "../button/button"
+import { StyledColumn, StyledOrder } from './order.styles'
 
-const Order = ({orderId, date, status, total, amount}) => {
-  return <div>
-    <h3>Order ID: {orderId}</h3>
-    <p>Date: {date}</p>
-    <p>Status: {status}</p>
-    <p>Total: ${total}</p>
-    <p>Amount Paid: ${amount}</p>
-    <Link to={`orders/${orderId}`}>
-      <Button>
-        View
-        <FaEye/>
-      </Button>
-    </Link>
-  </div>
+const Order = ({ orderId, date, status, total, amount }) => {
+  return <StyledOrder>
+    <StyledColumn>{orderId}</StyledColumn>
+    <StyledColumn>{date}</StyledColumn>
+    <StyledColumn>{status}</StyledColumn>
+    <StyledColumn>{total}$</StyledColumn>
+    <StyledColumn>{amount}</StyledColumn>
+    <StyledColumn>
+      <Link to={`orders/${orderId}`}>
+        <Button>
+          View
+          <FaEye />
+        </Button>
+      </Link>
+    </StyledColumn>
+  </StyledOrder>
 }
 
 export default Order;
