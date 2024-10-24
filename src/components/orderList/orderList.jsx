@@ -1,6 +1,7 @@
 import useFetch from "../../hooks/useFetch"
 import Order from "../order/order"
 import Spinner from "../spinner/spinner"
+import { StyledOrderList } from './orderList.styles'
 
 const OrderList = () => {
 
@@ -10,7 +11,7 @@ const OrderList = () => {
     return <Spinner />
   }
 
-  return <table>
+  return <StyledOrderList>
     <tr>
       <th>Order</th>
       <th>Date</th>
@@ -20,7 +21,7 @@ const OrderList = () => {
     {data.forEach((order) => {
       return <Order {...order} />
     })}
-  </table>
+  </StyledOrderList>
 }
 
 export default OrderList;
