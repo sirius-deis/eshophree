@@ -11,16 +11,24 @@ const OrderList = () => {
     return <Spinner />
   }
 
+  if (error) {
+    return <div>Error</div>
+  }
+
   return <StyledOrderList>
-    <tr>
-      <th>Order</th>
-      <th>Date</th>
-      <th>Status</th>
-      <th>Total</th>
-    </tr>
-    {data.forEach((order) => {
-      return <Order {...order} />
-    })}
+    <thead>
+      <tr>
+        <th>Order</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {data?.orders.forEach((order) => {
+        return <Order {...order} />
+      })}
+    </tbody>
   </StyledOrderList>
 }
 
