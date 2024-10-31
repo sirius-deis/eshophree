@@ -1,5 +1,9 @@
+import OrderList from "../../components/orderList/orderList";
+
 const Profile = () => {
-  return <div></div>;
+  return <div>
+    <OrderList />
+  </div>;
 };
 
 export default Profile;
