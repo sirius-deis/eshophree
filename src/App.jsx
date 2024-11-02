@@ -6,6 +6,7 @@ import './App.css';
 import RootLayout from './layouts/rootLayout';
 import Home from './pages/home/home';
 import Spinner from './components/spinner/spinner';
+import AccountDetails from './components/accoundDetails/accountDetails';
 
 const CenteredLayout = React.lazy(() => import('./layouts/centeredLayout'));
 const Cart = React.lazy(() => import('./pages/cart/cart'));
@@ -56,7 +57,18 @@ function App() {
               <Profile />
             </Suspense>
           }
-        />
+        >
+          <Route path='orders' element={
+            <Suspense fallback={<Spinner />}>
+              <Orders />
+            </Suspense>
+          } />
+          <Route path='account-details' element={
+            <Suspense fallback={<Spinner />}>
+              <AccountDetails />
+            </Suspense>
+          } />
+        </Route>
         <Route
           path='product'
           element={
