@@ -20,7 +20,7 @@ const banners = [
 ];
 
 const Home = () => {
-  const categories = useSelector((state) => state.category.categories);
+  const { categories } = useSelector((state) => state.category);
   return (
     <main>
       <div className='container--colored'>
