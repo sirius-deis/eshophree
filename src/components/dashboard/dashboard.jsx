@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { StyledDashboard, StyledName } from './dashboard.styles'
 
-const DashBoard = () => {
+const Dashboard = () => {
   const { user } = useSelector((state) => state.user);
   return <StyledDashboard>
     <h2>Hello, <StyledName>{user.name}</StyledName></h2>
@@ -9,4 +9,4 @@ const DashBoard = () => {
   </StyledDashboard>
 }
 
-export default DashBoard;
+export default Dashboard;
