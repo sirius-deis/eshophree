@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
+import { StyledDashboard, StyledName } from './dashboard.styles'
 
 const DashBoard = () => {
   const { user } = useSelector((state) => state.user);
-  return <div>
-    <h2>Hello, {user.name}</h2>
+  return <StyledDashboard>
+    <h2>Hello, <StyledName>{user.name}</StyledName></h2>
     <p>From your account dashBoard you can view your recent orders, manage your shipping and billing addresses and edit your password and account details</p>
-  </div>
+  </StyledDashboard>
 }
 
 export default DashBoard;
