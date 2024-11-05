@@ -63,3 +63,17 @@ export const clearRecentlyViewed = () => {
     type: UserActionTypes.CLEAR_RECENTLY_VIEWED,
   };
 };
+
+
+export const updateAddress = (data) => async (dispatch) => {
+  dispatch({ type: UserActionTypes.UPDATE_ADDRESS_START });
+  try {
+    const data = await fetchData('users/updateAddress', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+    dispatch({ type: UserActionTypes.UPDATE_ADDRESS_SUCCESS, payload: data });
+  } catch(error) {
+    dispatch({type: UserActionTypes.UPDATE_ADDRESS_FAIL, payload: error})
+  }
+}
