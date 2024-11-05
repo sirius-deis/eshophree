@@ -1,13 +1,15 @@
 import { useSelector } from "react-redux";
+import Line from "../line/line";
+import { StyledAddresses, StyledTitle } from './address.styles'
 
 const Addresses = () => {
   const { addresses } = useSelector(state => state.user)
-  return <div>
-    <h2>The following addresses will be used on the checkout page by default</h2>
+  return <StyledAddresses>
+    <StyledTitle>The following addresses will be used on the checkout page by default</StyledTitle>
     {addresses.map(address => {
       return <div key={address.id}>
         <h2>{address.title}</h2>
-        <br />
+        <Line />
         <h3>{address.name}</h3>
         <p>{address.address}</p>
         <p>{address.city}, {address.state} {address.zipCode}</p>
@@ -15,7 +17,7 @@ const Addresses = () => {
         <p>{address.email}</p>
       </div>
     })}
-  </div>
+  </StyledAddresses>
 }
 
 export default Addresses;
