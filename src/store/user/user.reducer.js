@@ -3,6 +3,7 @@ import UserActionTypes from './user.types';
 const INITIAL_STATE = {
   isLoading: false,
   user: null,
+  addresses: [],
   error: null,
   token: null,
   recentlyViewed: [],
@@ -52,6 +53,12 @@ const userReducer = (state = INITIAL_STATE, action) => {
       return { ...state, recentlyViewed: recentlyViewedWithoutItem };
     case UserActionTypes.CLEAR_RECENTLY_VIEWED:
       return { ...state, recentlyViewed: [] };
+    case UserActionTypes.UPDATE_ADDRESS_START:
+      return {...state, isLoading: true };
+    case UserActionTypes.UPDATE_ADDRESS_SUCCESS:
+      return {...state, isLoading: false, addresses: action.payload.addresses};
+    case UserActionTypes.UPDATE_ADDRESS_FAIL:
+      return {...state, isLoading: false, error: action.payload.message};
     default:
       return state;
   }
