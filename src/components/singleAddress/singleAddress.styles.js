@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const StyledAddress = styled.div`
+export const StyledAddress = styled.form`
   display: flex;
   gap: 0.5rem;
   flex-wrap: no-wrap;
