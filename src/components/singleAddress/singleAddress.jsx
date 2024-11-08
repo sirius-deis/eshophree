@@ -1,3 +1,4 @@
+import Button from "../button/button"
 import Line from "../line/line"
 import Row from "../row/row"
 import { StyledAddress, StyledTitle } from './singleAddress.styles'

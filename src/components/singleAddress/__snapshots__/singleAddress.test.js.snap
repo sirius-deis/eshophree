@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleAddress component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-gxYJeL bFkkmb"
+  >
+    <div
+      class="sc-iVCKna glYdkZ"
+    >
+      <h2
+        class="sc-kPTPQs gdCQYp"
+      >
+        Billing Address
+      </h2>
+      <button
+        class="sc-bgqQcB sc-fFGjHI jHWwsb dQaKvT"
+        type="button"
+      >
+        Edit
+      </button>
+    </div>
+    <div
+      class="sc-dicizt fpupii"
+    />
+    <h3>
+      John Smith
+    </h3>
+    <p>
+      123 Main St
+    </p>
+    <p>
+      New York
+      , 
+      NY
+       
+      10001
+    </p>
+    <p>
+      123-456-7890
+    </p>
+    <p>
+      john@example.com
+    </p>
+  </div>
+</div>
+`;
