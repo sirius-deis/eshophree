@@ -1,10 +1,11 @@
 import Line from "../line/line"
 import Row from "../row/row"
+import { StyledAddress, StyledTitle } from './singleAddress.styles'
 
 const SingleAddress = ({ id, title, name, address, city, state, zipCode, phone, email }) => {
-  return <div key={id}>
+  return <StyledAddress key={id}>
     <Row>
-      <h2>{title}</h2>
+      <StyledTitle>{title}</StyledTitle>
       <Button onClickHandler={() => setEditId(id)}>Edit</Button>
     </Row>
     <Line />
@@ -13,7 +14,7 @@ const SingleAddress = ({ id, title, name, address, city, state, zipCode, phone, 
     <p>{city}, {state} {zipCode}</p>
     <p>{phone}</p>
     <p>{email}</p>
-  </div>
+  </StyledAddress>
 }
 
 export default SingleAddress;
