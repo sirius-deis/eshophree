@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 const TrackYourOrder = () => {
+
+  const [error, setError] = useState(false)
+
+  const submitHandler = () => {
+
+  }
   return <div>
     <h1>Track Your Order</h1>
     <p>Please enter your order ID to track your order.</p>
