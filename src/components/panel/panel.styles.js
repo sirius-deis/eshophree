@@ -12,6 +12,6 @@ export const StyledPanel = styled.div`
   &.shadowed {
     box-shadow: 1px 2px 10px 2px rgba(2, 6, 23, 0.3);
   }
-  background-color: ${(props) => (props.bgColor ? props.bgColor : 'inherit')};
+  background-color: ${(props) => (props.bgColor ? `var(${props.bgColor})` : 'inherit')};
 `;
 

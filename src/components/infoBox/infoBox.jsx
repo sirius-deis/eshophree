@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Panel from "../panel/panel";
 
 const InfoBox = ({ error }) => {
-  return <Panel withBorder>
+  return <Panel withBorder bgColor="warning">
     <p>{error}</p>
   </Panel>
 }
