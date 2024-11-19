@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoBox component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB evNxN bordered "
+  >
+    <p />
+  </div>
+</div>
+`;
