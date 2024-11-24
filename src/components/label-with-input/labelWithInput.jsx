@@ -8,11 +8,12 @@ const LabelWithInput = ({
   placeholder = `Enter your ${label}`,
   minLength,
   maxLength,
+  withLabel = true
 }) => {
   return (
     <StyledLabelWithInput>
       <StyledLabel>
-        {label[0].toUpperCase() + label.slice(1)} *
+        {withLabel && label[0].toUpperCase() + label.slice(1)} *
         <StyledInput
           type={type}
           placeholder={placeholder}
