@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import { StyledTable } from './customTable.styles'
 
 const CustomTable = ({ columnsName, data }) => {
-  return <table>
+  return <StyledTable>
     <thead>
       <tr>
         {columnsName.map((column, index) => (
@@ -18,7 +19,7 @@ const CustomTable = ({ columnsName, data }) => {
         </tr>
       ))}
     </tbody>
-  </table>
+  </StyledTable>
 }
 
 CustomTable.propTypes = {
