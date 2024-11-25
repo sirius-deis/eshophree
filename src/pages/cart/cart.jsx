@@ -1,13 +1,19 @@
+import { useSelector } from "react-redux";
 import LabelWithInput from "../../components/label-with-input/labelWithInput";
 import Button from "../../components/button/button";
+import CustomTable from "../../components/customTable/customTable";
 
 const Cart = () => {
+    const { cart, sum } = useSelector(state = state.cart)
     return <div className=''>
         <h1>Shopping Cart Summary</h1>
-        <div></div>
+        <CustomTable columnsName={["Product", "Price", "Quantity", "Total"]} data={cart} />
         <div>
-            <LabelWithInput placeholder="Enter your coupon code" />
-            <Button bgColor="green" color="white">Apply Coupon</Button>
+            <div>
+                <LabelWithInput placeholder="Enter your coupon code" />
+                <Button bgColor="green" color="white">Apply Coupon</Button>
+            </div>
+            <h3>Total: {sum}</h3>
         </div>
         <div>
             <Button bgColor="primary" color="white">Continue shopping</Button>
