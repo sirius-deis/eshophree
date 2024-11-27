@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { StyledTable } from './customTable.styles'
 import Button from "../button/button";
 
-const CustomTable = ({ columnsName, data, clickHandler }) => {
+const CustomTable = ({ columnsName, data, customCols, }) => {
   return <StyledTable>
     <thead>
       <tr>
@@ -17,7 +17,10 @@ const CustomTable = ({ columnsName, data, clickHandler }) => {
           {columnsName.map((column, index) => (
             <td key={index}>{item[column]}</td>
           ))}
-          <td><Button onClickHandler={() => clickHandler(item._id)}>&#10006;</Button></td>
+          {customCols && customCols.map((customCol, index) => (
+            <td key={index}>{customCol(item._id)}</td>
+          ))}
+
         </tr>
       ))}
     </tbody>
