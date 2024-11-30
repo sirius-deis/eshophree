@@ -3,6 +3,7 @@ import LabelWithInput from "../../components/label-with-input/labelWithInput";
 import Button from "../../components/button/button";
 import CustomTable from "../../components/customTable/customTable";
 import { removeProductFromCart } from "../../store/cart/cart.actions";
+import QuantityChanger from "../../components/quantityChanger/quantityChanger";
 
 const closeBtnWrapper = (fn) => (id) => <Button onClickHandler={() => fn(id)}>&#10006;</Button>
 
@@ -15,7 +16,9 @@ const Cart = () => {
     }
     return <div className=''>
         <h1>Shopping Cart Summary</h1>
-        <CustomTable columnsName={["Product", "Price", "Quantity", "Total"]} data={cart} customCols={[closeBtnWrapper(removeProduct)]} />
+        <CustomTable columnsName={["Product", "Price", "Quantity", "Total"]}
+            data={cart} customCols={[closeBtnWrapper(removeProduct)]}
+            wrappers={{ 2: (quantity) => <QuantityChanger quantity={quantity} /> }} />
         <div>
             <div>
                 <LabelWithInput placeholder="Enter your coupon code" />
