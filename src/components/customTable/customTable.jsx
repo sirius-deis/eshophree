@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import { StyledTable } from './customTable.styles'
-import Button from "../button/button";
 
-const CustomTable = ({ columnsName, data, customCols, }) => {
+const CustomTable = ({ columnsName, data, customCols, wrappers }) => {
   return <StyledTable>
     <thead>
       <tr>
@@ -15,7 +14,7 @@ const CustomTable = ({ columnsName, data, customCols, }) => {
       {data.map((item, index) => (
         <tr key={index}>
           {columnsName.map((column, index) => (
-            <td key={index}>{item[column]}</td>
+            wrappers[index] ? <td key={index}>{wrappers[index](item[column])}</td> : <td key={index}>{item[column]}</td>
           ))}
           {customCols && customCols.map((customCol, index) => (
             <td key={index}>{customCol(item._id)}</td>
@@ -31,6 +30,8 @@ CustomTable.propTypes = {
   columnsName: PropTypes.arrayOf(PropTypes.string).isRequired,
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   clickHandler: PropTypes.func,
+  customCols: PropTypes.arrayOf(PropTypes.func),
+  wrappers: PropTypes.arrayOf(PropTypes.node),
 }
 
 export default CustomTable;

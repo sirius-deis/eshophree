@@ -3,11 +3,11 @@ import Button from "../button/button";
 
 const QuantityChanger = ({ quantity, changeFn }) => {
   return <div>
-    <Button onClickHandler={() => changeFn(1)}>
+    <Button onClickHandler={() => changeFn(1)} kind="round" >
       +
     </Button>
     {quantity}
-    <Button onClickHandler={() => changeFn(-1)}>
+    <Button onClickHandler={() => changeFn(-1)} kind="round">
       -
     </Button>
   </div>
