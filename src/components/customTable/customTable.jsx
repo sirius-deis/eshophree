@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 import { StyledTable } from './customTable.styles'
+import { removeProductFromCart } from "../../store/cart/cart.actions";
+import Button from "../button/button";
+import { useDispatch } from "react-redux";
 
-const CustomTable = ({ columnsName, data, customCols, wrappers }) => {
+const CustomTable = ({ columnsName, data, wrappers }) => {
+  const dispatch = useDispatch();
   return <StyledTable>
     <thead>
       <tr>
@@ -16,10 +20,9 @@ const CustomTable = ({ columnsName, data, customCols, wrappers }) => {
           {columnsName.map((column, index) => (
             wrappers[index] ? <td key={index}>{wrappers[index](item[column])}</td> : <td key={index}>{item[column]}</td>
           ))}
-          {customCols && customCols.map((customCol, index) => (
-            <td key={index}>{customCol(item._id)}</td>
-          ))}
-
+          <td>
+            <Button onClickHandler={() => dispatch(removeProductFromCart(item._id))}>&#10006;</Button>
+          </td>
         </tr>
       ))}
     </tbody>
