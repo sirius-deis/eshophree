@@ -10,11 +10,11 @@ const colors = {
 const InfoBox = ({ error, type, clickHandler }) => {
   return <Panel withBorder bgColor={colors[type]}>
     <p>{error}</p>
-    <div>
+    {clickHandler && <div>
       <Button onClickHandler={clickHandler}>
         &#10006;
       </Button>
-    </div>
+    </div>}
   </Panel>
 }
 
