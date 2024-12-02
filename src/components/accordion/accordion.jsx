@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import List from '../list/list';
-import {StyledAccordion, StyledAccordionBody, StyledAccordionButton, StyledAccordionCollapse, StyledAccordionHeader} from './accordion.styles'
+import PropTypes from 'prop-types';
+import { StyledAccordion, StyledAccordionBody, StyledAccordionButton, StyledAccordionCollapse, StyledAccordionHeader } from './accordion.styles'
 
 
 
-const Accordion = ({ title, list = [] }) => {
+const Accordion = ({ title, content }) => {
   const [isOpened, setIsOpened] = useState(false);
   return (
     <StyledAccordion>
@@ -17,19 +17,18 @@ const Accordion = ({ title, list = [] }) => {
         <StyledAccordionCollapse>
           <StyledAccordionBody>
             {
-              <List
-                list={list}
-                isColumn
-                styles={{ fontSize: '1.2rem' }}
-                color='text-color'
-                position='left'
-              />
+              content
             }
           </StyledAccordionBody>
         </StyledAccordionCollapse>
       )}
     </StyledAccordion>
   );
+};
+
+Accordion.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
 };
 
 export default Accordion;

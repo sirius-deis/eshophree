@@ -5,6 +5,7 @@ import Card from '../../components/card/card';
 import useFetch from '../../hooks/useFetch';
 
 import Accordion from '../../components/accordion/accordion';
+import List from '../../components/list/list';
 
 const StyledShopPage = styled.main`
   margin-top: 2rem;
@@ -35,7 +36,16 @@ const ShopPage = () => {
       {location.pathname.slice(1).split('/').join('>')}
       <StyledShopPage>
         <StyledLeft>
-          <Accordion title='All Categories' list={categories} />
+          <Accordion title='All Categories'
+            content={
+              <List
+                list={categories}
+                isColumn
+                styles={{ fontSize: '1.2rem' }}
+                color='text-color'
+                position='left'
+              />}
+          />
         </StyledLeft>
         <StyledRight>
           0-0 of 00 result for "{search}"
