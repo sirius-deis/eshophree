@@ -57,7 +57,7 @@ const FAQ = () => {
     };
 
     return <div >
-        <Sidebar heading="Hot Topics" elements={sidebarEntries} />
+        <Sidebar heading="Hot Topics" elements={sidebarEntries} onClick={setSelectedTab} />
         <div>
             <h1>Frequently Asked Questions</h1>
             {getEntries().map((entry, index) => (
