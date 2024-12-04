@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { StyledLink, StyledSideNav } from './sidebar.styles'
 
-const Sidebar = ({ heading, elements, onClick }) => {
+const Sidebar = ({ heading, elements, onClick = () => null }) => {
 
   const clickHandler = (title) => (e) => {
     e.preventDefault();

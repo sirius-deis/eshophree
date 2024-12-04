@@ -21,6 +21,7 @@ const Profile = React.lazy(() => import('./pages/profile/profile'));
 const NotFound = React.lazy(() => import('./pages/notfound/notfound'));
 const Logout = React.lazy(() => import('./pages/logout/logout'));
 const TrackYourOrder = React.lazy(() => import('./pages/trackYourOrder/trackYourOrder'));
+const Faq = React.lazy(() => import('./pages/faq/faq'));
 
 function App() {
   return (
@@ -76,6 +77,7 @@ function App() {
             </Suspense>
           } />
           <Route path="track-your-order" element={<Suspense fallback={<Spinner />}><TrackYourOrder /></Suspense>} />
+          <Route path="faq" element={<Suspense fallback={<Spinner />}><Faq /></Suspense>} />
         </Route>
         <Route
           path='product'
