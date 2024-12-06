@@ -22,6 +22,7 @@ const NotFound = React.lazy(() => import('./pages/notfound/notfound'));
 const Logout = React.lazy(() => import('./pages/logout/logout'));
 const TrackYourOrder = React.lazy(() => import('./pages/trackYourOrder/trackYourOrder'));
 const Faq = React.lazy(() => import('./pages/faq/faq'));
+const BillingAndShoppingDetails = React.lazy(() => import('./pages/billingAndShoppingDetails/billingAndShoppingDetails'));
 
 function App() {
   return (
@@ -78,6 +79,7 @@ function App() {
           } />
           <Route path="track-your-order" element={<Suspense fallback={<Spinner />}><TrackYourOrder /></Suspense>} />
           <Route path="faq" element={<Suspense fallback={<Spinner />}><Faq /></Suspense>} />
+          <Route path="billing-and-shopping-details" element={<Suspense fallback={<Spinner />}><BillingAndShoppingDetails /></Suspense>} />
         </Route>
         <Route
           path='product'
