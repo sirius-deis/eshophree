@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
+import { StyledCheckMark, StyledCheckbox, StyledCheckboxContainer } from './checkboxWithLabel.styles'
 
 const CheckboxWithLabel = ({ labelTitle, clickHandler }) => {
-  return <label>
+  return <StyledCheckboxContainer>
     {labelTitle}
-    <input type="checkbox" onClick={clickHandler} />
-    <span></span>
-  </label>
+    <StyledCheckbox type="checkbox" onClick={clickHandler} />
+    <StyledCheckMark />
+  </StyledCheckboxContainer>
 }
 
 CheckboxWithLabel.propTypes = {
