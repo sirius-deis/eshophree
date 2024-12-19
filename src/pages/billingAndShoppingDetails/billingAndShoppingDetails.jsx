@@ -7,6 +7,7 @@ import fetchData from "../../utils/fetchData";
 const BillingAndShoppingDetails = () => {
   const { user } = useSelector(state => state.user);
   const [shouldAccountBeCreated, setShouldAccountBeCreated] = useState(false)
+  const [shipToADifferent, setShipToADifferent] = useState(false)
   const createAccount = (e) => {
     const { phone, email } = e.target.elements
     fetchData("register", { data: { phone, email } })
@@ -19,17 +20,21 @@ const BillingAndShoppingDetails = () => {
       createAccount(e)
     }
   }
-  return <form onSubmit={sendData}>
-    <h1>Billing & Shopping details</h1>
-    <h2>
-      Billing address
-    </h2>
-    <hr />
-    <AddressBox />
-    {!user && <CheckboxWithLabel labelTitle="Create an account?" clickHandler={setShouldAccountBeCreated} />}
-    <h2>Shipping address</h2>
-    <hr />
-  </form>
+  return <div>
+    <form onSubmit={sendData}>
+      <h1>Billing & Shopping details</h1>
+      <h2>
+        Billing address
+      </h2>
+      <hr />
+      <AddressBox />
+      {!user && <CheckboxWithLabel labelTitle="Create an account?" clickHandler={() => setShouldAccountBeCreated(currentState => !currentState)} />}
+      <h2>Shipping address</h2>
+      <hr />
+      <CheckboxWithLabel labelTitle="Ship to a different address" clickHandler={setShipToADifferent(currentState => !currentState)} />
+      {shipToADifferent && <AddressBox />}
+    </form>
+  </div>
 }
 
 export default BillingAndShoppingDetails;
