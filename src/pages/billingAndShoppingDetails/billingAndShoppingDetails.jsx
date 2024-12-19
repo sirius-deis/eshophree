@@ -11,17 +11,25 @@ const BillingAndShoppingDetails = () => {
     const { phone, email } = e.target.elements
     fetchData("register", { data: { phone, email } })
   }
-  return <div>
+  const sendData = (e) => {
+    e.preventDefault();
+    const { address, city, state, zipCode, phone, email } = e.target.elements
+    fetchData("place-order", { data: { address, city, state, zipCode, phone, email } })
+    if (shouldAccountBeCreated) {
+      createAccount(e)
+    }
+  }
+  return <form onSubmit={sendData}>
     <h1>Billing & Shopping details</h1>
     <h2>
       Billing address
     </h2>
     <hr />
     <AddressBox />
-    {!user && <CheckboxWithLabel labelTitle="Create an account?" clickHandler={setCreateAccount} />}
+    {!user && <CheckboxWithLabel labelTitle="Create an account?" clickHandler={setShouldAccountBeCreated} />}
     <h2>Shipping address</h2>
     <hr />
-  </div>
+  </form>
 }
 
 export default BillingAndShoppingDetails;
