@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import { StyledLabelWithInput, StyledLabel, StyledInput } from './labelWithInput.styles';
 
 
-const LabelWithTextarea = ({ label, name, placeholder, minLength, maxLength, withLabel = true }) => {
+const LabelWithTextarea = ({ label, name, placeholder, minLength, maxLength, withLabel = true, value, setValue }) => {
   return <div>
     {
       withLabel && <label>{label[0].toUpperCase() + label.slice(1)} *</label>
@@ -11,7 +10,10 @@ const LabelWithTextarea = ({ label, name, placeholder, minLength, maxLength, wit
       name={name}
       placeholder={placeholder}
       required
-
+      minLength={minLength}
+      maxLength={maxLength}
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
     />
   </div>
 }
@@ -22,6 +24,9 @@ LabelWithTextarea.propTypes = {
   placeholder: PropTypes.string,
   minLength: PropTypes.number,
   maxLength: PropTypes.number,
+  withLabel: PropTypes.bool,
+  value: PropTypes.string,
+  setValue: PropTypes.func
 }
 
 return LabelWithTextarea
