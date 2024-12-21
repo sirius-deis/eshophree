@@ -4,12 +4,12 @@ import Button from "../button/button";
 
 const colors = {
   success: "success",
-  error: "warning",
+  message: "warning",
 }
 
-const InfoBox = ({ error, type, clickHandler }) => {
+const InfoBox = ({ message, type, clickHandler }) => {
   return <Panel withBorder bgColor={colors[type]}>
-    <p>{error}</p>
+    <p>{message}</p>
     {clickHandler && <div>
       <Button onClickHandler={clickHandler}>
         &#10006;
@@ -19,7 +19,7 @@ const InfoBox = ({ error, type, clickHandler }) => {
 }
 
 InfoBox.propTypes = {
-  error: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
   type: PropTypes.oneOf(["success", "warning", "error"]),
   clickHandler: PropTypes.func,
 }
