@@ -8,7 +8,9 @@ const LabelWithInput = ({
   placeholder = `Enter your ${label}`,
   minLength,
   maxLength,
-  withLabel = true
+  withLabel = true,
+  value,
+  setValue
 }) => {
   return (
     <StyledLabelWithInput>
@@ -21,6 +23,8 @@ const LabelWithInput = ({
           maxLength={maxLength}
           name={name}
           required
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
       </StyledLabel>
     </StyledLabelWithInput>
@@ -34,6 +38,9 @@ LabelWithInput.propTypes = {
   placeholder: PropTypes.string,
   minLength: PropTypes.number,
   maxLength: PropTypes.number,
+  withLabel: PropTypes.bool,
+  value: PropTypes.string,
+  setValue: PropTypes.func
 };
 
 export default LabelWithInput;
