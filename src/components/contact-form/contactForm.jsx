@@ -6,19 +6,20 @@ import fetchData from "../../utils/fetchData";
 import { useState } from "react";
 
 const ContactForm = ({ title, text, clickHandler, isLoading, error, isSubmitted }) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isErrorClosed, setIsErrorClosed] = useState(false);
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     try {
       const { email, subject, message } = e.target.elements
-      setIsSubmitting(true)
+      setIsErrorClosed(false)
+      setIsLoading(true)
       await fetchData('contact', { email: email.value, subject: subject.value, message: message.value });
     } catch (error) {
-
+      setError(error)
     }
-    setIsSubmitting(false)
+    setIsLoading(false)
   }
   return <form onSubmit={onSubmitHandler}>
     <h2>{title}</h2>
@@ -28,8 +29,8 @@ const ContactForm = ({ title, text, clickHandler, isLoading, error, isSubmitted 
     <LabelWithTextarea label="Your message" name="message" />
     <Button onClick={clickHandler}>Send message</Button>
     {isLoading && <Spinner />}
-    {error && !isErrorClosed && <InfoBox message={error} />}
-    {isSubmitted && <InfoBox message="Thank you for your submission!" />}
+    {error && !isErrorClosed && <InfoBox message={error} clickHandler={() => setIsErrorClosed(true)} />}
+    {!isLoading && !error && <InfoBox message="Thank you for your submitting!" />}
   </form>
 }
 
