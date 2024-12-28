@@ -13,6 +13,8 @@ const LabelWithTextarea = ({ label, name, placeholder, minLength, maxLength, wit
       minLength={minLength}
       maxLength={maxLength}
       value={value}
+      rows={7}
+      cols={70}
       onChange={(e) => setValue(e.target.value)}
     />
   </div>
