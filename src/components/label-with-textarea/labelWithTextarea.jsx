@@ -31,4 +31,4 @@ LabelWithTextarea.propTypes = {
   setValue: PropTypes.func
 }
 
-return LabelWithTextarea
+export default LabelWithTextarea
