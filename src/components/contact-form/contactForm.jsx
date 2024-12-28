@@ -2,9 +2,16 @@ import LabelWithInput from "../label-with-input/labelWithInput";
 import Spinner from "../spinner/spinner";
 import InfoBox from "../infoBox/infoBox";
 import LabelWithTextarea from "../label-with-textarea/labelWithTextarea";
+import fetchData from "../../utils/fetchData";
 
 const ContactForm = ({ title, text, clickHandler, isLoading, error, isSubmitted }) => {
-  return <form action="">
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    const { email, subject, message } = e.target.elements
+    fetchData('contact', { email: email.value, subject: subject.value, message: message.value });
+  }
+  return <form onSubmit={onSubmitHandler}>
     <h2>{title}</h2>
     <p>{text}</p>
     <LabelWithInput type="email" label="Email" name="email" />
