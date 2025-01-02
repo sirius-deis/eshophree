@@ -4,7 +4,7 @@ import LabelWithInput from "../label-with-input/labelWithInput";
 import Spinner from "../spinner/spinner";
 import InfoBox from "../infoBox/infoBox";
 import LabelWithTextarea from "../label-with-textarea/labelWithTextarea";
-import fetchData from "../../utils/fetchData";
+import { StyledText, StyledTitle } from './contactForm.styles';
 
 const ContactForm = ({ title, text, clickHandler, isLoading, error, isSubmitted }) => {
   const [isErrorClosed, setIsErrorClosed] = useState(false);
@@ -15,8 +15,8 @@ const ContactForm = ({ title, text, clickHandler, isLoading, error, isSubmitted 
     clickHandler(email.value, subject.value, message.value);
   }
   return <form onSubmit={onSubmitHandler}>
-    <h2>{title}</h2>
-    <p>{text}</p>
+    <StyledTitle>{title}</StyledTitle>
+    <StyledText>{text}</StyledText>
     <LabelWithInput type="email" label="Email" name="email" />
     <LabelWithInput type="text" label="Subject" name="subject" />
     <LabelWithTextarea label="Your message" name="message" />
