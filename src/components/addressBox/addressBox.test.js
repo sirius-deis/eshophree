@@ -19,5 +19,25 @@ describe('AddressBox Component', () => {
     expect(screen.getByText(/Phone Number/)).toBeInTheDocument();
     expect(screen.getByText(/Email Address/)).toBeInTheDocument();
   });
-  
+  it('should update input value on change event', () => {
+    render(<AddressBox />);
+    
+    const inputs = [
+      { label: /First Name/, value: 'John' },
+      { label: /Last Name/, value: 'Doe' },
+      { label: /Street/, value: '123 Main St' },
+      { label: /City/, value: 'Anytown' },
+      { label: /State/, value: 'CA' },
+      { label: /Zip Code/, value: '12345' },
+      { label: /Country/, value: 'USA' },
+      { label: /Phone Number/, value: '123-456-7890' },
+      { label: /Email Address/, value: 'john.doe@example.com' }
+    ];
+
+    inputs.forEach(({ label, value }) => {
+      const inputElement = screen.getByLabelText(label);
+      fireEvent.change(inputElement, { target: { value } });
+      expect(inputElement.value).toBe(value);
+    });
+  });
 });
