@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddressBox Component should match snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="sc-fFGjHI eYNeRf"
+    >
+      <div
+        class="sc-dicizt iXKfqv"
+      >
+        <div
+          class="sc-bgqQcB cyUqvl"
+        >
+          <label
+            class="sc-gTRrQi fYROVA"
+          >
+            First Name
+             *
+            <input
+              class="sc-ewnqHT bzVbyC"
+              name="firstName"
+              placeholder="Enter your First Name"
+              required=""
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="sc-bgqQcB cyUqvl"
+        >
+          <label
+            class="sc-gTRrQi fYROVA"
+          >
+            Last Name
+             *
+            <input
+              class="sc-ewnqHT bzVbyC"
+              name="lastName"
+              placeholder="Enter your Last Name"
+              required=""
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-fFGjHI eYNeRf"
+    >
+      <div
+        class="sc-dicizt iXKfqv"
+      >
+        <div
+          class="sc-bgqQcB cyUqvl"
+        >
+          <label
+            class="sc-gTRrQi fYROVA"
+          >
+            Street
+             *
+            <input
+              class="sc-ewnqHT bzVbyC"
+              name="street"
+              placeholder="Enter your Street"
+              required=""
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="sc-bgqQcB cyUqvl"
+        >
+          <label
+            class="sc-gTRrQi fYROVA"
+          >
+            City
+             *
+            <input
+              class="sc-ewnqHT bzVbyC"
+              name="city"
+              placeholder="Enter your City"
+              required=""
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="sc-bgqQcB cyUqvl"
+        >
+          <label
+            class="sc-gTRrQi fYROVA"
+          >
+            State
+             *
+            <input
+              class="sc-ewnqHT bzVbyC"
+              name="state"
+              placeholder="Enter your State"
+              required=""
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="sc-bgqQcB cyUqvl"
+        >
+          <label
+            class="sc-gTRrQi fYROVA"
+          >
+            Zip Code
+             *
+            <input
+              class="sc-ewnqHT bzVbyC"
+              name="zipCode"
+              placeholder="Enter your Zip Code"
+              required=""
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="sc-bgqQcB cyUqvl"
+        >
+          <label
+            class="sc-gTRrQi fYROVA"
+          >
+            Country
+             *
+            <input
+              class="sc-ewnqHT bzVbyC"
+              name="country"
+              placeholder="Enter your Country"
+              required=""
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-fFGjHI eYNeRf"
+    >
+      <div
+        class="sc-dicizt iXKfqv"
+      >
+        <div
+          class="sc-bgqQcB cyUqvl"
+        >
+          <label
+            class="sc-gTRrQi fYROVA"
+          >
+            Phone Number
+             *
+            <input
+              class="sc-ewnqHT bzVbyC"
+              name="phone"
+              placeholder="Enter your Phone Number"
+              required=""
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="sc-bgqQcB cyUqvl"
+        >
+          <label
+            class="sc-gTRrQi fYROVA"
+          >
+            Email Address
+             *
+            <input
+              class="sc-ewnqHT bzVbyC"
+              name="email"
+              placeholder="Enter your Email Address"
+              required=""
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
