@@ -3,7 +3,19 @@ import Row from "../row/row";
 import Button from "../button/button";
 
 const AccountDetails = () => {
-  return <div>
+  const [data, setData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    currentPassword: '',
+    newPassword: '',
+    confirmPassword: '',
+  })
+  const handleChange = e => {
+    setData(prevState => ({ ...prevState, [e.target.name]: e.target.value }))
+  }
+  return <form>
+    <h2>Account Information</h2>
     <Row>
       <LabelWithInput label="First Name" />
       <LabelWithInput label="Last Name" />
@@ -18,7 +30,7 @@ const AccountDetails = () => {
       <LabelWithInput label="Confirm New Password" type="password" />
     </div>
     <Button>Save changes</Button>
-  </div>
+  </form>
 }
 
 export default AccountDetails;
