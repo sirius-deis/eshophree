@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion component should match snapshot with kind round 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB"
+  >
+    <div
+      class="sc-gTRrQi iGYtZf"
+    >
+      <button
+        class="sc-ewnqHT gAZJuI"
+      >
+        <span>
+          Accordion Title
+        </span>
+         
+        +
+      </button>
+    </div>
+  </div>
+</div>
+`;
