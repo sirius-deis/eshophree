@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen , fireEvent} from '@testing-library/react';
 import AddressBox from './addressBox';
 
 describe('AddressBox Component', () => {
@@ -19,4 +19,5 @@ describe('AddressBox Component', () => {
     expect(screen.getByText(/Phone Number/)).toBeInTheDocument();
     expect(screen.getByText(/Email Address/)).toBeInTheDocument();
   });
+  
 });
