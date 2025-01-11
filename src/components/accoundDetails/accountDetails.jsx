@@ -11,23 +11,23 @@ const AccountDetails = () => {
     newPassword: '',
     confirmPassword: '',
   })
-  const handleChange = e => {
-    setData(prevState => ({ ...prevState, [e.target.name]: e.target.value }))
+  const handleChange = (value, name) => {
+    setData(prevState => ({ ...prevState, [name]: value }))
   }
   return <form>
     <h2>Account Information</h2>
     <Row>
-      <LabelWithInput label="First Name" />
-      <LabelWithInput label="Last Name" />
+      <LabelWithInput label="First Name" name="firstName" value={data.firstName} setValue={handleChange} />
+      <LabelWithInput label="Last Name" name="lastName" value={data.lastName} setValue={handleChange} />
     </Row>
     <Row>
-      <LabelWithInput label="Email Address" />
+      <LabelWithInput label="Email Address" name="email" value={data.email} setValue={handleChange} />
     </Row>
     <div>
       <h2>Password Change</h2>
-      <LabelWithInput label="Current Password" type="password" />
-      <LabelWithInput label="New Password" type="password" />
-      <LabelWithInput label="Confirm New Password" type="password" />
+      <LabelWithInput label="Current Password" type="password" name="currentPassword" value={data.currentPassword} setValue={handleChange} />
+      <LabelWithInput label="New Password" type="password" name="newPassword" value={data.newPassword} setValue={handleChange} />
+      <LabelWithInput label="Confirm New Password" type="password" name="confirmPassword" value={data.confirmPassword} setValue={handleChange} />
     </div>
     <Button>Save changes</Button>
   </form>

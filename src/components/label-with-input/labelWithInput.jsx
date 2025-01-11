@@ -24,7 +24,7 @@ const LabelWithInput = ({
           name={name}
           required
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) => setValue(e.target.value, e.target.name)}
         />
       </StyledLabel>
     </StyledLabelWithInput>
