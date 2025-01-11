@@ -24,13 +24,13 @@ describe("SingleAddress component", () => {
     store = mockStore({});
     store.dispatch = jest.fn();
   });
-  it("should match snapshot", function () {
+  it("should match snapshot", () => {
     const { container } = render(<Provider store={store}>
       <SingleAddress {...address} />
     </Provider>);
     expect(container).toMatchSnapshot();
   });
-  it("should render address details", function () {
+  it("should render address details", () => {
     render(<Provider store={store}>
       <SingleAddress {...address} />
     </Provider>);
@@ -42,7 +42,7 @@ describe("SingleAddress component", () => {
     expect(screen.getByText(/123-456-7890/)).toBeInTheDocument();
     expect(screen.getByText(/john@example\.com/)).toBeInTheDocument();
   })
-  it("should show edit form when Edit button is clicked", function () {
+  it("should show edit form when Edit button is clicked", () => {
     render(<Provider store={store}>
       <SingleAddress {...address} />
     </Provider>);
@@ -53,5 +53,14 @@ describe("SingleAddress component", () => {
     expect(screen.getByPlaceholderText("Zip Code")).toHaveValue("10001");
     expect(screen.getByPlaceholderText("Phone Number")).toHaveValue("123-456-7890");
     expect(screen.getByPlaceholderText("Email Address")).toHaveValue("john@example.com");
+  })
+  it("should update form fields when edited", () => {
+    render(<Provider store={store}>
+      <SingleAddress {...address} />
+    </Provider>);
+    fireEvent.click(screen.getByText("Edit"));
+    const addressInput = screen.getByPlaceholderText("Street Address")
+    fireEvent.change(addressInput, {target: {value: "456 Main St"}})
+    expect(addressInput).toHaveValue("456 Main St")
   })
 });
