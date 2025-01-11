@@ -63,4 +63,15 @@ describe("SingleAddress component", () => {
     fireEvent.change(addressInput, {target: {value: "456 Main St"}})
     expect(addressInput).toHaveValue("456 Main St")
   })
+  it('should cancel editing when Cancel button is clicked', () => {
+    render(<Provider store={store}>
+      <SingleAddress {...address} />
+    </Provider>);
+    fireEvent.click(screen.getByText("Edit"));
+    const addressInput = screen.getByPlaceholderText("Street Address")
+    fireEvent.change(addressInput, {target: {value: "456 Main St"}})
+    fireEvent.click(screen.getByText("Cancel"));
+    expect(screen.getByText("123 Main St")).toBeInTheDocument();
+    expect(screen.queryByPlaceholderText("Street Address")).not.toBeInTheDocument()
+  })
 });
