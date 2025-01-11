@@ -2,14 +2,14 @@
 
 exports[`SingleAddress component should match snapshot 1`] = `
 <div>
-  <div
-    class="sc-gxYJeL bFkkmb"
+  <form
+    class="sc-gxYJeL gGLwKK"
   >
     <div
-      class="sc-iVCKna glYdkZ"
+      class="sc-iVCKna dIcsDr"
     >
       <h2
-        class="sc-kPTPQs gdCQYp"
+        class="sc-kPTPQs tiUYv"
       >
         Billing Address
       </h2>
@@ -26,22 +26,34 @@ exports[`SingleAddress component should match snapshot 1`] = `
     <h3>
       John Smith
     </h3>
-    <p>
-      123 Main St
-    </p>
-    <p>
-      New York
-      , 
-      NY
-       
-      10001
-    </p>
-    <p>
-      123-456-7890
-    </p>
-    <p>
-      john@example.com
-    </p>
-  </div>
+    <div
+      class="sc-kuWgmH bgXavs"
+    >
+      <p
+        class="sc-duSInm cRhGRE"
+      >
+        123 Main St
+      </p>
+      <p
+        class="sc-duSInm cRhGRE"
+      >
+        New York
+        , 
+        NY
+         
+        10001
+      </p>
+      <p
+        class="sc-duSInm cRhGRE"
+      >
+        123-456-7890
+      </p>
+      <p
+        class="sc-duSInm cRhGRE"
+      >
+        john@example.com
+      </p>
+    </div>
+  </form>
 </div>
 `;

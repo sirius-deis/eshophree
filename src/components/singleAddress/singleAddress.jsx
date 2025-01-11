@@ -1,9 +1,12 @@
 import { useDispatch } from "react-redux"
+import PropTypes from "prop-types"
+import { useState } from "react"
 import Button from "../button/button"
 import Line from "../line/line"
 import Row from "../row/row"
 import { updateAddress } from "../../store/user/user.actions"
 import { StyledAddress, StyledTitle, StyledForm, StyledInput, StyledInputGroup, StyledDetailsContainer, StyledDetailParagraph } from './singleAddress.styles'
+
 
 const SingleAddress = ({ id, title, name, address, city, state, zipCode, phone, email }) => {
   const dispatch = useDispatch();

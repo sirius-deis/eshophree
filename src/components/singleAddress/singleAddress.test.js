@@ -1,5 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import { Provider } from "react-redux";
+import configureStore from "redux-mock-store";
 import SingleAddress from "./singleAddress";
+
+const mockStore = configureStore([]);
 
 const address = {
   id: 1,
@@ -14,12 +18,22 @@ const address = {
 };
 
 describe("SingleAddress component", () => {
+  let store;
+
+  beforeEach(() => {
+    store = mockStore({});
+    store.dispatch = jest.fn();
+  });
   it("should match snapshot", function () {
-    const { container } = render(<SingleAddress {...address} />);
+    const { container } = render(<Provider store={store}>
+      <SingleAddress {...address} />
+    </Provider>);
     expect(container).toMatchSnapshot();
   });
   it("should render address details", function () {
-    render(<SingleAddress {...address} />);
+    render(<Provider store={store}>
+      <SingleAddress {...address} />
+    </Provider>);
     expect(screen.getByText("John Smith")).toBeInTheDocument();
     expect(screen.getByText("123 Main St")).toBeInTheDocument();
     expect(screen.getByText(/New York/)).toBeInTheDocument();
@@ -27,5 +41,17 @@ describe("SingleAddress component", () => {
     expect(screen.getByText(/10001/)).toBeInTheDocument();
     expect(screen.getByText(/123-456-7890/)).toBeInTheDocument();
     expect(screen.getByText(/john@example\.com/)).toBeInTheDocument();
+  })
+  it("should show edit form when Edit button is clicked", function () {
+    render(<Provider store={store}>
+      <SingleAddress {...address} />
+    </Provider>);
+    fireEvent.click(screen.getByText("Edit"));
+    expect(screen.getByPlaceholderText("Street Address")).toHaveValue("123 Main St");
+    expect(screen.getByPlaceholderText("City")).toHaveValue("New York");
+    expect(screen.getByPlaceholderText("State")).toHaveValue("NY");
+    expect(screen.getByPlaceholderText("Zip Code")).toHaveValue("10001");
+    expect(screen.getByPlaceholderText("Phone Number")).toHaveValue("123-456-7890");
+    expect(screen.getByPlaceholderText("Email Address")).toHaveValue("john@example.com");
   })
 });
