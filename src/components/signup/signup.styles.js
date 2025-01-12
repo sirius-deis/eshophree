@@ -12,14 +12,6 @@ export const StyledSignup = styled.form`
   box-shadow: 5px 4px 4px var(--shadow-color);
 `;
 
-export const StyledAccountLink = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.3rem;
-  color: var(--text-color-additional);
-  margin-top: 1rem;
-`
-
 export const StyledSocialSignup = styled.div`
   display: flex;
   justify-content: center;

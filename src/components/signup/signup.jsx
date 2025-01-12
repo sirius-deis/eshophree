@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
-import { StyledSignup, StyledAccountLink, StyledSocialSignup, StyledSocialButtons, StyledOrSignup } from './signup.styles';
+import { StyledSignup, StyledSocialSignup, StyledSocialButtons, StyledOrSignup } from './signup.styles';
 import Heading from '../heading/heading';
 import Line from '../line/line';
 import Spinner from '../spinner/spinner';
 import LabelWithInput from '../label-with-input/labelWithInput';
 import Button from '../button/button';
 import Modal from '../modal/modal';
+import AccountLink from '../account-link/accountLink';
 import { signUp } from '../../store/user/user.actions';
 
 const SignUp = () => {
@@ -51,14 +52,14 @@ const SignUp = () => {
         minLength={8}
         required
       />
-      <StyledAccountLink>
+      <AccountLink>
         <p>
           Have an account?{' '}
           <Link to='/login' style={{ textDecoration: 'underline', paddingLeft: '0.7rem' }}>
             Sign in
           </Link>
         </p>
-      </StyledAccountLink>
+      </AccountLink>
       <Button
         bgColor='var(--additional-color)'
         color='var(--bg-color)'

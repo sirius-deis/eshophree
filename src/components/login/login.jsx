@@ -9,6 +9,7 @@ import Spinner from '../spinner/spinner';
 import LabelWithInput from '../label-with-input/labelWithInput';
 import Button from '../button/button';
 import Modal from '../modal/modal';
+import AccountLink from '../account-link/accountLink';
 import { signIn } from '../../store/user/user.actions';
 
 const Login = () => {
@@ -40,14 +41,7 @@ const Login = () => {
       <Heading>Log in</Heading>
       <LabelWithInput type='email' label='email' name='email' />
       <LabelWithInput type='password' label='password' name='password' minLength={8} />
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          fontSize: '1.3rem',
-          color: 'var(--text-color-additional)',
-        }}
-      >
+      <AccountLink>
         <p>
           Don't have account?{' '}
           <Link to='/signup' style={{ textDecoration: 'underline', marginLeft: '0.3rem' }}>
@@ -57,7 +51,7 @@ const Login = () => {
         <Link to='/forget' style={{ textDecoration: 'underline' }}>
           Forget password?
         </Link>
-      </div>
+      </AccountLink>
       <Button bgColor='var(--additional-color)' color='var(--bg-color)' disabled={isModalOpened}>
         Login
       </Button>
