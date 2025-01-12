@@ -9,8 +9,8 @@ const LabelWithInput = ({
   minLength,
   maxLength,
   withLabel = true,
-  value,
-  setValue
+  value = "",
+  setValue = () => { }
 }) => {
   return (
     <StyledLabelWithInput>

@@ -3,7 +3,7 @@
 exports[`Hero component should match snapshot 1`] = `
 <div>
   <div
-    class="sc-bgqQcB kCavFA"
+    class="sc-bgqQcB LPAGp"
   >
     <div
       class="container"
@@ -15,7 +15,7 @@ exports[`Hero component should match snapshot 1`] = `
           class="sc-iVCKna fxRogo"
         >
           <div
-            class="sc-kuWgmH kXFAza"
+            class="sc-kuWgmH bLiJGc"
           >
             <button
               class="active"
@@ -35,17 +35,19 @@ exports[`Hero component should match snapshot 1`] = `
             style="transform: translateX(0%);"
           >
             <div
-              class="sc-kPTPQs jiUKgF"
+              class="sc-kPTPQs hLdbeo"
             >
               <img
                 alt="slide"
-                src="https://source.unsplash.com/random/300×300?electronics"
+                src="https://source.unsplash.com/random/1100×400?electronics"
               />
               <div
                 class="sc-duSInm gTwQKa"
               >
                 <button
-                  class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+                  class="sc-jrrXlR sc-cJPUEC cWTNp fzfrux"
+                  color="bg-color"
+                  type="button"
                 >
                   <a
                     href="/shop/"
@@ -56,17 +58,19 @@ exports[`Hero component should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="sc-kPTPQs jiUKgF"
+              class="sc-kPTPQs hLdbeo"
             >
               <img
                 alt="slide"
-                src="https://source.unsplash.com/random/300×300?electronics"
+                src="https://source.unsplash.com/random/1100×400?electronics"
               />
               <div
                 class="sc-duSInm gTwQKa"
               >
                 <button
-                  class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+                  class="sc-jrrXlR sc-cJPUEC cWTNp fzfrux"
+                  color="bg-color"
+                  type="button"
                 >
                   <a
                     href="/shop/"
@@ -77,17 +81,19 @@ exports[`Hero component should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="sc-kPTPQs jiUKgF"
+              class="sc-kPTPQs hLdbeo"
             >
               <img
                 alt="slide"
-                src="https://source.unsplash.com/random/300×300?electronics"
+                src="https://source.unsplash.com/random/1100×400?electronics"
               />
               <div
                 class="sc-duSInm gTwQKa"
               >
                 <button
-                  class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+                  class="sc-jrrXlR sc-cJPUEC cWTNp fzfrux"
+                  color="bg-color"
+                  type="button"
                 >
                   <a
                     href="/shop/"
@@ -98,17 +104,19 @@ exports[`Hero component should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="sc-kPTPQs jiUKgF"
+              class="sc-kPTPQs hLdbeo"
             >
               <img
                 alt="slide"
-                src="https://source.unsplash.com/random/300×300?electronics"
+                src="https://source.unsplash.com/random/1100×400?electronics"
               />
               <div
                 class="sc-duSInm gTwQKa"
               >
                 <button
-                  class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+                  class="sc-jrrXlR sc-cJPUEC cWTNp fzfrux"
+                  color="bg-color"
+                  type="button"
                 >
                   <a
                     href="/shop/"
@@ -131,17 +139,19 @@ exports[`Hero component should match snapshot 1`] = `
           </button>
         </div>
         <div
-          class="sc-jeCNp tSVWP"
+          class="sc-jeCNp SLeWG"
         >
           <img
             alt="card"
-            src="https://source.unsplash.com/random/300×300?electronics"
+            src="https://source.unsplash.com/random/400×200?electronics"
           />
           <div
             class="sc-eywOmQ jPqCqk"
           >
             <button
-              class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+              class="sc-jrrXlR sc-cJPUEC cWTNp fzfrux"
+              color="bg-color"
+              type="button"
             >
               <a
                 href="/"
@@ -153,17 +163,19 @@ exports[`Hero component should match snapshot 1`] = `
           </div>
         </div>
         <div
-          class="sc-jeCNp tSVWP"
+          class="sc-jeCNp SLeWG"
         >
           <img
             alt="card"
-            src="https://source.unsplash.com/random/300×300?electronics"
+            src="https://source.unsplash.com/random/400×200?electronics"
           />
           <div
             class="sc-eywOmQ jPqCqk"
           >
             <button
-              class="sc-jrrXlR sc-cJPUEC fAwCSw haBvUC"
+              class="sc-jrrXlR sc-cJPUEC cWTNp fzfrux"
+              color="bg-color"
+              type="button"
             >
               <a
                 href="/"
@@ -195,7 +207,7 @@ exports[`Hero component should match snapshot 1`] = `
             />
           </svg>
           <div
-            class="sc-dicizt dDHUsF"
+            class="sc-dicizt cZFebZ"
           >
             <p>
               Free Shipping
@@ -225,7 +237,7 @@ exports[`Hero component should match snapshot 1`] = `
             />
           </svg>
           <div
-            class="sc-dicizt dDHUsF"
+            class="sc-dicizt cZFebZ"
           >
             <p>
               Money Guarantee
@@ -252,7 +264,7 @@ exports[`Hero component should match snapshot 1`] = `
             />
           </svg>
           <div
-            class="sc-dicizt dDHUsF"
+            class="sc-dicizt cZFebZ"
           >
             <p>
               Online Support
@@ -283,7 +295,7 @@ exports[`Hero component should match snapshot 1`] = `
             />
           </svg>
           <div
-            class="sc-dicizt dDHUsF"
+            class="sc-dicizt cZFebZ"
           >
             <p>
               Flexible Payment

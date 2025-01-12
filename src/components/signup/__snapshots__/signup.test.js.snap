@@ -4,105 +4,113 @@ exports[`SignUp component should match snapshot 1`] = `
 <div>
   <form
     aria-label="form"
-    class="sc-bgqQcB gmCWKN"
+    class="sc-bgqQcB gnGJcR"
   >
-    <h2
-      class="sc-gTRrQi qTUwf"
+    <div
+      class="sc-iVCKna dltEjw"
     >
       Sign up
-    </h2>
+    </div>
     <div
-      class="sc-iVCKna dqAret"
+      class="sc-kcuKUB eCvKLg"
     >
       <label
-        class="sc-gxYJeL dLwkrg"
+        class="sc-dcrmVg hToJXa"
       >
         Email
          *
         <input
-          class="sc-kPTPQs ebvaXq"
+          class="sc-kuWgmH dBLOPc"
           name="email"
-          placeholder="Enter your email"
+          placeholder="Enter your Email"
           required=""
           type="email"
+          value=""
         />
       </label>
     </div>
     <div
-      class="sc-iVCKna dqAret"
+      class="sc-kcuKUB eCvKLg"
     >
       <label
-        class="sc-gxYJeL dLwkrg"
+        class="sc-dcrmVg hToJXa"
       >
         Password
          *
         <input
-          class="sc-kPTPQs ebvaXq"
+          class="sc-kuWgmH dBLOPc"
           minlength="8"
           name="password"
-          placeholder="Enter your password"
+          placeholder="Enter your Password"
           required=""
           type="password"
+          value=""
         />
       </label>
     </div>
     <div
-      class="sc-iVCKna dqAret"
+      class="sc-kcuKUB eCvKLg"
     >
       <label
-        class="sc-gxYJeL dLwkrg"
+        class="sc-dcrmVg hToJXa"
       >
         Password confirm
          *
         <input
-          class="sc-kPTPQs ebvaXq"
+          class="sc-kuWgmH dBLOPc"
           minlength="8"
           name="confirm"
           placeholder="Confirm your password"
           required=""
           type="password"
+          value=""
         />
       </label>
     </div>
     <div
-      style="display: flex; justify-content: space-between; font-size: 1.3rem;"
+      class="sc-gTRrQi kqvnkN"
     >
       <p>
-        Have account?
+        Have an account?
          
         <a
           href="/login"
-          style="text-decoration: underline; padding-left: 0.5rem;"
+          style="text-decoration: underline; padding-left: 0.7rem;"
         >
           Sign in
         </a>
       </p>
     </div>
     <button
-      class="sc-ispOId sc-kuWgmH dHSeuY jjKghz"
+      class="sc-duSInm sc-jJTsDX iPdldQ gCrpBA"
+      color="var(--bg-color)"
+      type="button"
     >
       Sign up
     </button>
     <div
-      style="display: flex; justify-content: center; align-items: center; gap: 1rem;"
+      class="sc-ewnqHT bOYVUD"
     >
       <div
-        class="sc-ewnqHT bVIEaX"
+        class="sc-gxYJeL gKfuHE"
+        width="35"
       />
       <p
-        style="font-size: 1.3rem;"
+        class="sc-fFGjHI gDBNIm"
       >
         Or sign up with
       </p>
       <div
-        class="sc-ewnqHT bVIEaX"
+        class="sc-gxYJeL gKfuHE"
+        width="35"
       />
     </div>
     <div
-      style="display: flex; justify-content: space-between; align-items: center; gap: 2rem;"
+      class="sc-dicizt gHbCSR"
     >
       <button
-        class="sc-ispOId sc-kuWgmH hIhUdR jjKghz"
+        class="sc-duSInm sc-jJTsDX kMKRfS gCrpBA"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -120,7 +128,8 @@ exports[`SignUp component should match snapshot 1`] = `
          Facebook
       </button>
       <button
-        class="sc-ispOId sc-kuWgmH hIhUdR jjKghz"
+        class="sc-duSInm sc-jJTsDX kMKRfS gCrpBA"
+        type="button"
       >
         <svg
           fill="currentColor"
@@ -139,5 +148,6 @@ exports[`SignUp component should match snapshot 1`] = `
       </button>
     </div>
   </form>
+  ,
 </div>
 `;

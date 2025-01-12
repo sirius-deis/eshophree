@@ -3,7 +3,7 @@
 exports[`InfoBox component should match snapshot 1`] = `
 <div>
   <div
-    class="sc-bgqQcB evNxN bordered "
+    class="sc-bgqQcB iGTaAG bordered "
   >
     <p />
   </div>

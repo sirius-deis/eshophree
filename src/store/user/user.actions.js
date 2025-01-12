@@ -65,12 +65,12 @@ export const clearRecentlyViewed = () => {
 };
 
 
-export const updateAddress = (data) => async (dispatch) => {
+export const updateAddress = (dataForServer) => async (dispatch) => {
   dispatch({ type: UserActionTypes.UPDATE_ADDRESS_START });
   try {
     const data = await fetchData('users/updateAddress', {
       method: 'POST',
-      body: JSON.stringify(data),
+      body: JSON.stringify(dataForServer),
     });
     dispatch({ type: UserActionTypes.UPDATE_ADDRESS_SUCCESS, payload: data });
   } catch(error) {

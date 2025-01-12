@@ -3,7 +3,8 @@
 exports[`Button component should match snapshot with kind default 1`] = `
 <div>
   <button
-    class="sc-bgqQcB sc-fFGjHI MyNZc gkWWIA"
+    class="sc-bgqQcB sc-fFGjHI jHWwsb dQaKvT"
+    type="button"
   >
     Loading
   </button>
@@ -13,7 +14,7 @@ exports[`Button component should match snapshot with kind default 1`] = `
 exports[`Button component should match snapshot with kind dropdown 1`] = `
 <div>
   <button
-    class="sc-bgqQcB sc-ewnqHT MyNZc cTzBXJ"
+    class="sc-bgqQcB sc-ewnqHT jHWwsb cTzBXJ"
     type="button"
   >
     Loading
@@ -24,7 +25,7 @@ exports[`Button component should match snapshot with kind dropdown 1`] = `
 exports[`Button component should match snapshot with kind round 1`] = `
 <div>
   <button
-    class="sc-bgqQcB sc-gTRrQi MyNZc cVPPIc"
+    class="sc-bgqQcB sc-gTRrQi jHWwsb cVPPIc"
     type="button"
   >
     Loading

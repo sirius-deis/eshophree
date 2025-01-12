@@ -3,13 +3,13 @@
 exports[`Stock component should match snapshot 1`] = `
 <div>
   <div
-    class="sc-bgqQcB kNqEON"
+    class="sc-bgqQcB beiWqX"
   >
     <div
       style="margin-bottom: 1rem;"
     >
       <div
-        class="sc-ewnqHT eqIhHE"
+        class="sc-ewnqHT dLOUny"
       >
         <span
           style="font-size: 1.3rem;"
@@ -38,7 +38,7 @@ exports[`Stock component should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-ewnqHT fHlIUl"
+      class="sc-ewnqHT fcqwuT"
     >
       <div
         style="display: flex; flex-direction: column; gap: 0.5rem;"
@@ -55,7 +55,7 @@ exports[`Stock component should match snapshot 1`] = `
         </p>
       </div>
       <div
-        class="sc-ewnqHT TXAsr"
+        class="sc-ewnqHT jRSYnd"
       >
         <div
           class="clock"

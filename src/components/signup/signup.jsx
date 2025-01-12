@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
-import { StyledSignUp } from './signup.styles';
+import { StyledSignup, StyledAccountLink, StyledSocialSignup, StyledSocialButtons, StyledOrSignup } from './signup.styles';
 import Heading from '../heading/heading';
 import Line from '../line/line';
 import Spinner from '../spinner/spinner';
@@ -17,6 +17,7 @@ const SignUp = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const submitHandler = (e) => {
     e.preventDefault();
     const { email, password, confirm } = e.target.elements;
@@ -36,69 +37,51 @@ const SignUp = () => {
   }, [isLoading, error, isSubmitted, navigate]);
 
   return (
-    <StyledSignUp onSubmit={submitHandler} aria-label='form'>
+    <StyledSignup onSubmit={submitHandler} aria-label='form'>
       {isLoading && <Spinner />}
       {isModalOpened && <Modal closeModal={() => setIsModalOpened(false)}>{error}</Modal>}
       <Heading>Sign up</Heading>
-      <LabelWithInput type='email' name='email' />
-      <LabelWithInput type='password' name='password' minLength={8} />
+      <LabelWithInput type='email' name='email' label="Email" required />
+      <LabelWithInput type='password' name='password' label="Password" minLength={8} required />
       <LabelWithInput
         type='password'
         label='password confirm'
         placeholder='Confirm your password'
         name='confirm'
         minLength={8}
+        required
       />
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          fontSize: '1.3rem',
-          color: 'var(--text-color-additional)',
-        }}
-      >
+      <StyledAccountLink>
         <p>
           Have an account?{' '}
           <Link to='/login' style={{ textDecoration: 'underline', paddingLeft: '0.7rem' }}>
             Sign in
           </Link>
         </p>
-      </div>
+      </StyledAccountLink>
       <Button
         bgColor='var(--additional-color)'
         color='var(--bg-color)'
-        disabled={isLoading ? true : false}
+        disabled={isLoading}
       >
         Sign up
       </Button>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
+      <StyledSocialSignup>
         <Line width={35} />
-        <p
-          style={{
-            color: 'var(--text-color-additional)',
-            fontSize: '1.3rem',
-          }}
-        >
+        <StyledOrSignup>
           Or sign up with
-        </p>
+        </StyledOrSignup>
         <Line width={35} />
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          gap: '2rem',
-        }}
-      >
+      </StyledSocialSignup>
+      <StyledSocialButtons>
         <Button bordered>
           <FaFacebookF /> Facebook
         </Button>
         <Button bordered>
           <FaGoogle /> Google
         </Button>
-      </div>
-    </StyledSignUp>
+      </StyledSocialButtons>
+    </StyledSignup>
   );
 };
 

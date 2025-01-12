@@ -2,7 +2,7 @@
 
 exports[`SingleAddress component should match snapshot 1`] = `
 <div>
-  <form
+  <div
     class="sc-gxYJeL gGLwKK"
   >
     <div
@@ -54,6 +54,6 @@ exports[`SingleAddress component should match snapshot 1`] = `
         john@example.com
       </p>
     </div>
-  </form>
+  </div>
 </div>
 `;

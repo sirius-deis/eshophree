@@ -3,13 +3,13 @@
 exports[`ListItem component should match snapshot 1`] = `
 <div>
   <li
-    class="sc-bgqQcB XKrgR"
+    class="sc-bgqQcB lnKBne"
   >
-    <a
-      href="/test"
+    <button
+      class="sc-gTRrQi iMirOm"
     >
       test
-    </a>
+    </button>
   </li>
 </div>
 `;

@@ -6,15 +6,16 @@ exports[`LabelWithInput component should match snapshot 1`] = `
     class="sc-bgqQcB cyUqvl"
   >
     <label
-      class="sc-gTRrQi ePxBfa"
+      class="sc-gTRrQi fYROVA"
     >
       Text
        *
       <input
-        class="sc-ewnqHT hPImUq"
+        class="sc-ewnqHT bzVbyC"
         placeholder="Enter your text"
         required=""
         type="text"
+        value=""
       />
     </label>
   </div>

@@ -3,13 +3,13 @@
 exports[`Accordion component should match snapshot with kind round 1`] = `
 <div>
   <div
-    class="sc-bgqQcB"
+    class="sc-bgqQcB jIiUBw"
   >
     <div
-      class="sc-gTRrQi iGYtZf"
+      class="sc-gTRrQi hnLgNS"
     >
       <button
-        class="sc-ewnqHT gAZJuI"
+        class="sc-ewnqHT gA-dPuy"
       >
         <span>
           Accordion Title

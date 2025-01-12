@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB bVJoSM"
+  >
+    <img
+      alt="card"
+      src="https://source.unsplash.com/random/400×200?electronics"
+    />
+    <div
+      class="sc-gTRrQi iOjQnv"
+    >
+      <button
+        class="sc-ewnqHT sc-iVCKna hbuNTc hhqmXX"
+        color="bg-color"
+        type="button"
+      >
+        <a
+          href="/"
+        >
+          Card
+           →
+        </a>
+      </button>
+    </div>
+  </div>
+</div>
+`;

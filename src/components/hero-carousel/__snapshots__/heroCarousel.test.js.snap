@@ -6,7 +6,7 @@ exports[`HeroCarousel component should match snapshot 1`] = `
     class="sc-bgqQcB dxzDM"
   >
     <div
-      class="sc-gxYJeL dmSiwI"
+      class="sc-gxYJeL gCehjy"
     >
       <button
         class="active"
@@ -26,17 +26,19 @@ exports[`HeroCarousel component should match snapshot 1`] = `
       style="transform: translateX(0%);"
     >
       <div
-        class="sc-ewnqHT hufTMZ"
+        class="sc-ewnqHT jUAMGI"
       >
         <img
           alt="slide"
-          src="https://source.unsplash.com/random/300×300?electronics"
+          src="https://source.unsplash.com/random/1100×400?electronics"
         />
         <div
           class="sc-kPTPQs gkVKTH"
         >
           <button
-            class="sc-ispOId sc-kuWgmH dHSeuY jjKghz"
+            class="sc-ispOId sc-kuWgmH hQXfFZ gSsMvs"
+            color="bg-color"
+            type="button"
           >
             <a
               href="/shop/"
@@ -47,17 +49,19 @@ exports[`HeroCarousel component should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="sc-ewnqHT hufTMZ"
+        class="sc-ewnqHT jUAMGI"
       >
         <img
           alt="slide"
-          src="https://source.unsplash.com/random/300×300?electronics"
+          src="https://source.unsplash.com/random/1100×400?electronics"
         />
         <div
           class="sc-kPTPQs gkVKTH"
         >
           <button
-            class="sc-ispOId sc-kuWgmH dHSeuY jjKghz"
+            class="sc-ispOId sc-kuWgmH hQXfFZ gSsMvs"
+            color="bg-color"
+            type="button"
           >
             <a
               href="/shop/"
@@ -68,17 +72,19 @@ exports[`HeroCarousel component should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="sc-ewnqHT hufTMZ"
+        class="sc-ewnqHT jUAMGI"
       >
         <img
           alt="slide"
-          src="https://source.unsplash.com/random/300×300?electronics"
+          src="https://source.unsplash.com/random/1100×400?electronics"
         />
         <div
           class="sc-kPTPQs gkVKTH"
         >
           <button
-            class="sc-ispOId sc-kuWgmH dHSeuY jjKghz"
+            class="sc-ispOId sc-kuWgmH hQXfFZ gSsMvs"
+            color="bg-color"
+            type="button"
           >
             <a
               href="/shop/"
@@ -89,17 +95,19 @@ exports[`HeroCarousel component should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="sc-ewnqHT hufTMZ"
+        class="sc-ewnqHT jUAMGI"
       >
         <img
           alt="slide"
-          src="https://source.unsplash.com/random/300×300?electronics"
+          src="https://source.unsplash.com/random/1100×400?electronics"
         />
         <div
           class="sc-kPTPQs gkVKTH"
         >
           <button
-            class="sc-ispOId sc-kuWgmH dHSeuY jjKghz"
+            class="sc-ispOId sc-kuWgmH hQXfFZ gSsMvs"
+            color="bg-color"
+            type="button"
           >
             <a
               href="/shop/"

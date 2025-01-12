@@ -1,8 +1,11 @@
 import { render, screen, fireEvent, act } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from '../../store/store';
+import { BrowserRouter as Router } from 'react-router-dom';
 import SignUp from './signup';
+
+import { Provider } from "react-redux";
+import configureStore from "redux-mock-store";
+
+const mockStore = configureStore([]);
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -14,23 +17,30 @@ global.fetch = jest.fn(() =>
 );
 
 describe('SignUp component', () => {
+  let store;
+
+  beforeEach(() => {
+    store = mockStore({user: {isLoading: false, error: null}});
+    store.dispatch = jest.fn();
+  });
   it('should match snapshot', () => {
     const { container } = render(
-      <Provider store={store}>
-        <MemoryRouter>
+      <Router>
+        <Provider store={store}>
           <SignUp />
-        </MemoryRouter>
-      </Provider>,
+        </Provider>,
+      </Router>
     );
     expect(container).toMatchSnapshot();
   });
+  
   it('should fire submit event', async () => {
     render(
-      <Provider store={store}>
-        <MemoryRouter>
+      <Router>
+        <Provider store={store}>
           <SignUp />
-        </MemoryRouter>
-      </Provider>,
+        </Provider>,
+    </Router>
     );
     const emailInput = screen.getByLabelText('Email *');
     fireEvent.change(emailInput, {
