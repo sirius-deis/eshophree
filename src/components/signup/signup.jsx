@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
-import { StyledSignup, StyledSocialSignup, StyledSocialButtons, StyledOrSignup } from './signup.styles';
-import Heading from '../heading/heading';
-import Line from '../line/line';
+import { StyledSignup } from './signup.styles';
+import Heading from '../heading/heading'
 import Spinner from '../spinner/spinner';
 import LabelWithInput from '../label-with-input/labelWithInput';
 import Button from '../button/button';
 import Modal from '../modal/modal';
 import AccountLink from '../account-link/accountLink';
+import SocialButtons from '../social-buttons/socialButtons';
 import { signUp } from '../../store/user/user.actions';
 
 const SignUp = () => {
@@ -67,21 +67,10 @@ const SignUp = () => {
       >
         Sign up
       </Button>
-      <StyledSocialSignup>
-        <Line width={35} />
-        <StyledOrSignup>
-          Or sign up with
-        </StyledOrSignup>
-        <Line width={35} />
-      </StyledSocialSignup>
-      <StyledSocialButtons>
-        <Button bordered>
-          <FaFacebookF /> Facebook
-        </Button>
-        <Button bordered>
-          <FaGoogle /> Google
-        </Button>
-      </StyledSocialButtons>
+      <SocialButtons title="sign up" buttons={[
+        { button: <FaFacebookF /> + " Facebook", onClick: () => { } },
+        { button: <FaGoogle /> + " Google", onClick: () => { } }]}
+      />
     </StyledSignup>
   );
 };

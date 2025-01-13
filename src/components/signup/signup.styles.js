@@ -11,23 +11,3 @@ export const StyledSignup = styled.form`
   background-color: var(--bg-color);
   box-shadow: 5px 4px 4px var(--shadow-color);
 `;
-
-export const StyledSocialSignup = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 2rem 0;
-`
-
-export const StyledOrSignup = styled.p`
-  color: var(--text-color-additional);
-  font-size: 1.3rem;
-`
-
-export const StyledSocialButtons = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-`;
