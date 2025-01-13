@@ -14,8 +14,8 @@ const SocialButtons = ({ title, buttons }) => {
     </StyledSocialSignup>
     <StyledSocialButtons>
       {buttons.map((button, i) => {
-        return <Button key={i} bordered onClick={button.onClick}>
-          {button.button}
+        return <Button key={i} bordered onClickHandler={button.onClick}>
+          {button.buttonContent}
         </Button>
       })}
     </StyledSocialButtons>
@@ -25,7 +25,7 @@ const SocialButtons = ({ title, buttons }) => {
 SocialButtons.propTypes = {
   title: PropTypes.string.isRequired,
   buttons: PropTypes.arrayOf(PropTypes.shape({
-    button: PropTypes.node.isRequired,
+    buttonContent: PropTypes.node.isRequired,
     onClick: PropTypes.func
   })).isRequired,
 };
