@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialButtons component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-iVCKna eKaoQc"
+  >
+    <div
+      class="sc-gxYJeL fIRewz"
+    >
+      <div
+        class="sc-bgqQcB teJYB"
+        width="35"
+      />
+      <p
+        class="sc-kPTPQs iPJAVP"
+      >
+        Or 
+        login
+         with
+      </p>
+      <div
+        class="sc-bgqQcB teJYB"
+        width="35"
+      />
+    </div>
+    <div
+      class="sc-iVCKna eKaoQc"
+    >
+      <button
+        class="sc-gTRrQi sc-dicizt isQxaZ dkhXdi"
+        type="button"
+      >
+        <div>
+          Google
+        </div>
+      </button>
+      <button
+        class="sc-gTRrQi sc-dicizt isQxaZ dkhXdi"
+        type="button"
+      >
+        <div>
+          Facebook
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
