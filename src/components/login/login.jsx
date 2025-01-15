@@ -56,8 +56,8 @@ const Login = () => {
         Login
       </Button>
       <SocialButtons title="login" buttons={[
-        { button: <FaFacebookF /> + " Facebook", onClick: () => { } },
-        { button: <FaGoogle /> + " Google", onClick: () => { } }]}
+        { buttonContent: <FaFacebookF /> + " Facebook", onClick: () => { } },
+        { buttonContent: <FaGoogle /> + " Google", onClick: () => { } }]}
       />
     </StyledLogin>
   );
