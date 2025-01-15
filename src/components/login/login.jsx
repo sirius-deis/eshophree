@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
-import Line from '../line/line';
 import Heading from '../heading/heading';
 import { StyledLogin } from './login.styles';
 import Spinner from '../spinner/spinner';
@@ -10,6 +9,7 @@ import LabelWithInput from '../label-with-input/labelWithInput';
 import Button from '../button/button';
 import Modal from '../modal/modal';
 import AccountLink from '../account-link/accountLink';
+import SocialButtons from '../social-buttons/socialButtons';
 import { signIn } from '../../store/user/user.actions';
 
 const Login = () => {
@@ -55,33 +55,10 @@ const Login = () => {
       <Button bgColor='var(--additional-color)' color='var(--bg-color)' disabled={isModalOpened}>
         Login
       </Button>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
-        <Line width={35} />
-        <p
-          style={{
-            color: 'var(--text-color-additional)',
-            fontSize: '1.3rem',
-          }}
-        >
-          Or login with
-        </p>
-        <Line width={35} />
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          gap: '2rem',
-        }}
-      >
-        <Button bordered disabled={isModalOpened}>
-          <FaFacebookF /> Facebook
-        </Button>
-        <Button bordered disabled={isModalOpened}>
-          <FaGoogle /> Google
-        </Button>
-      </div>
+      <SocialButtons title="login" buttons={[
+        { button: <FaFacebookF /> + " Facebook", onClick: () => { } },
+        { button: <FaGoogle /> + " Google", onClick: () => { } }]}
+      />
     </StyledLogin>
   );
 };
