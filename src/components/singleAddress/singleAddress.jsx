@@ -8,10 +8,10 @@ import { updateAddress } from "../../store/user/user.actions"
 import { StyledAddress, StyledTitle, StyledForm, StyledInput, StyledInputGroup, StyledDetailsContainer, StyledDetailParagraph } from './singleAddress.styles'
 
 
-const SingleAddress = ({ id, title, name, address, city, state, zipCode, phone, email }) => {
+const SingleAddress = ({ id, title, name, street, city, state, zipCode, phone, email }) => {
   const dispatch = useDispatch();
   const [isBeingEdited, setIsBeingEdited] = useState(false);
-  const [formData, setFormData] = useState({ address, city, state, zipCode, phone, email });
+  const [formData, setFormData] = useState({ street, city, state, zipCode, phone, email });
   const toggleEdit = () => {
     setIsBeingEdited(!isBeingEdited);
   }
@@ -36,7 +36,7 @@ const SingleAddress = ({ id, title, name, address, city, state, zipCode, phone, 
     <h3 >{name}</h3>
     {isBeingEdited ? (
       <StyledForm onSubmit={updateAddressHandler}>
-        <StyledInput type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Street Address" />
+        <StyledInput type="text" name="address" value={formData.street} onChange={handleChange} placeholder="Street Address" />
         <StyledInputGroup>
           <StyledInput type="text" name="city" value={formData.city} onChange={handleChange} placeholder="City" />
           <StyledInput type="text" name="state" value={formData.state} onChange={handleChange} placeholder="State" />
@@ -47,7 +47,7 @@ const SingleAddress = ({ id, title, name, address, city, state, zipCode, phone, 
       </StyledForm>
     ) : (
       <StyledDetailsContainer>
-        <StyledDetailParagraph>{address}</StyledDetailParagraph>
+        <StyledDetailParagraph>{street}</StyledDetailParagraph>
         <StyledDetailParagraph>{city}, {state} {zipCode}</StyledDetailParagraph>
         <StyledDetailParagraph>{phone}</StyledDetailParagraph>
         <StyledDetailParagraph>{email}</StyledDetailParagraph>
@@ -60,7 +60,7 @@ SingleAddress.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
+  street: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
   zipCode: PropTypes.string.isRequired,

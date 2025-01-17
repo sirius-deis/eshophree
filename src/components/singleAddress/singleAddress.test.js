@@ -9,7 +9,7 @@ const address = {
   id: 1,
   name: "John Smith",
   title: "Billing Address",
-  address: "123 Main St",
+  street: "123 Main St",
   city: "New York",
   state: "NY",
   zipCode: "10001",

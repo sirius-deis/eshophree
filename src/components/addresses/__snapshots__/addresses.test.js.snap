@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Address component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB cgjxUA"
+  >
+    <h2
+      class="sc-gTRrQi"
+    >
+      The following addresses will be used on the checkout page by default
+    </h2>
+    <div
+      class="sc-kcuKUB dTGKrC"
+    >
+      <div
+        class="sc-ispOId dbDVvX"
+      >
+        <h2
+          class="sc-dcrmVg kcsjkr"
+        >
+          Billing Address
+        </h2>
+        <button
+          class="sc-fFGjHI sc-gxYJeL ivVKaH gIQAZC"
+          type="button"
+        >
+          Edit
+        </button>
+      </div>
+      <div
+        class="sc-kPTPQs zAAxG"
+      />
+      <h3>
+        John Doe
+      </h3>
+      <div
+        class="sc-crozmw jOfitN"
+      >
+        <p
+          class="sc-jJTsDX gAVfzf"
+        >
+          123 Main St
+        </p>
+        <p
+          class="sc-jJTsDX gAVfzf"
+        >
+          Anytown
+          , 
+          CA
+           
+          12345
+        </p>
+        <p
+          class="sc-jJTsDX gAVfzf"
+        >
+          123-456-7890
+        </p>
+        <p
+          class="sc-jJTsDX gAVfzf"
+        >
+          john.doe@example.com
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
