@@ -19,6 +19,7 @@ const Card = ({
   height,
   styles,
 }) => {
+  const discountedPrice = price - (price * discount) / 100;
   return (
     <StyledCard
       style={{
@@ -40,7 +41,7 @@ const Card = ({
         <p className='price'>
           ${price.toFixed(2)}
           <sup>
-            <del>${((price / 100) * (price - discount)).toFixed(2)}</del>
+            <del>${discountedPrice.toFixed(2)}</del>
           </sup>
         </p>
         {children && React.cloneElement(children, { total, sold, endIn })}
@@ -52,15 +53,15 @@ const Card = ({
 Card.propTypes = {
   children: PropTypes.node,
   isColumn: PropTypes.bool,
-  image: PropTypes.string,
-  category: PropTypes.string,
-  name: PropTypes.string,
-  price: PropTypes.number,
+  image: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   discount: PropTypes.number,
-  total: PropTypes.number,
-  sold: PropTypes.number,
+  total: PropTypes.number.isRequired,
+  sold: PropTypes.number.isRequired,
   endIn: PropTypes.object,
-  height: PropTypes.string,
+  height: PropTypes.string.isRequired,
   styles: PropTypes.object,
 };
 

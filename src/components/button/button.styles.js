@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   width: 100%;
   height: 100%;
   min-height: 3.9rem;
@@ -21,7 +21,7 @@ const StyledButton = styled.button`
     filter: unset;
 `;
 
-const StyledRoundButton = styled(StyledButton)`
+export const StyledRoundButton = styled(StyledButton)`
   margin: 0.5rem;
   padding: 0.3rem;
   width: 4rem;
@@ -33,15 +33,13 @@ const StyledRoundButton = styled(StyledButton)`
   }
 `;
 
-const StyledDropdownButton = styled(StyledButton)`
+export const StyledDropdownButton = styled(StyledButton)`
   padding: 1.5rem 1rem 1.5rem;
   justify-content: space-between;
 `;
 
-const StyledPlainButton = styled(StyledButton)`
+export const StyledPlainButton = styled(StyledButton)`
   padding: 1rem 1.4rem;
   border-radius: 10px;
   font-size: 1.6rem;
 `;
-
-export { StyledPlainButton, StyledRoundButton, StyledDropdownButton };

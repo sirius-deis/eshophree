@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import Banner from '../banner/banner';
-import {StyledBannerContainer} from './bannerContainer.styles'
+import { StyledBannerContainer } from './bannerContainer.styles'
 
 const BannerContainer = ({ banners }) => {
   return (

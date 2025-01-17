@@ -6,7 +6,7 @@ exports[`Address component should match snapshot 1`] = `
     class="sc-bgqQcB cgjxUA"
   >
     <h2
-      class="sc-gTRrQi"
+      class="sc-gTRrQi hlJsKd"
     >
       The following addresses will be used on the checkout page by default
     </h2>
