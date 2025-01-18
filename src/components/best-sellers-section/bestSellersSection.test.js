@@ -1,5 +1,5 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import BestSellersSection from './bestSellersSection';
 import useFetch from '../../hooks/useFetch';
 
@@ -9,21 +9,21 @@ jest.mock('../../hooks/useFetch');
 describe('BestSellersSection', () => {
   it('renders loading state initially', () => {
     useFetch.mockReturnValue([null, true]);
-    render(<BestSellersSection />);
+    render(<Router><BestSellersSection /></Router>);
     expect(screen.queryByText('Best Sellers')).not.toBeInTheDocument();
   });
 
-  // it('renders products when data is fetched', () => {
-  //   const mockProducts = {
-  //     products: [
-  //       { _id: 1, name: 'Product 1', price: 100, images: [] },
-  //       { _id: 2, name: 'Product 2', price: 200, images: [] },
-  //     ],
-  //   };
-  //   useFetch.mockReturnValue([mockProducts, false]);
-  //   render(<BestSellersSection />);
-  //   expect(screen.getByText('Best Sellers')).toBeInTheDocument();
-  //   expect(screen.getByText('Product 1')).toBeInTheDocument();
-  //   expect(screen.getByText('Product 2')).toBeInTheDocument();
-  // });
+  it('renders products when data is fetched', () => {
+    const mockProducts = {
+      products: [
+        { _id: "j34ogr3og", name: 'Product 1', price: 100, total: 300, sold: 19, images: [], category: {_id: "i5ghj5fk5", name: "Category 1"} },
+        { _id: "i4sg84122fd", name: 'Product 2', price: 200, total: 200, sold: 16, images: [], category: {_id: "o64gro4g4", name: "Category 2"} },
+      ],
+    };
+    useFetch.mockReturnValue([mockProducts, false]);
+    render(<Router><BestSellersSection /></Router>);
+    expect(screen.getByText('Best Sellers')).toBeInTheDocument();
+    expect(screen.getByText('Product 1')).toBeInTheDocument();
+    expect(screen.getByText('Product 2')).toBeInTheDocument();
+  });
 });

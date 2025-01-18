@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB lmryQB"
+    style="flex-direction: row;"
+  >
+    <img
+      alt="product"
+      src="test.jpg"
+    />
+    <div
+      class="sc-gTRrQi bnzzvf"
+    >
+      <a
+        href="/category/5635geet3gfdgd"
+      >
+        Category
+      </a>
+      <a
+        href="/product/21fd434hd3"
+        style="font-size: 2.5rem;"
+      >
+        Hero
+      </a>
+      <p
+        class="price"
+      >
+        $
+        100.00
+        <sup>
+          <del>
+            $
+            90.00
+          </del>
+        </sup>
+      </p>
+    </div>
+  </div>
+</div>
+`;
