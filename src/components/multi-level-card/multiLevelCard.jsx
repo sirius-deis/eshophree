@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import {} from './multiLevelCard.styles'
+import { StyledMultiLevelCard } from './multiLevelCard.styles'
 
 const MultiLevelCard = ({ children }) => {
   return <StyledMultiLevelCard>{children}</StyledMultiLevelCard>;

@@ -4,16 +4,7 @@ import Card from '../card/card';
 import MultiLevelCard from '../multi-level-card/multiLevelCard';
 import useFetch from '../../hooks/useFetch';
 import { divideArrayOnChunks } from '../../utils/util';
-
-const StyledComposedSection = styled.section`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-`;
-
-const StyledWrapper = styled.div`
-  width: 25%;
-`;
+import { StyledComposedSection, StyledWrapper } from './composedSection.styles'
 
 const ComposedSection = () => {
   const [top20Products, isTop20ProductsLoading] = useFetch(
