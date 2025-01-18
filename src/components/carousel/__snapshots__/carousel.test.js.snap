@@ -44,7 +44,7 @@ exports[`Carousel component should match snapshot 1`] = `
           style="transform: translateX(NaN%);"
         >
           <div
-            class="sc-iVCKna jFjGbS"
+            class="sc-iVCKna jFjGbS active"
           >
             <div>
               Slide 1
@@ -55,6 +55,13 @@ exports[`Carousel component should match snapshot 1`] = `
           >
             <div>
               Slide 2
+            </div>
+          </div>
+          <div
+            class="sc-iVCKna jFjGbS"
+          >
+            <div>
+              Slide 3
             </div>
           </div>
         </div>

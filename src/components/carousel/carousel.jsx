@@ -44,15 +44,14 @@ const Carousel = ({ children, banner, title, amount, titleColor, icon }) => {
         <div style={{ overflow: 'hidden' }}>
           <StyledInner
             style={{
-              transform: `translateX(${
-                (index + 1) * amount < children.length
+              transform: `translateX(${(index + 1) * amount < children.length
                   ? -index * 100
                   : -(index - 1) * 100 + ((index * amount - children.length) / amount) * 100
-              }%)`,
+                }%)`,
             }}
           >
-            {React.Children.map(children, (child) => (
-              <StyledCarouseItem amount={amount}>{React.cloneElement(child)}</StyledCarouseItem>
+            {React.Children.map(children, (child, i) => (
+              <StyledCarouseItem className={index === i ? "active" : ""} amount={amount}>{React.cloneElement(child)}</StyledCarouseItem>
             ))}
           </StyledInner>
         </div>
