@@ -3,7 +3,7 @@ import { StyledSpinner, StyledBackdrop } from './spinner.styles';
 const Spinner = () => {
   return (
     <StyledBackdrop>
-      <StyledSpinner />
+      <StyledSpinner role='status' />
     </StyledBackdrop>
   );
 };

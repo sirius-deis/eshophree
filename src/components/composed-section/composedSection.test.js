@@ -20,6 +20,4 @@ describe("ComposedSection component", () => {
     expect(screen.queryByText("Top 20")).not.toBeInTheDocument();
     expect(screen.queryByText("Featured Products")).not.toBeInTheDocument();
   });
-
-  
 });
