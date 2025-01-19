@@ -21,7 +21,7 @@ const ContactForm = ({ title, text, clickHandler, isLoading, error, isSubmitted 
     <LabelWithInput type="email" placeholder="Enter your email" label="Email" name="email" />
     <LabelWithInput type="text" placeholder="Enter your subject" label="Subject" name="subject" />
     <LabelWithTextarea placeholder="Enter your message" label="Your message" name="message" />
-    <Button >Send message</Button>
+    <Button>Send message</Button>
     {isLoading && <Spinner />}
     {error && !isErrorClosed && <InfoBox message={error} clickHandler={() => setIsErrorClosed(true)} />}
     {isSubmitted && !isLoading && !error && <InfoBox message="Thank you for your submitting!" />}

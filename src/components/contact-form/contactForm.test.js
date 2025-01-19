@@ -27,19 +27,27 @@ describe('ContactForm Component', () => {
     expect(screen.getByText('Please fill out the form below to contact us.')).toBeInTheDocument();
   });
 
-  
+  it('should call clickHandler with form data on submit', () => {
+    render(<ContactForm {...defaultProps} />);
+    fireEvent.change(screen.getByPlaceholderText(/Email/i), { target: { value: 'test@example.com' } });
+    fireEvent.change(screen.getByPlaceholderText(/Subject/i), { target: { value: 'Test Subject' } });
+    fireEvent.change(screen.getByPlaceholderText(/Your message/i), { target: { value: 'Test Message' } });
+    fireEvent.click(screen.getByRole("button"));
 
-  it('displays a spinner when loading', () => {
+    expect(mockClickHandler).toHaveBeenCalledWith('test@example.com', 'Test Subject', 'Test Message');
+  });
+
+  it('should display a spinner when loading', () => {
     render(<ContactForm {...defaultProps} isLoading={true} />);
     expect(screen.getByRole('status')).toBeInTheDocument();
   });
 
-  it('displays an error message when there is an error', () => {
+  it('should display an error message when there is an error', () => {
     render(<ContactForm {...defaultProps} error="Error occurred" />);
     expect(screen.getByText('Error occurred')).toBeInTheDocument();
   });
 
-  it('displays a success message when submitted', () => {
+  it('should display a success message when submitted', () => {
     render(<ContactForm {...defaultProps} isSubmitted={true} />);
     expect(screen.getByText('Thank you for your submitting!')).toBeInTheDocument();
   });
