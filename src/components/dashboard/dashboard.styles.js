@@ -9,5 +9,5 @@ export const StyledDashboard = styled.div`
 
 
 export const StyledName = styled.span`
-  color: var(--primary)
+  color: var(--primary);
 `

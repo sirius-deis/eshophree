@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard component should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-bgqQcB cHXazT"
+  >
+    <h2>
+      Hello, 
+      <span
+        class="sc-gTRrQi cTcuAO"
+      >
+        John
+      </span>
+    </h2>
+    <p>
+      From your account dashBoard you can view your recent orders, manage your shipping and billing addresses and edit your password and account details
+    </p>
+  </div>
+</div>
+`;

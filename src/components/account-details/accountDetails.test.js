@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import AccountDetails from './accountDetails';
@@ -40,7 +39,7 @@ describe('AccountDetails Component', () => {
     expect(emailInput.value).toBe('john.doe@example.com');
   });
 
-  it('it render save changes button', () => {
+  it('should render save changes button', () => {
     render(<AccountDetails />);
     expect(screen.getByRole('button', { name: /save changes/i })).toBeInTheDocument();
   });
