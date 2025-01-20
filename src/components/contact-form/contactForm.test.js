@@ -3,12 +3,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import ContactForm from './contactForm';
 
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    json: () => Promise.resolve({}),
-  })
-);
-
 describe('ContactForm Component', () => {
   const mockClickHandler = jest.fn();
 
@@ -28,7 +22,8 @@ describe('ContactForm Component', () => {
   });
 
   it('should call clickHandler with form data on submit', () => {
-    render(<ContactForm {...defaultProps} />);
+    const mockClickHandler = jest.fn();
+    render(<ContactForm {...defaultProps} clickHandler={mockClickHandler} />);
     fireEvent.change(screen.getByPlaceholderText(/Email/i), { target: { value: 'test@example.com' } });
     fireEvent.change(screen.getByPlaceholderText(/Subject/i), { target: { value: 'Test Subject' } });
     fireEvent.change(screen.getByPlaceholderText(/Your message/i), { target: { value: 'Test Message' } });

@@ -8,6 +8,9 @@ import LabelWithTextarea from "../label-with-textarea/labelWithTextarea";
 import { StyledText, StyledTitle } from './contactForm.styles';
 
 const ContactForm = ({ title, text, clickHandler, isLoading, error, isSubmitted }) => {
+  const [email, setEmail] = useState("")
+  const [subject, setSubject] = useState("")
+  const [message, setMessage] = useState("")
   const [isErrorClosed, setIsErrorClosed] = useState(false);
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -15,13 +18,13 @@ const ContactForm = ({ title, text, clickHandler, isLoading, error, isSubmitted 
     setIsErrorClosed(false)
     clickHandler(email.value, subject.value, message.value);
   }
-  return <form onSubmit={onSubmitHandler}>
+  return <form onSubmit={onSubmitHandler} aria-label='form'>
     <StyledTitle>{title}</StyledTitle>
     <StyledText>{text}</StyledText>
-    <LabelWithInput type="email" placeholder="Enter your email" label="Email" name="email" />
-    <LabelWithInput type="text" placeholder="Enter your subject" label="Subject" name="subject" />
-    <LabelWithTextarea placeholder="Enter your message" label="Your message" name="message" />
-    <Button>Send message</Button>
+    <LabelWithInput type="email" placeholder="Enter your email" label="Email" name="email" value={email} setValue={setEmail} />
+    <LabelWithInput type="text" placeholder="Enter your subject" label="Subject" name="subject" value={subject} setValue={setSubject} />
+    <LabelWithTextarea placeholder="Enter your message" label="Your message" name="message" value={message} setValue={setMessage} />
+    <Button type="submit">Send message</Button>
     {isLoading && <Spinner />}
     {error && !isErrorClosed && <InfoBox message={error} clickHandler={() => setIsErrorClosed(true)} />}
     {isSubmitted && !isLoading && !error && <InfoBox message="Thank you for your submitting!" />}

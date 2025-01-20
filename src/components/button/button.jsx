@@ -25,13 +25,14 @@ const Button = ({
   onMouseEnterHandler,
   bordered,
   disabled,
+  type = "button",
 }) => {
   const ButtonEl = getButton(kind);
   return (
     <ButtonEl
       color={color}
       bgColor={bgColor}
-      type="button"
+      type={type}
       onClick={onClickHandler}
       onMouseEnter={onMouseEnterHandler}
       bordered={bordered}
@@ -51,6 +52,7 @@ Button.propTypes = {
   onMouseEnterHandler: PropTypes.func,
   bordered: PropTypes.bool,
   disabled: PropTypes.bool,
+  type: PropTypes.string,
 };
 
 export default Button;
