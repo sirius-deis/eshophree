@@ -2,6 +2,7 @@ import { FaFireAlt } from 'react-icons/fa';
 import Carousel from '../carousel/carousel';
 import Card from '../card/card';
 import Stock from '../stock/stock';
+import Spinner from '../spinner/spinner';
 import useFetch from '../../hooks/useFetch';
 import { StyledDealSection } from './dealSection.styles';
 
@@ -25,6 +26,7 @@ const DealSection = () => {
           ))}
         </Carousel>
       )}
+      {isDealLoading && <Spinner />}
     </StyledDealSection>
   );
 };

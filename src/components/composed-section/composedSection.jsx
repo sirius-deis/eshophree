@@ -1,8 +1,8 @@
-import styled from 'styled-components';
 import Carousel from '../carousel/carousel';
 import Card from '../card/card';
 import MultiLevelCard from '../multi-level-card/multiLevelCard';
 import useFetch from '../../hooks/useFetch';
+import Spinner from '../spinner/spinner';
 import { divideArrayOnChunks } from '../../utils/util';
 import { StyledComposedSection, StyledWrapper } from './composedSection.styles'
 
@@ -38,6 +38,7 @@ const ComposedSection = () => {
             ))}
           </Carousel>
         )}
+        {isTop20ProductsLoading && <Spinner />}
       </StyledWrapper>
       <StyledWrapper>
         {!isFeaturedProductsLoading && (
@@ -56,6 +57,7 @@ const ComposedSection = () => {
             ))}
           </Carousel>
         )}
+        {isFeaturedProductsLoading && <Spinner />}
       </StyledWrapper>
       <StyledWrapper>
         {!isTopSellingLoading && (
@@ -74,6 +76,7 @@ const ComposedSection = () => {
             ))}
           </Carousel>
         )}
+        {isTopSellingLoading && <Spinner />}
       </StyledWrapper>
       <StyledWrapper>
         {!isOnSaleProductsLoading && (
@@ -92,6 +95,7 @@ const ComposedSection = () => {
             ))}
           </Carousel>
         )}
+        {isOnSaleProductsLoading && <Spinner />}
       </StyledWrapper>
     </StyledComposedSection>
   );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledDealSection = styled.section`
+export const StyledDealSection = styled.section`
   display: flex;
   flex-direction: column;
   margin-top: -25rem;
@@ -10,5 +10,3 @@ const StyledDealSection = styled.section`
   border-radius: 10px;
   box-shadow: var(--shadow-color);
 `;
-
-export { StyledDealSection };
