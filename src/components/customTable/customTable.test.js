@@ -32,12 +32,10 @@ describe('CustomTable Component', () => {
       </Provider>
     );
 
-    // Check if column headers are rendered
     defaultProps.columnsName.forEach((column) => {
       expect(screen.getByText(column)).toBeInTheDocument();
     });
-
-    // Check if data rows are rendered
+    
     defaultProps.data.forEach((item) => {
       expect(screen.getByText(item.Name)).toBeInTheDocument();
       expect(screen.getByText(item.Price)).toBeInTheDocument();
