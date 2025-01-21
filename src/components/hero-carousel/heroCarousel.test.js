@@ -31,7 +31,14 @@ describe('HeroCarousel component', () => {
     expect(screen.getAllByAltText("slide")[3].parentElement).toHaveClass("active");
     expect(screen.getAllByAltText("slide")[0].parentElement).not.toHaveClass("active");
   });
-  
+  it('automatically changes slide after interval', () => {
+    const { getAllByAltText } = render(<MemoryRouter><HeroCarousel /></MemoryRouter>);
+    act(() => {
+      jest.advanceTimersByTime(10000);
+    });
+    expect(getAllByAltText("slide")[1].parentElement).toHaveClass("active");
+    expect(getAllByAltText("slide")[0].parentElement).not.toHaveClass("active");
+  });
   it('should change slide when indicator is clicked', () => {
     const { container } = render(<MemoryRouter><HeroCarousel /></MemoryRouter>);
     const indicators = container.querySelectorAll('button');
