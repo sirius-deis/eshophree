@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComposedSection component should match snapshot 1`] = `
+<div>
+  <section
+    class="sc-crozmw MGLnd"
+  >
+    <div
+      class="sc-jJTsDX kuukQj"
+    >
+      <div
+        class="sc-fFGjHI dwKuma"
+      >
+        <div
+          class="sc-ewnqHT dLOUny"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 0.7rem;"
+          >
+            <div
+              class="sc-gTRrQi eoyTqP"
+            >
+              Top 20
+            </div>
+          </div>
+          <div>
+            <button
+              class="sc-gxYJeL sc-kPTPQs kCKvOC"
+              disabled=""
+            >
+              ‹
+            </button>
+            <button
+              class="sc-gxYJeL sc-ispOId kCKvOC"
+              disabled=""
+            >
+              ›
+            </button>
+          </div>
+        </div>
+        <div
+          class="sc-bgqQcB iPXChy"
+          width="100"
+        />
+        <div
+          style="display: flex; gap: 1rem;"
+        >
+          <div
+            style="overflow: hidden;"
+          >
+            <div
+              class="sc-dicizt cTmuUj"
+              style="transform: translateX(100%);"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-jJTsDX kuukQj"
+    >
+      <div
+        class="sc-fFGjHI dwKuma"
+      >
+        <div
+          class="sc-ewnqHT dLOUny"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 0.7rem;"
+          >
+            <div
+              class="sc-gTRrQi eoyTqP"
+            >
+              Featured Products
+            </div>
+          </div>
+          <div>
+            <button
+              class="sc-gxYJeL sc-kPTPQs kCKvOC"
+              disabled=""
+            >
+              ‹
+            </button>
+            <button
+              class="sc-gxYJeL sc-ispOId kCKvOC"
+              disabled=""
+            >
+              ›
+            </button>
+          </div>
+        </div>
+        <div
+          class="sc-bgqQcB iPXChy"
+          width="100"
+        />
+        <div
+          style="display: flex; gap: 1rem;"
+        >
+          <div
+            style="overflow: hidden;"
+          >
+            <div
+              class="sc-dicizt cTmuUj"
+              style="transform: translateX(100%);"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-jJTsDX kuukQj"
+    >
+      <div
+        class="sc-fFGjHI dwKuma"
+      >
+        <div
+          class="sc-ewnqHT dLOUny"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 0.7rem;"
+          >
+            <div
+              class="sc-gTRrQi eoyTqP"
+            >
+              Top selling Products
+            </div>
+          </div>
+          <div>
+            <button
+              class="sc-gxYJeL sc-kPTPQs kCKvOC"
+              disabled=""
+            >
+              ‹
+            </button>
+            <button
+              class="sc-gxYJeL sc-ispOId kCKvOC"
+              disabled=""
+            >
+              ›
+            </button>
+          </div>
+        </div>
+        <div
+          class="sc-bgqQcB iPXChy"
+          width="100"
+        />
+        <div
+          style="display: flex; gap: 1rem;"
+        >
+          <div
+            style="overflow: hidden;"
+          >
+            <div
+              class="sc-dicizt cTmuUj"
+              style="transform: translateX(100%);"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-jJTsDX kuukQj"
+    >
+      <div
+        class="sc-fFGjHI dwKuma"
+      >
+        <div
+          class="sc-ewnqHT dLOUny"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 0.7rem;"
+          >
+            <div
+              class="sc-gTRrQi eoyTqP"
+            >
+              On-Sale Products
+            </div>
+          </div>
+          <div>
+            <button
+              class="sc-gxYJeL sc-kPTPQs kCKvOC"
+              disabled=""
+            >
+              ‹
+            </button>
+            <button
+              class="sc-gxYJeL sc-ispOId kCKvOC"
+              disabled=""
+            >
+              ›
+            </button>
+          </div>
+        </div>
+        <div
+          class="sc-bgqQcB iPXChy"
+          width="100"
+        />
+        <div
+          style="display: flex; gap: 1rem;"
+        >
+          <div
+            style="overflow: hidden;"
+          >
+            <div
+              class="sc-dicizt cTmuUj"
+              style="transform: translateX(100%);"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

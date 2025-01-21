@@ -8,7 +8,7 @@ const formatTime = (number) => {
   return trunked >= 10 ? trunked : `0${trunked}`;
 };
 
-const Stock = ({ total = 0, sold = 0, endIn }) => {
+const Stock = ({ total = 0, sold = 0, endIn = Date.now() }) => {
   const progressLength = (100 / total) * (total - sold);
   const [remainingTime, setRemainingTime] = useState((endIn - Date.now()) / 1000);
   useEffect(() => {

@@ -19,7 +19,7 @@ const DealSection = () => {
           titleColor='additional-color'
           icon={<FaFireAlt color='var(--additional-color)' fontSize='2rem' />}
         >
-          {(dealProducts?.products || []).map((item, i) => (
+          {((dealProducts && dealProducts?.products) || []).map((item, i) => (
             <Card key={i} withStock {...item}>
               <Stock />
             </Card>
