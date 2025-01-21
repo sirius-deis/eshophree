@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 
-const StyledCarousel = styled.div`
+export const StyledCarousel = styled.div`
   width: 100%;
 `;
 
-const StyledInner = styled.div`
+export const StyledInner = styled.div`
   margin: 2rem 0 0.5rem;
   display: flex;
   flex-wrap: no-wrap;
   transition: all 0.3s ease-out;
 `;
 
-const StyledCarouseItem = styled.div`
+export const StyledCarouseItem = styled.div`
   padding: 0.25rem;
   min-width: ${(props) => `calc(100%/${props.amount})`};
 `;
 
-const StyledControl = styled.button`
+export const StyledControl = styled.button`
   border: 0;
   background-color: transparent;
   padding: 0.5rem 1rem;
@@ -35,8 +35,6 @@ const StyledControl = styled.button`
   }
 `;
 
-const StyledPrevControl = styled(StyledControl)``;
+export const StyledPrevControl = styled(StyledControl)``;
 
-const StyledNextControl = styled(StyledControl)``;
-
-export { StyledCarousel, StyledInner, StyledCarouseItem, StyledPrevControl, StyledNextControl };
+export const StyledNextControl = styled(StyledControl)``;

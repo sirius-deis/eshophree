@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledCard = styled.div`
+export const StyledCard = styled.div`
   grid-column: span 2;
   width: 100%;
   position: relative;
@@ -13,7 +13,7 @@ const StyledCard = styled.div`
   }
 `;
 
-const StyledImageOverlay = styled.div`
+export const StyledImageOverlay = styled.div`
   max-width: 50%;
   position: absolute;
   left: 0;
@@ -21,5 +21,3 @@ const StyledImageOverlay = styled.div`
   padding: 1rem;
   z-index: 10;
 `;
-
-export { StyledCard, StyledImageOverlay };

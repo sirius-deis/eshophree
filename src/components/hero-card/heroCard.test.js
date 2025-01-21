@@ -12,7 +12,7 @@ describe('Card component', () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it('should render element with given title', () => {
+  it('should render element with correct button title', () => {
     render(
       <MemoryRouter>
         <HeroCard btnTitle='Card' />
@@ -20,5 +20,10 @@ describe('Card component', () => {
     );
     const title = screen.queryByText(/Card/);
     expect(title).toBeInTheDocument();
+  });
+  it('should render a link inside the button', () => {
+    const { container } = render(<MemoryRouter><HeroCard btnTitle="Shop Now" /></MemoryRouter>);
+    const linkElement = container.querySelector('a');
+    expect(linkElement).toBeInTheDocument();
   });
 });

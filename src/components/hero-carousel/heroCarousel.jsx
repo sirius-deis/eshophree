@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import Button from '../button/button';
 import {
   StyledCarousel,
   StyledInner,
@@ -10,7 +10,6 @@ import {
   StyledIndicators,
   StyledCarouselOverlay,
 } from './heroCarousel.styles';
-import Button from '../button/button';
 
 const size = 4;
 
@@ -53,7 +52,7 @@ const HeroCarousel = () => {
         {Array(size)
           .fill(null)
           .map((_, i) => (
-            <StyledCarouseItem key={i}>
+            <StyledCarouseItem key={i} className={currentSlide === i ? "active" : ""}>
               <img src='https://source.unsplash.com/random/1100×400?electronics' alt='slide' />
               <StyledCarouselOverlay>
                 <Button bgColor='shadow-color-darker' color='bg-color'>

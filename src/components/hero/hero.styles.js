@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
-const StyledColoredContainer = styled.div`
+export const StyledColoredContainer = styled.div`
   width: 100%;
   min-height: 80rem;
   padding: 4rem 0;
   background-color: var(--bg-darker);
 `;
 
-const StyledHero = styled.section`
+export const StyledHero = styled.section`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 1rem;
 `;
 
-const StyledInfo = styled.div`
+export const StyledInfo = styled.div`
   margin-top: 2rem;
   padding: 0 1rem;
   display: flex;
@@ -21,7 +21,7 @@ const StyledInfo = styled.div`
   align-items: center;
 `;
 
-const StyledItem = styled.div`
+export const StyledItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -31,7 +31,7 @@ const StyledItem = styled.div`
   }
 `;
 
-const StyledText = styled.div`
+export const StyledText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -44,5 +44,3 @@ const StyledText = styled.div`
     color: var(--text-color-darker);
   }
 `;
-
-export { StyledHero, StyledColoredContainer, StyledInfo, StyledItem, StyledText };

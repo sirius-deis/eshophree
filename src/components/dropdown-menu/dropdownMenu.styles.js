@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledDropdownMenu = styled.div`
+export const StyledDropdownMenu = styled.div`
   min-width: 23rem;
   max-height: 29.6rem;
   position: absolute;
@@ -15,5 +15,3 @@ const StyledDropdownMenu = styled.div`
   box-shadow: 2px 2px 3px var(--shadow-color);
   z-index: 99;
 `;
-
-export { StyledDropdownMenu };

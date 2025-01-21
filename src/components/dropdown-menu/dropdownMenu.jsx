@@ -12,6 +12,7 @@ const DropdownMenu = ({ children, styles }) => {
 
 DropdownMenu.propTypes = {
   children: PropTypes.node,
+  styles: PropTypes.object,
 };
 
 export default DropdownMenu;

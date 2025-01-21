@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledCarousel = styled.div`
+export const StyledCarousel = styled.div`
   grid-column: span 5;
   grid-row: span 2;
   position: relative;
@@ -8,13 +8,13 @@ const StyledCarousel = styled.div`
   border-radius: 10px;
 `;
 
-const StyledInner = styled.div`
+export const StyledInner = styled.div`
   display: flex;
   flex-wrap: no-wrap;
   transition: all 0.3s ease-out;
 `;
 
-const StyledCarouseItem = styled.div`
+export const StyledCarouseItem = styled.div`
   min-width: 100%;
   position: relative;
   img {
@@ -24,7 +24,7 @@ const StyledCarouseItem = styled.div`
   }
 `;
 
-const StyledControl = styled.button`
+export const StyledControl = styled.button`
   position: absolute;
   top: 50%;
   opacity: 0;
@@ -43,15 +43,15 @@ const StyledControl = styled.button`
   }
 `;
 
-const StyledPrevControl = styled(StyledControl)`
+export const StyledPrevControl = styled(StyledControl)`
   left: 0;
 `;
 
-const StyledNextControl = styled(StyledControl)`
+export const StyledNextControl = styled(StyledControl)`
   right: 0;
 `;
 
-const StyledIndicators = styled.div`
+export const StyledIndicators = styled.div`
   position: absolute;
   left: 50%;
   bottom: 1.5rem;
@@ -79,19 +79,9 @@ const StyledIndicators = styled.div`
   }
 `;
 
-const StyledCarouselOverlay = styled.div`
+export const StyledCarouselOverlay = styled.div`
   position: absolute;
   left: 60%;
   bottom: 30%;
   transform: translate(-60%, -30%);
 `;
-
-export {
-  StyledCarousel,
-  StyledInner,
-  StyledCarouseItem,
-  StyledPrevControl,
-  StyledNextControl,
-  StyledIndicators,
-  StyledCarouselOverlay,
-};

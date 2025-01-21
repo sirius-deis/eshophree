@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { StyledDropdownItem } from './dropdownItem.styles';
 
-const DropdownItem = ({ children, onSelectCategoryHandler = () => {}, value }) => {
+const DropdownItem = ({ children, onSelectCategoryHandler = () => { }, value }) => {
   return (
     <StyledDropdownItem
       role='listitem'
@@ -15,6 +15,7 @@ const DropdownItem = ({ children, onSelectCategoryHandler = () => {}, value }) =
 };
 
 DropdownItem.propTypes = {
+  children: PropTypes.node,
   onSelectCategoryHandler: PropTypes.func,
   value: PropTypes.string,
 };

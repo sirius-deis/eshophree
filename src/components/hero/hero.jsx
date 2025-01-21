@@ -1,7 +1,8 @@
 import { FaShippingFast } from 'react-icons/fa';
 import { BiCheckShield, BiSupport } from 'react-icons/bi';
 import { MdPayment } from 'react-icons/md';
-
+import HeroCarousel from '../hero-carousel/heroCarousel';
+import HeroCard from '../hero-card/heroCard';
 import {
   StyledHero,
   StyledColoredContainer,
@@ -10,8 +11,7 @@ import {
   StyledText,
 } from './hero.styles';
 
-import HeroCarousel from '../hero-carousel/heroCarousel';
-import HeroCard from '../hero-card/heroCard';
+
 
 const Hero = () => {
   return (

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledDropdownItem = styled.button`
+export const StyledDropdownItem = styled.button`
   width: 100%;
   padding: 1rem 0.3rem;
   font-size: 1.4rem;
@@ -14,5 +14,3 @@ const StyledDropdownItem = styled.button`
     text-transform: uppercase;
   }
 `;
-
-export { StyledDropdownItem };

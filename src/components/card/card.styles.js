@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledCard = styled.div`
+export const StyledCard = styled.div`
   width: 100%;
   height: ${(props) => (props.height ? props.height : 'auto')};
   padding: 0.9rem;
@@ -19,7 +19,7 @@ const StyledCard = styled.div`
   }
 `;
 
-const StyledInfo = styled.div`
+export const StyledInfo = styled.div`
   width: 100%;
   margin-left: 1rem;
   display: flex;
@@ -42,5 +42,3 @@ const StyledInfo = styled.div`
     }
   }
 `;
-
-export { StyledCard, StyledInfo };
