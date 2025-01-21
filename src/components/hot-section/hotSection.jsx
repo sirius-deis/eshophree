@@ -1,10 +1,9 @@
-import PropTypes from 'prop-types';
 import Carousel from '../carousel/carousel';
 import Card from '../card/card';
 import MultiLevelCard from '../multi-level-card/multiLevelCard';
 import useFetch from '../../hooks/useFetch';
 import { divideArrayOnChunks } from '../../utils/util';
-import {StyledHotSection} from './hotSection.styles'
+import { StyledHotSection } from './hotSection.styles'
 
 const HotSection = () => {
   const [hotProducts, isHotLoading] = useFetch('products?tag=hot&fields=name,price,images');
@@ -41,10 +40,6 @@ const HotSection = () => {
       )}
     </StyledHotSection>
   );
-};
-
-HotSection.propTypes = {
-  products: PropTypes.array,
 };
 
 export default HotSection;
