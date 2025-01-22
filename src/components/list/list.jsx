@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import Button from "../../components/button/button";
+import { StyledList, StyledListItem } from './list.styles';
 
-import { StyledList } from './list.styles';
-
-import ListItem from '../listItem/listItem';
 
 const List = ({ list, color, isColumn, styles, position, link }) => {
-  const navigation = list.map((item, i) => (
-    <ListItem color={color} key={item._id || i} position={position} link={link}>
-      {item.name}
-    </ListItem>
-  ));
+  const navigation = list.map(({ _id, name, icon }, i) => (
+    <StyledListItem color={color} key={_id || i} position={position}>
+      {icon && icon}
+      {link && <Link to={`/${name}`}>{name.replace(/-/g, ' ')}</Link>}
+      {!link && <Button bordered={false} kind="">{name.replace(/-/g, ' ')}</Button>}
+    </StyledListItem>
+  ))
   return (
     <StyledList style={styles} isColumn={isColumn}>
       {navigation}
@@ -20,6 +22,10 @@ const List = ({ list, color, isColumn, styles, position, link }) => {
 List.propTypes = {
   list: PropTypes.array,
   color: PropTypes.string,
+  isColumn: PropTypes.bool,
+  styles: PropTypes.object,
+  position: PropTypes.string,
+  link: PropTypes.bool,
 };
 
 export default List;

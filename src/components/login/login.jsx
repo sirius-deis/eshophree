@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
@@ -16,14 +16,21 @@ const Login = () => {
   const { isLoading, error } = useSelector((state) => state.user);
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("")
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
-    const { email, password } = e.target.elements;
-    dispatch(signIn({ email: email.value, password: password.value }));
+    dispatch(signIn({ email, password }));
+    clearForm();
     setIsSubmitted(true);
   };
+
+  const clearForm = () => {
+    setEmail("");
+    setPassword("");
+  }
 
   useEffect(() => {
     if (isSubmitted && !isLoading && !error) {
@@ -39,8 +46,8 @@ const Login = () => {
       {isLoading && <Spinner />}
       {isModalOpened && <Modal closeModal={() => setIsModalOpened(false)}>{error}</Modal>}
       <Heading>Log in</Heading>
-      <LabelWithInput type='email' label='email' name='email' />
-      <LabelWithInput type='password' label='password' name='password' minLength={8} />
+      <LabelWithInput type='email' label='email' name='email' value={email} setValue={setEmail} />
+      <LabelWithInput type='password' label='password' name='password' minLength={8} value={password} setValue={setPassword} />
       <AccountLink>
         <p>
           Don't have account?{' '}

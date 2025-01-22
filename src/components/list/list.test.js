@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import List from './list';
 
 describe('List component', () => {
-  const list = ['1', '2', '3'];
+  const list = [{_id: 1, name: "1"}, {_id: 2, name: "2"}, {_id: 3, name: "3"}];
   it('should match snapshot', () => {
     const { container } = render(
       <MemoryRouter>

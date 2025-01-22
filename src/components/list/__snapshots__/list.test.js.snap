@@ -3,34 +3,37 @@
 exports[`List component should match snapshot 1`] = `
 <div>
   <ul
-    class="sc-bgqQcB eLjcYi"
+    class="sc-dicizt fvLdoU"
   >
     <li
-      class="sc-gTRrQi kQsCbO"
+      class="sc-iVCKna eSdBHa"
     >
-      <a
-        href="/1"
+      <button
+        class="sc-bgqQcB sc-fFGjHI jHWwsb dQaKvT"
+        type="button"
       >
         1
-      </a>
+      </button>
     </li>
     <li
-      class="sc-gTRrQi kQsCbO"
+      class="sc-iVCKna eSdBHa"
     >
-      <a
-        href="/2"
+      <button
+        class="sc-bgqQcB sc-fFGjHI jHWwsb dQaKvT"
+        type="button"
       >
         2
-      </a>
+      </button>
     </li>
     <li
-      class="sc-gTRrQi kQsCbO"
+      class="sc-iVCKna eSdBHa"
     >
-      <a
-        href="/3"
+      <button
+        class="sc-bgqQcB sc-fFGjHI jHWwsb dQaKvT"
+        type="button"
       >
         3
-      </a>
+      </button>
     </li>
   </ul>
 </div>
