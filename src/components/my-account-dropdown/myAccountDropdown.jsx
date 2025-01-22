@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaRegHeart, FaRegUser, FaRegAddressCard, FaFileInvoice } from 'react-icons/fa';
 import { MdOutlineShoppingCart, MdLogout, MdLogin } from 'react-icons/md';
@@ -55,6 +56,10 @@ const MyAccountDropdown = ({ closeDropdown }) => {
       )}
     </div>
   );
+};
+
+MyAccountDropdown.propTypes = {
+  closeDropdown: PropTypes.func,
 };
 
 export default MyAccountDropdown;
