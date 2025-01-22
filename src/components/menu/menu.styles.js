@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledMenu = styled.div`
+export const StyledMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ const StyledMenu = styled.div`
   }
 `;
 
-const StyledDropdownToggle = styled.button`
+export const StyledDropdownToggle = styled.button`
   position: relative;
   padding: 1.8rem;
   cursor: pointer;
@@ -28,7 +28,7 @@ const StyledDropdownToggle = styled.button`
   }
 `;
 
-const StyledCount = styled.div`
+export const StyledCount = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,5 +43,3 @@ const StyledCount = styled.div`
     border-radius: 50%;
     color: var(--bg-color);
 `;
-
-export { StyledMenu, StyledDropdownToggle, StyledCount };

@@ -3,13 +3,13 @@
 exports[`Menu component should match snapshot 1`] = `
 <div>
   <div
-    class="sc-ewnqHT jgrgrY"
+    class="sc-fFGjHI cKYZZp"
   >
     <div
       class="sc-bgqQcB CeERh"
     >
       <button
-        class="sc-fFGjHI juBWff"
+        class="sc-dicizt gTBWaL"
       >
         <svg
           fill="currentColor"
@@ -25,21 +25,17 @@ exports[`Menu component should match snapshot 1`] = `
           />
         </svg>
         <div
-          class="sc-dicizt cCqDEe"
+          class="sc-iVCKna djyvZY"
         >
-          0
+          2
         </div>
       </button>
-      <div
-        class="sc-gTRrQi fIpzC"
-        role="listbox"
-      />
     </div>
     <div
       class="sc-bgqQcB CeERh"
     >
       <button
-        class="sc-fFGjHI juBWff"
+        class="sc-dicizt gTBWaL"
       >
         <svg
           fill="currentColor"
@@ -59,21 +55,17 @@ exports[`Menu component should match snapshot 1`] = `
           />
         </svg>
         <div
-          class="sc-dicizt cCqDEe"
+          class="sc-iVCKna djyvZY"
         >
-          0
+          3
         </div>
       </button>
-      <div
-        class="sc-gTRrQi fIpzC"
-        role="listbox"
-      />
     </div>
     <div
       class="sc-bgqQcB CeERh"
     >
       <button
-        class="sc-fFGjHI juBWff"
+        class="sc-dicizt gTBWaL"
       >
         <svg
           fill="currentColor"
@@ -89,10 +81,6 @@ exports[`Menu component should match snapshot 1`] = `
           />
         </svg>
       </button>
-      <div
-        class="sc-gTRrQi fIpzC"
-        role="listbox"
-      />
     </div>
   </div>
 </div>
