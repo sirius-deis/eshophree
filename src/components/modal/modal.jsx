@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Portal from '../portal/portal';
 import Button from '../button/button';
 
-import {StyledBackdrop, StyledCloseButtonWrapper, StyledModal} from './modal.styles'
+import { StyledBackdrop, StyledCloseButtonWrapper, StyledModal } from './modal.styles'
 
 const Modal = ({ children, closeModal }) => {
   const onBackdropClickHandler = (e) => {
@@ -26,7 +26,7 @@ const Modal = ({ children, closeModal }) => {
 
   return (
     <Portal wrapperId='modal'>
-      <StyledBackdrop onClick={onBackdropClickHandler} />
+      <StyledBackdrop onClick={onBackdropClickHandler} data-testid="backdrop" />
       <StyledModal>
         {children}
         <StyledCloseButtonWrapper>
