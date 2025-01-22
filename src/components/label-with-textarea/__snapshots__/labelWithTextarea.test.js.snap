@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelWithTextarea component should match snapshot 1`] = `
+<div>
+  <div>
+    <textarea
+      cols="70"
+      maxlength="100"
+      minlength="10"
+      required=""
+      rows="7"
+    />
+  </div>
+</div>
+`;

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
 
-const LabelWithTextarea = ({ label, name, placeholder, minLength, maxLength, withLabel = true, value, setValue = () => { } }) => {
+const LabelWithTextarea = ({ labelText, name, placeholder, minLength = 10, maxLength = 100, withLabel = true, value, setValue = () => { } }) => {
   return <div>
     {
-      withLabel && <label>{label[0].toUpperCase() + label.slice(1)} *</label>
+      withLabel && labelText && <label>{labelText[0].toUpperCase() + labelText.slice(1)} *</label>
     }
     <textarea
       name={name}
