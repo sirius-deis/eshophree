@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmartHomeSection component should match snapshot 1`] = `
+<div>
+  <section>
+    <div
+      class="sc-fFGjHI dwKuma"
+    >
+      <div
+        class="sc-ewnqHT dLOUny"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 0.7rem;"
+        >
+          <div
+            class="sc-gTRrQi eoyTqP"
+          >
+            Smart Home Appliances
+          </div>
+        </div>
+        <div>
+          <button
+            class="sc-gxYJeL sc-kPTPQs kCKvOC"
+            disabled=""
+          >
+            ‹
+          </button>
+          <button
+            class="sc-gxYJeL sc-ispOId kCKvOC"
+            disabled=""
+          >
+            ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="sc-bgqQcB iPXChy"
+        width="100"
+      />
+      <div
+        style="display: flex; gap: 1rem;"
+      >
+        <div
+          class="sc-duSInm ehBJwN"
+        />
+        <div
+          style="overflow: hidden;"
+        >
+          <div
+            class="sc-dicizt cTmuUj"
+            style="transform: translateX(100%);"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
