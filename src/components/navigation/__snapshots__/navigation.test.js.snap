@@ -9,11 +9,11 @@ exports[`Navigation component should match snapshot 1`] = `
       class="container"
     >
       <ul
-        class="sc-gTRrQi epUtYC"
+        class="sc-iVCKna dCfHBB"
         style="font-size: 1.7rem;"
       >
         <li
-          class="sc-ewnqHT iWesBX"
+          class="sc-gxYJeL eKnYvv"
         >
           <a
             href="/home"
@@ -22,7 +22,7 @@ exports[`Navigation component should match snapshot 1`] = `
           </a>
         </li>
         <li
-          class="sc-ewnqHT iWesBX"
+          class="sc-gxYJeL eKnYvv"
         >
           <a
             href="/categories"
@@ -31,7 +31,7 @@ exports[`Navigation component should match snapshot 1`] = `
           </a>
         </li>
         <li
-          class="sc-ewnqHT iWesBX"
+          class="sc-gxYJeL eKnYvv"
         >
           <a
             href="/shop"
@@ -40,7 +40,7 @@ exports[`Navigation component should match snapshot 1`] = `
           </a>
         </li>
         <li
-          class="sc-ewnqHT iWesBX"
+          class="sc-gxYJeL eKnYvv"
         >
           <a
             href="/about"
@@ -49,7 +49,7 @@ exports[`Navigation component should match snapshot 1`] = `
           </a>
         </li>
         <li
-          class="sc-ewnqHT iWesBX"
+          class="sc-gxYJeL eKnYvv"
         >
           <a
             href="/blog"
@@ -58,7 +58,7 @@ exports[`Navigation component should match snapshot 1`] = `
           </a>
         </li>
         <li
-          class="sc-ewnqHT iWesBX"
+          class="sc-gxYJeL eKnYvv"
         >
           <a
             href="/contact"
