@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledSearch = styled.form`
+export const StyledSearch = styled.form`
   width: 60%;
   display: flex;
   justify-content: space-between;
@@ -13,7 +13,7 @@ const StyledSearch = styled.form`
   }
 `;
 
-const StyledSearchInput = styled.input`
+export const StyledSearchInput = styled.input`
   width: 75%;
   padding: 0.5rem 1rem;
   font-size: 2rem;
@@ -25,7 +25,7 @@ const StyledSearchInput = styled.input`
   }
 `;
 
-const StyledText = styled.div`
+export const StyledText = styled.div`
   width: 100%;
   text-align: center;
   text-overflow: ellipsis;
@@ -38,5 +38,3 @@ const StyledText = styled.div`
     transform: rotate(180deg);
   }
 `;
-
-export { StyledSearch, StyledSearchInput, StyledText };

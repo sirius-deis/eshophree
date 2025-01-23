@@ -7,12 +7,11 @@ const Sidebar = ({ heading, elements, onClick = () => null }) => {
     e.preventDefault();
     onClick(title);
   }
-
   return <StyledSideNav>
     <h3>{heading}</h3>
     {
-      elements.forEach((element) => {
-        return <StyledLink href={element.href} onClick={clickHandler(element.title)} >{element.title}</StyledLink>
+      elements.map((element, i) => {
+        return <StyledLink key={i} to={element.href} onClick={clickHandler(element.title)} data-testid="styled-link">{element.title}</StyledLink>
       })
     }
   </StyledSideNav>

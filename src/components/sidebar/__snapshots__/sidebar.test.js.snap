@@ -8,6 +8,27 @@ exports[`Sidebar component should match snapshot 1`] = `
     <h3>
       Some title
     </h3>
+    <a
+      class="sc-gTRrQi cAtJzw"
+      data-testid="styled-link"
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      class="sc-gTRrQi cAtJzw"
+      data-testid="styled-link"
+      href="/about"
+    >
+      About
+    </a>
+    <a
+      class="sc-gTRrQi cAtJzw"
+      data-testid="styled-link"
+      href="/contact"
+    >
+      Contact
+    </a>
   </div>
 </div>
 `;
