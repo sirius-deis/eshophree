@@ -18,15 +18,17 @@ jest.mock('../../hooks/useFetch.js', () => ({
 }))
 
 describe("SmartHomeSection component", () => {
+  const mockProducts = {
+    products: [
+      { _id: 1, name: "Product 1", price: 100 },
+      { _id: 2, name: "Product 2", price: 200 },
+    ]
+  };
   beforeEach(() => {
     jest.clearAllMocks();
   })
   it("should match snapshot", () => {
     const useFetch = require('../../hooks/useFetch').default;
-    const mockProducts = [
-      { _id: 1, name: "Product 1", price: 100 },
-      { _id: 2, name: "Product 2", price: 200 },
-    ];
     useFetch.mockReturnValue([mockProducts, false]);
     const {container} = render(<SmartHomeSection />);
     expect(container).toMatchSnapshot();
@@ -41,12 +43,6 @@ describe("SmartHomeSection component", () => {
   });
   it("should render products", () => {
     const useFetch = require('../../hooks/useFetch').default;
-    const mockProducts = {
-      products: [
-        { _id: 1, name: "Product 1", price: 100 },
-        { _id: 2, name: "Product 2", price: 200 },
-      ]
-    };
     useFetch.mockReturnValue([mockProducts, false]);
 
     render(<SmartHomeSection />);

@@ -3,10 +3,10 @@
 exports[`ComposedSection component should match snapshot 1`] = `
 <div>
   <section
-    class="sc-crozmw MGLnd"
+    class="sc-duSInm fUXtZv"
   >
     <div
-      class="sc-jJTsDX kuukQj"
+      class="sc-jrrXlR nEidk"
     >
       <div
         class="sc-fFGjHI dwKuma"
@@ -50,14 +50,39 @@ exports[`ComposedSection component should match snapshot 1`] = `
           >
             <div
               class="sc-dicizt cTmuUj"
-              style="transform: translateX(100%);"
-            />
+              style="transform: translateX(0%);"
+            >
+              <div
+                class="sc-iVCKna cKdQal active"
+              >
+                <div
+                  class="sc-kcuKUB hYZhKm"
+                >
+                  <div>
+                    <h2>
+                      Product 1
+                    </h2>
+                    <p>
+                      100
+                    </p>
+                  </div>
+                  <div>
+                    <h2>
+                      Product 2
+                    </h2>
+                    <p>
+                      200
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-jJTsDX kuukQj"
+      class="sc-jrrXlR nEidk"
     >
       <div
         class="sc-fFGjHI dwKuma"
@@ -101,14 +126,39 @@ exports[`ComposedSection component should match snapshot 1`] = `
           >
             <div
               class="sc-dicizt cTmuUj"
-              style="transform: translateX(100%);"
-            />
+              style="transform: translateX(0%);"
+            >
+              <div
+                class="sc-iVCKna cKdQal active"
+              >
+                <div
+                  class="sc-kcuKUB hYZhKm"
+                >
+                  <div>
+                    <h2>
+                      Product 1
+                    </h2>
+                    <p>
+                      100
+                    </p>
+                  </div>
+                  <div>
+                    <h2>
+                      Product 2
+                    </h2>
+                    <p>
+                      200
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-jJTsDX kuukQj"
+      class="sc-jrrXlR nEidk"
     >
       <div
         class="sc-fFGjHI dwKuma"
@@ -152,14 +202,39 @@ exports[`ComposedSection component should match snapshot 1`] = `
           >
             <div
               class="sc-dicizt cTmuUj"
-              style="transform: translateX(100%);"
-            />
+              style="transform: translateX(0%);"
+            >
+              <div
+                class="sc-iVCKna cKdQal active"
+              >
+                <div
+                  class="sc-kcuKUB hYZhKm"
+                >
+                  <div>
+                    <h2>
+                      Product 1
+                    </h2>
+                    <p>
+                      100
+                    </p>
+                  </div>
+                  <div>
+                    <h2>
+                      Product 2
+                    </h2>
+                    <p>
+                      200
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sc-jJTsDX kuukQj"
+      class="sc-jrrXlR nEidk"
     >
       <div
         class="sc-fFGjHI dwKuma"
@@ -203,8 +278,33 @@ exports[`ComposedSection component should match snapshot 1`] = `
           >
             <div
               class="sc-dicizt cTmuUj"
-              style="transform: translateX(100%);"
-            />
+              style="transform: translateX(0%);"
+            >
+              <div
+                class="sc-iVCKna cKdQal active"
+              >
+                <div
+                  class="sc-kcuKUB hYZhKm"
+                >
+                  <div>
+                    <h2>
+                      Product 1
+                    </h2>
+                    <p>
+                      100
+                    </p>
+                  </div>
+                  <div>
+                    <h2>
+                      Product 2
+                    </h2>
+                    <p>
+                      200
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
