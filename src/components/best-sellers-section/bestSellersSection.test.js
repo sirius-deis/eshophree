@@ -7,13 +7,13 @@ import useFetch from '../../hooks/useFetch';
 jest.mock('../../hooks/useFetch');
 
 describe('BestSellersSection', () => {
-  it('renders loading state initially', () => {
+  it('should render loading state initially', () => {
     useFetch.mockReturnValue([null, true]);
     render(<Router><BestSellersSection /></Router>);
     expect(screen.queryByText('Best Sellers')).not.toBeInTheDocument();
   });
 
-  it('renders products when data is fetched', () => {
+  it('should render products when data is fetched', () => {
     const mockProducts = {
       products: [
         { _id: "j34ogr3og", name: 'Product 1', price: 100, total: 300, sold: 19, images: [], category: {_id: "i5ghj5fk5", name: "Category 1"} },

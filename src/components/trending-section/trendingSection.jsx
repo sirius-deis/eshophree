@@ -1,6 +1,7 @@
 import useFetch from '../../hooks/useFetch';
 import Carousel from '../../components/carousel/carousel';
 import Card from '../../components/card/card';
+import Spinner from '../spinner/spinner'
 
 const TrendingSection = () => {
   const [trendingProducts, isTrendingLoading] = useFetch(
@@ -15,6 +16,7 @@ const TrendingSection = () => {
           ))}
         </Carousel>
       )}
+      {isTrendingLoading && <Spinner />}
     </section>
   );
 };
