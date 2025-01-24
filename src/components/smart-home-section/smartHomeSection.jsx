@@ -17,9 +17,9 @@ const SmartHomeSection = () => {
         >
           {divideArrayOnChunks(hotProducts?.products || [], 2).map((array, i) => (
             <MultiLevelCard key={i}>
-              {array.map((item, i) => (
+              {array.map((item) => (
                 <Card
-                  key={i}
+                  key={item._id}
                   {...item}
                   isColumn
                   height='30rem'
