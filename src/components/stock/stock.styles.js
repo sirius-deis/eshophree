@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledStock = styled.div`
+export const StyledStock = styled.div`
   margin-top: 7rem;
   .progress {
     width: 100%;
@@ -22,12 +22,10 @@ const StyledStock = styled.div`
   }
 `;
 
-const StyledProgress = styled.div`
+export const StyledProgress = styled.div`
   position: absolute;
   background-color: ${(props) => `var(--${props.bgColor})`};
   width: ${(props) => props.width}%;
   height: 1.5rem;
   border-radius: 1rem;
 `;
-
-export { StyledStock, StyledProgress };

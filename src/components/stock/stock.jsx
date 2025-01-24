@@ -42,8 +42,8 @@ const Stock = ({ total = 0, sold = 0, endIn = Date.now() }) => {
           </span>
         </Row>
         <div className='progress'>
-          <StyledProgress width={100} bgColor='additional-color-lighter' />
-          <StyledProgress width={progressLength || 100} bgColor='additional-color' />
+          <StyledProgress width={100} bgColor='additional-color-lighter' role='progressbar' />
+          <StyledProgress width={progressLength || 100} bgColor='additional-color' role='progressbar' />
         </div>
       </div>
       <Row gap={1}>
@@ -80,7 +80,7 @@ const Stock = ({ total = 0, sold = 0, endIn = Date.now() }) => {
 Stock.propTypes = {
   total: PropTypes.number,
   sold: PropTypes.number,
-  endIn: PropTypes.object,
+  endIn: PropTypes.number,
 };
 
 export default Stock;
