@@ -12,7 +12,8 @@ exports[`Carousel component should match snapshot 1`] = `
         style="display: flex; align-items: center; gap: 0.7rem;"
       >
         <div
-          class="sc-gTRrQi eoyTqP"
+          class="sc-gTRrQi kGWnip"
+          color="text-color"
         />
       </div>
       <div>
@@ -24,6 +25,7 @@ exports[`Carousel component should match snapshot 1`] = `
         </button>
         <button
           class="sc-gxYJeL sc-ispOId kCKvOC"
+          disabled=""
         >
           ›
         </button>
@@ -41,24 +43,24 @@ exports[`Carousel component should match snapshot 1`] = `
       >
         <div
           class="sc-dicizt cTmuUj"
-          style="transform: translateX(NaN%);"
+          style="transform: translateX(0%);"
         >
           <div
-            class="sc-iVCKna jFjGbS active"
+            class="sc-iVCKna dnKQBn active"
           >
             <div>
               Slide 1
             </div>
           </div>
           <div
-            class="sc-iVCKna jFjGbS"
+            class="sc-iVCKna dnKQBn"
           >
             <div>
               Slide 2
             </div>
           </div>
           <div
-            class="sc-iVCKna jFjGbS"
+            class="sc-iVCKna dnKQBn"
           >
             <div>
               Slide 3

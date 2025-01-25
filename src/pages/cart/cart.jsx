@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import LabelWithInput from "../../components/label-with-input/labelWithInput";
 import Button from "../../components/button/button";
 import CustomTable from "../../components/customTable/customTable";

@@ -23,20 +23,18 @@ describe("Carousel component", () => {
     const nextButton = screen.getByRole("button", { name: /›/i });
     fireEvent.click(nextButton);
     expect(screen.getByText("Slide 2").parentElement).toHaveClass("active");
-    expect(screen.queryByText("Slide 1").parentElement).not.toHaveClass("active");
+    expect(screen.getByText("Slide 1").parentElement).not.toHaveClass("active");
   });
   it("should navigate to the previous slide on previous button click", () => {
     render(<Carousel>{list}</Carousel>);
     const nextButton = screen.getByRole('button', { name: /›/i });
     const prevButton = screen.getByRole('button', { name: /‹/i });
-
-    // Move to the second slide first
     fireEvent.click(nextButton);
-    expect(screen.getByText("Slide 2")).toBeInTheDocument();
 
-    // Now move back to the first slide
+    expect(screen.getByText("Slide 2").parentElement).toHaveClass("active");
+
     fireEvent.click(prevButton);
     expect(screen.getByText("Slide 1").parentElement).toHaveClass("active");
-    expect(screen.queryByText("Slide 2").parentElement).not.toHaveClass("active");
+    expect(screen.getByText("Slide 2").parentElement).not.toHaveClass("active");
   });
 });

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Children, useState } from 'react';
 import PropTypes from 'prop-types';
 import Line from '../line/line';
 import Heading from '../heading/heading';
@@ -12,7 +12,7 @@ import {
   StyledNextControl,
 } from './carousel.styles';
 
-const Carousel = ({ children, banner, title, amount, titleColor, icon }) => {
+const Carousel = ({ children, banner, title, amount = Children.count(children), titleColor = "text-color", icon }) => {
   const [index, setIndex] = useState(0);
   const shiftSlide = (n) => {
     setIndex((prevState) => {
@@ -45,13 +45,13 @@ const Carousel = ({ children, banner, title, amount, titleColor, icon }) => {
           <StyledInner
             style={{
               transform: `translateX(${(index + 1) * amount < children.length
-                  ? -index * 100
-                  : -(index - 1) * 100 + ((index * amount - children.length) / amount) * 100
+                ? -index * 100
+                : -(index - 1) * 100 + ((index * amount - children.length) / amount) * 100
                 }%)`,
             }}
           >
             {React.Children.map(children, (child, i) => (
-              <StyledCarouseItem className={index === i ? "active" : ""} amount={amount}>{React.cloneElement(child)}</StyledCarouseItem>
+              <StyledCarouseItem className={index === i ? "active" : ""} amount={amount}>{child}</StyledCarouseItem>
             ))}
           </StyledInner>
         </div>
