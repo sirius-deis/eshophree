@@ -3,7 +3,7 @@
 exports[`DealSection component should match snapshot 1`] = `
 <div>
   <section
-    class="sc-jJTsDX eWPprp"
+    class="sc-jrrXlR evPxLq"
   >
     <div
       class="sc-fFGjHI dwKuma"
@@ -45,7 +45,6 @@ exports[`DealSection component should match snapshot 1`] = `
           </button>
           <button
             class="sc-gxYJeL sc-ispOId kCKvOC"
-            disabled=""
           >
             ›
           </button>
@@ -63,8 +62,33 @@ exports[`DealSection component should match snapshot 1`] = `
         >
           <div
             class="sc-dicizt cTmuUj"
-            style="transform: translateX(100%);"
-          />
+            style="transform: translateX(0%);"
+          >
+            <div
+              class="sc-iVCKna feqZei active"
+            >
+              <div>
+                <h2>
+                  Product 1
+                </h2>
+                <p>
+                  100
+                </p>
+              </div>
+            </div>
+            <div
+              class="sc-iVCKna feqZei"
+            >
+              <div>
+                <h2>
+                  Product 2
+                </h2>
+                <p>
+                  200
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

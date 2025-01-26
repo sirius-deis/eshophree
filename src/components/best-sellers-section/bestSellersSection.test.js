@@ -3,8 +3,20 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import BestSellersSection from './bestSellersSection';
 import useFetch from '../../hooks/useFetch';
 
-// Mock the useFetch hook
-jest.mock('../../hooks/useFetch');
+jest.mock("../card/card.jsx", () => ({
+  __esModule: true,
+  default: ({ name, price }) => (
+    <div>
+      <h2>{name}</h2>
+      <p>{price}</p>
+    </div>
+  )
+}))
+
+jest.mock('../../hooks/useFetch', () => ({
+  __esModule: true,
+  default: jest.fn()
+}));
 
 describe('BestSellersSection', () => {
   it('should render loading state initially', () => {
