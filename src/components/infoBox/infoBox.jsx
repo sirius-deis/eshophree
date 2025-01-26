@@ -7,7 +7,7 @@ const colors = {
   message: "warning",
 }
 
-const InfoBox = ({ message, type, clickHandler }) => {
+const InfoBox = ({ message, type, clickHandler = () => { } }) => {
   return <Panel withBorder bgColor={colors[type]}>
     <p>{message}</p>
     {clickHandler && <div>

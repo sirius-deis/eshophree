@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Spinner from "../../components/spinner/spinner";
+import ProductDetail from "../../components/product-detail/productDetail";
+import InfoBox from "../../components/infoBox/infoBox";
 
 const Product = () => {
     const { productId } = useParams();
@@ -8,14 +10,11 @@ const Product = () => {
     if (isLoading) {
         return <Spinner />
     }
-    return <div className=''>
-        <div>
-            <img src="" alt="" />
-        </div>
-        <div>
-            <p>Category: <Link>{data.product.category}</Link></p>
-            <h2>{data.product.title}</h2>
-        </div>
+    if (error) {
+        return <InfoBox message={error.message} type="warning" />;
+    }
+    return <div>
+        <ProductDetail {...data} />
     </div>;
 };
 
