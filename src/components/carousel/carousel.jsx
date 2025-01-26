@@ -32,7 +32,7 @@ const Carousel = ({ children, banner, title, amount = Children.count(children), 
           </StyledPrevControl>
           <StyledNextControl
             onClick={() => shiftSlide(1)}
-            disabled={(index + 1) * amount >= children.length}
+            disabled={(index + 1) >= Children.count(children)}
           >
             &rsaquo;
           </StyledNextControl>

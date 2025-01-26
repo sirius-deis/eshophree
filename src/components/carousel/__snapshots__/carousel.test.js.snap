@@ -25,7 +25,6 @@ exports[`Carousel component should match snapshot 1`] = `
         </button>
         <button
           class="sc-gxYJeL sc-ispOId kCKvOC"
-          disabled=""
         >
           ›
         </button>

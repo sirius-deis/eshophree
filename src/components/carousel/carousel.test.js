@@ -20,7 +20,8 @@ describe("Carousel component", () => {
   })
   it("should navigate to the next slide", () => {
     render(<Carousel>{list}</Carousel>);
-    const nextButton = screen.getByRole("button", { name: /›/i });
+    const nextButton = screen.getByText(/›/i);
+    // const nextButton = screen.getByRole("button", { name: /›/i });
     fireEvent.click(nextButton);
     expect(screen.getByText("Slide 2").parentElement).toHaveClass("active");
     expect(screen.getByText("Slide 1").parentElement).not.toHaveClass("active");

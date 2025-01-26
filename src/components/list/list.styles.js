@@ -6,7 +6,7 @@ export const StyledList = styled.ul`
   display: flex;
   flex-direction: ${(props) => (props.isColumn ? 'column' : 'row')};
   justify-content: space-around;
-  list-style: none;
+  list-style: ${(props) => (props.withDots ? "default" : "none")};
 `;
 
 export const StyledListItem = styled.li`
