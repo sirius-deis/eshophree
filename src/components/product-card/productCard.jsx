@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { FaRegStar, FaStar, FaShoppingCart, FaCirclePlus } from "react-icons/fa";
+import { FaRegStar, FaStar, FaShoppingCart, FaPlusCircle } from "react-icons/fa";
 import Heading from "../heading/heading";
 import Button from "../button/button";
 
@@ -19,17 +19,17 @@ const ProductCard = ({ image, name, price, discount, characteristics, rating, ta
       <div>
         {discount <= 0 && `$${price}`}
         {discount > 0 && <span style={{ textDecoration: 'line-through', color: 'gray' }}>{price}</span>}
-        {discount > 0 && <span style={{ color: 'red' }}>{price - (price * discount / 100)}</span>}
+        {discount > 0 && <span style={{ color: 'red' }}>${price - (price * discount / 100)}</span>}
       </div>
       <div>
         {characteristics.map((characteristic, i) => <span key={i} style={{ marginLeft: '5px', backgroundColor: 'lightgray', padding: '3px 5px', borderRadius: '5px' }}>{characteristic}</span>)}
       </div>
       <div>
-        {Array(rating).map((_, i) => rating >= i ? <FaStar /> : <FaRegStar />)}
+        {Array(5).fill(0).map((_, i) => rating >= i + 1 ? <FaStar key={i} data-testid="star-filled" /> : <FaRegStar key={i} data-testid="star-empty" />)}
       </div>
     </div>
     <div>
-      <Button onClickHandler={addToComparisonHandler}><FaCirclePlus /> Compare</Button>
+      <Button onClickHandler={addToComparisonHandler}><FaPlusCircle /> Compare</Button>
       <Button onClickHandler={addToCartHandler}>Add to Cart <FaShoppingCart /></Button>
     </div>
   </div>
