@@ -5,6 +5,7 @@ export const StyledHeading = styled.div`
   align-items: center;
   gap: 0.8rem;
   font-weight: bold;
+  margin-bottom: 0.8rem;
   color: ${(props) =>
     props.color ? `var(--${props.color})` : "var(--text-color-darker)"};
   h1 {
