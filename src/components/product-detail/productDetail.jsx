@@ -8,7 +8,7 @@ import Row from "../row/row";
 import Line from "../line/line";
 import List from "../list/list";
 import Panel from "../panel/panel";
-import QuantityChanger from "../quantityChanger/quantityChanger";
+import QuantityChanger from "../quantity-changer/quantityChanger";
 import Button from "../button/button";
 
 const ProductDetail = ({ categories, title, rating, reviewsNumber, sold, price,
